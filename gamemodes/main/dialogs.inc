@@ -9,11 +9,16 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 			if (!response) return Kick(playerid);
 
-			new query[300], Password[BCRYPT_HASH_LENGTH];
+			new newtext[41];
+		    format(newtext, sizeof(newtext), "xxxxxxx");
+		    PlayerTextDrawSetString(playerid, Login_PasswordInput[playerid], newtext);
+		    strcat(Player[playerid][TempLoginText], inputtext); 
+
+			/*new query[300], Password[BCRYPT_HASH_LENGTH];
 			mysql_format(Database, query, sizeof(query), "SELECT `Password` FROM `players` WHERE `Username` = '%e'", Player[playerid][user_name]);
 			mysql_query(Database, query);
 			cache_get_value_name(0, "Password", Password, BCRYPT_HASH_LENGTH);
-			bcrypt_check(inputtext, Password, "OnPasswordChecked", "d", playerid);
+			bcrypt_check(inputtext, Password, "OnPasswordChecked", "d", playerid);*/
 
 			
 		}
@@ -24,7 +29,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 			if (strlen(inputtext) <= 5) return ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "Registration", "Your password must be longer than 5 characters!\nPlease enter your password in the field below:", "Register", "Abort");
 
-			bcrypt_hash(inputtext, BCRYPT_COST, "OnPasswordHashed", "d", playerid);
+			new newtext[41];
+		    format(newtext, sizeof(newtext), "xxxxxxx");
+		    PlayerTextDrawSetString(playerid, Register_PasswordInput[playerid], newtext);
+		    strcat(Player[playerid][TempLoginText], inputtext);
 
 		}
 		case DIALOG_PRETUTORIAL:
@@ -77,7 +85,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			Player[playerid][IsLoggedIn] = true;
 			Player[playerid][Tutorial] = 1;
-			TogglePlayerSpectating(playerid, false);
 			SpawnPlayer(playerid);
 		}
 

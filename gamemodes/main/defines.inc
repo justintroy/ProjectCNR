@@ -6,6 +6,9 @@
 #define COLOR_LIGHTBLUE 					0x16E0BDFF
 
 //------------------------------------------------------OTHER DEFINES
+
+
+
 #define MYSQL_HOSTNAME						"localhost"
 #define MYSQL_USERNAME						"root"
 #define MYSQL_PASSWORD						""
@@ -26,3 +29,4 @@
 #define CLASS_POLICE						2
 #define CLASS_FBI							3
 #define CLASS_ARMY							4
+

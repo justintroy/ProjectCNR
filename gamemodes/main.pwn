@@ -10,7 +10,6 @@
 #include <YSI\y_timers>
 #include <YSI\y_hooks>
 #include <YSI\y_stringhash>
-#include <3dspeed>
 
 
 
@@ -18,12 +17,15 @@
 #include "main\variables"
 #include "main\functions"
 #include "main\timers"
-#include "main\dialogs"
+
 #include "main\cmds"
+
 #include "main\account\account"
+
 #include "main\textdraws"
-#include "main\tutorial"
-#include "main\classSelection"
+
+#include "main\OnPlayerClickTextDraw"
+#include "main\dialogs"
 
 #include "main\maps\objects"
 
@@ -49,9 +51,9 @@ public OnGameModeInit()
 	}
 	print("SERVER: MySQL Connection was successful.");
 
-	LoadStaticVehiclesFromFile("vehicles/ls_airport.txt");
-	LoadStaticVehiclesFromFile("vehicles/ls_gen_inner.txt");
-	LoadStaticVehiclesFromFile("vehicles/ls_gen_outer.txt");
+	LoadStaticVehiclesFromFile("vehicles/sf_airport.txt");
+	LoadStaticVehiclesFromFile("vehicles/sf_gen.txt");
+	LoadStaticVehiclesFromFile("vehicles/sf_law.txt");
 	loadMaps();
 
 	SetGameModeText("Blank Script");
@@ -76,10 +78,8 @@ public OnGameModeExit()
 
 public OnPlayerRequestClass(playerid, classid)
 {
-	
 	if(Player[playerid][IsLoggedIn] == false)
 	{
-		
         ClearChatbox(playerid, 10);
         SendClientMessage(playerid, COLOR_YELLOW, "Welcome to Manila: Cops N Robbers RPG!");
 	}
@@ -90,10 +90,17 @@ public OnPlayerRequestClass(playerid, classid)
 	return true;
 }
 
+public OnPlayerRequestSpawn(playerid)
+{
+	if(Player[playerid][IsLoggedIn] == false)
+		return false;
+
+	return 1;
+}
+
 public OnPlayerConnect(playerid)
 {
-	classSelectionTD(playerid);
-	resetSkinSelect(playerid);
+	//SetSpawnInfo(playerid, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 	return 1;
 }
 
@@ -109,7 +116,7 @@ public OnPlayerSpawn(playerid)
 	{
 		defer StopPlayerSound(playerid);
 		SetPlayerSkin(playerid, Player[playerid][user_skin]);
-		SetPlayerPos(playerid, 2231.7708, -1262.3362, 23.9275);
+		SetPlayerPos(playerid, -1984.7754, 660.3203, 46.5683);
 	    SetPlayerFacingAngle(playerid, 180.0);
 	}
 	return 1;
@@ -172,14 +179,6 @@ public OnPlayerLeaveRaceCheckpoint(playerid)
 
 public OnRconCommand(cmd[])
 {
-	return 1;
-}
-
-public OnPlayerRequestSpawn(playerid)
-{
-	if(Player[playerid][IsLoggedIn] == false)
-		return false;
-
 	return 1;
 }
 

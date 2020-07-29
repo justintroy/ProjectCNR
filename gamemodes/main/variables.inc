@@ -16,7 +16,8 @@ enum E_PLAYERS
 	Cache: Cache_ID,
 	bool: IsLoggedIn,
 	LoginAttempts,
-	LoginTimer
+	LoginTimer,
+	TempLoginText[128]
 };
 
 enum
@@ -37,7 +38,6 @@ new Player[MAX_PLAYERS][E_PLAYERS];
 new g_MysqlRaceCheck[MAX_PLAYERS];
 
 new
-	PlayerText:Connecting_TD_Message[MAX_PLAYERS][6],
-	Text:PublicTD[4];
+	PlayerText:Connecting_TD_Message[MAX_PLAYERS][6];
 
 new Vehicle[MAX_PLAYERS];

@@ -1,16 +1,19 @@
 #include <YSI\y_hooks>
 
+#include "classSelection\classSelection"
 #include "saveplayerdata"
 #include "setplayerdata"
+#include "textdrawlogin"
+#include "textdrawregister"
+#include "tutorial"
 
-hook public OnPlayerConnect(playerid)
+hook OnPlayerConnect(playerid)
 {
 	g_MysqlRaceCheck[playerid]++;
 
 	static const empty_player[E_PLAYERS];
 	Player[playerid] = empty_player;
 	
-
 	playerTD(playerid);
 
 	GetPlayerName(playerid, Player[playerid][user_name], MAX_PLAYER_NAME);
@@ -27,7 +30,7 @@ hook public OnPlayerConnect(playerid)
 	return 1;
 }
 
-hook public OnPlayerDisconnect(playerid, reason)
+hook OnPlayerDisconnect(playerid, reason)
 {
 	g_MysqlRaceCheck[playerid]++;
 
@@ -60,9 +63,8 @@ timer ConnectingMessages[5000](playerid)
  	PlayerTextDrawHide(playerid, Connecting_TD_Message[playerid][4]);
  	PlayerTextDrawHide(playerid, Connecting_TD_Message[playerid][5]);
 
-
- 	InterpolateCameraPos(playerid, 1701.193115, -711.747436, 59.379413, 1656.080566, -1017.064941, 92.189880, 80000);
-	InterpolateCameraLookAt(playerid, 1700.526611, -716.660766, 60.023361, 1655.303100, -1021.985656, 92.616355, 80000);
+	InterpolateCameraPos(playerid, -1021.755798, 935.365417, 37.657863, -1532.593872, 562.846923, 52.115207, 120000);
+	InterpolateCameraLookAt(playerid, -1025.666137, 932.258544, 37.896369, -1536.640136, 559.911315, 52.217079, 120000);
 	SetPlayerVirtualWorld(playerid, 0);
     SetPlayerPos(playerid, 1652.2787,-992.9540,50.2806);
 
@@ -78,20 +80,25 @@ public OnPlayerDataLoaded(playerid, race_check)
 {
 	if (race_check != g_MysqlRaceCheck[playerid]) return Kick(playerid);
 
-	new string[125];
 	if(cache_num_rows() > 0)
 	{
 		Player[playerid][Cache_ID] = cache_save();
-
-		format(string, sizeof string, "{F9DC5C}This account {009FB7}(%s) {F9DC5C}is registered. Please login by entering your password in the field below:", Player[playerid][user_name]);
-		ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, "{3185FC}MNL:CNR {F9DC5C}- Login", string, "Login", "Abort");
+		LoginTextDrawCreate(playerid);
+		LoginTextDrawShow(playerid);
+		/*format(string, sizeof string, "{F9DC5C}This account {009FB7}(%s) {F9DC5C}is registered. Please login by entering your password in the field below:", Player[playerid][user_name]);
+		ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, "{3185FC}MNL:CNR {F9DC5C}- Login", string, "Login", "Abort");*/
 		SendClientMessage(playerid, -1, "{3185FC}[MNL:CNR] {F9DC5C}You have 30 seconds to login.");
+		SendClientMessage(playerid, -1, "{3185FC}[MNL:CNR] {F9DC5C}Click on the password field to enter your password and click Proceed to log in!");
+
 		Player[playerid][LoginTimer] = SetTimerEx("OnLoginTimeout", SECONDS_TO_LOGIN * 1000, false, "d", playerid);
 	}
 	else
 	{
-		format(string, sizeof string, "{F9DC5C} Welcome {009FB7}%s{F9DC5C}, you can register by entering your password in the field below:", Player[playerid][user_name]);
-		ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "{3185FC}MNL:CNR{F9DC5C} - Registration", string, "Register", "Abort");
+		RegisterTextDrawCreate(playerid);
+		RegisterTextDrawShow(playerid);
+		SendClientMessage(playerid, -1, "{3185FC}[MNL:CNR] {F9DC5C}Click on the password field to enter your password and click Register!");
+		/*format(string, sizeof string, "{F9DC5C} Welcome {009FB7}%s{F9DC5C}, you can register by entering your password in the field below:", Player[playerid][user_name]);
+		ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "{3185FC}MNL:CNR - Registration", string, "Register", "Abort");*/
 	}
 	return 1;
 }
@@ -102,27 +109,23 @@ public OnLoginTimeout(playerid)
 {
 	Player[playerid][LoginTimer] = 0;
 
-	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, "{3185FC}MNL:CNR{F9DC5C} - Login", "{F9DC5C}You have been kicked for taking too long to login successfully to your account.", "Okay", "");
-	Kick(playerid);
+	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, "{3185FC}MNL:CNR - Login", "{F9DC5C}You have been kicked for taking too long to login successfully to your account.", "Okay", "");
+	DelayedKick(playerid);
 	return 1;
 }
 
 forward OnPlayerRegister(playerid);
 public OnPlayerRegister(playerid)
 {
+	RegisterTextDrawHide(playerid);
+	RegisterTextDrawDestroy(playerid);
+
 	Player[playerid][user_id] = cache_insert_id();
 
-	ShowPlayerDialog(playerid, DIALOG_PRETUTORIAL, DIALOG_STYLE_MSGBOX, "{3185FC}MNL:CNR{F9DC5C} - Registration", "{F9DC5C}Account successfully registered, you will proceed to the tutorial.", "Okay", "");
+	csPrevTextDrawCreate(playerid);
+    csTextDrawCreate(playerid);
+    ShowPlayerClassSelect(playerid);
 
-	//Player[playerid][IsLoggedIn] = true;
-
-	/*Player[playerid][X_Pos] = DEFAULT_POS_X;
-	Player[playerid][Y_Pos] = DEFAULT_POS_Y;
-	Player[playerid][Z_Pos] = DEFAULT_POS_Z;
-	Player[playerid][A_Pos] = DEFAULT_POS_A;
-
-	SetSpawnInfo(playerid, NO_TEAM, 0, Player[playerid][X_Pos], Player[playerid][Y_Pos], Player[playerid][Z_Pos], Player[playerid][A_Pos], 0, 0, 0, 0, 0, 0);
-	SpawnPlayer(playerid);*/
 	return 1;
 }
 
@@ -148,8 +151,10 @@ public OnPasswordChecked(playerid)
 	new bool:match = bcrypt_is_equal();
 	if(match)
 	{
+		LoginTextDrawHide(playerid);
+		LoginTextDrawDestroy(playerid);
 		TogglePlayerSpectating(playerid, false);
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, "{3185FC}MNL:CNR{F9DC5C} - Login", "{F9DC5C}You have been successfully logged in.", "Okay", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, "{3185FC}MNL:CNR - Login", "{F9DC5C}You have been successfully logged in.", "Okay", "");
 
 		// sets the specified cache as the active cache so we can retrieve the rest player data
 		cache_set_active(Player[playerid][Cache_ID]);
@@ -175,11 +180,14 @@ public OnPasswordChecked(playerid)
 
 		if (Player[playerid][LoginAttempts] >= 3)
 		{
-			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, "{3185FC}MNL:CNR{F9DC5C} - Login", "{F9DC5C}You have mistyped your password too often (3 times). ", "Okay", "");
-			Kick(playerid);
+			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, "{3185FC}MNL:CNR - Login", "{F9DC5C}You have mistyped your password too often (3 times). ", "Okay", "");
+			DelayedKick(playerid);
 		}
-		else ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, "{3185FC}MNL:CNR{F9DC5C} - Login", "{F9DC5C}Wrong password!\nPlease enter your password in the field below:", "Login", "Abort");
-
+		else
+		{
+			Player[playerid][TempLoginText] = 0;
+			ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, "{3185FC}MNL:CNR - Login", "{F9DC5C}Wrong password!\nPlease enter your password in the field below:", "Login", "Abort");
+		}
 	}
 	return 1;
 }
@@ -191,5 +199,9 @@ ReturnIP(playerid)
 	return PlayerIP;
 }
 
-////////////////GET THE PLAYER DATA
+DelayedKick(playerid, time = 500)
+{
+	SetTimerEx("_KickPlayerDelayed", time, false, "d", playerid);
+	return 1;
+}
 

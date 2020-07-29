@@ -1,4 +1,6 @@
-#include <YSI\y_hooks>
+
+
+#include "classPreview"
 
 new PlayerText:CSbox[MAX_PLAYERS];
 new PlayerText:CSheader[MAX_PLAYERS];
@@ -112,121 +114,6 @@ GetPrevModel(playerid, class[])
     return 0;
 }
 
-
-public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
-{
-    if(_:playertextid != INVALID_TEXT_DRAW)
-    {
-        ////////////////////////////CIVILIAN MODELSSSS
-        if(playertextid == CS_CivModel[playerid])
-        {
-            skinModelSeletected[playerid] = skinSelectionCivModels[currentCivSkinSelected[playerid]];
-            Player[playerid][user_skin] = skinModelSeletected[playerid];
-            Player[playerid][user_class] = CLASS_CIVILIAN;
-            SetPlayerSkin(playerid, skinModelSeletected[playerid]);
-        }
-        else if(playertextid == CS_CivLeft[playerid])
-        {
-            PlayerTextDrawSetPreviewModel(playerid, CS_CivModel[playerid], GetPrevModel(playerid, "CLASS_CIVILIAN"));
-            ShowPlayerClassSelect(playerid);
-            SelectTextDraw(playerid, 0xA3B4C5FF);
-            
-            return 1;
-        }
-        else if(playertextid == CS_CivRight[playerid])
-        {
-            PlayerTextDrawSetPreviewModel(playerid, CS_CivModel[playerid], GetNextModel(playerid, "CLASS_CIVILIAN"));
-            ShowPlayerClassSelect(playerid);
-            SelectTextDraw(playerid, 0xA3B4C5FF);
-            new string[60];
-            format( string, sizeof( string ),"Your id is: %i", skinSelectionCivModels[currentCivSkinSelected[playerid]]);
-            SCM(playerid, COLOR_RED, string);
-            return 1;
-        }
-        //////////////////////////////////POLICE MODELSSSSS
-        else if(playertextid == CS_PoliceModel[playerid])
-        {
-            skinModelSeletected[playerid] = skinSelectionPoliceModels[currentPoliceSkinSelected[playerid]];
-            Player[playerid][user_skin] = skinModelSeletected[playerid];
-            Player[playerid][user_class] = CLASS_POLICE;
-            SetPlayerSkin(playerid, skinModelSeletected[playerid]);
-        }
-        else if(playertextid == CS_PoliceLeft[playerid])
-        {
-            PlayerTextDrawSetPreviewModel(playerid, CS_PoliceModel[playerid], GetPrevModel(playerid, "CLASS_POLICE"));
-            ShowPlayerClassSelect(playerid);
-            SelectTextDraw(playerid, 0xA3B4C5FF);
-            
-            return 1;
-        }
-        else if(playertextid == CS_PoliceRight[playerid])
-        {
-            PlayerTextDrawSetPreviewModel(playerid, CS_PoliceModel[playerid], GetNextModel(playerid, "CLASS_POLICE"));
-            ShowPlayerClassSelect(playerid);
-            SelectTextDraw(playerid, 0xA3B4C5FF);
-            new string[60];
-            format( string, sizeof( string ),"Your id is: %i", skinSelectionPoliceModels[currentPoliceSkinSelected[playerid]]);
-            SCM(playerid, COLOR_RED, string);
-            return 1;
-        }
-        //////////////////////////////////////FBI MODELS
-        else if(playertextid == CS_FbiModel[playerid])
-        {
-            skinModelSeletected[playerid] = skinSelectionFbiModels[currentFbiSkinSelected[playerid]];
-            Player[playerid][user_skin] = skinModelSeletected[playerid];
-            Player[playerid][user_class] = CLASS_FBI;
-            SetPlayerSkin(playerid, skinSelectionFbiModels[currentFbiSkinSelected[playerid]]);
-            return 1;
-        }
-        else if(playertextid == CS_FbiLeft[playerid])
-        {
-            PlayerTextDrawSetPreviewModel(playerid, CS_FbiModel[playerid], GetPrevModel(playerid, "CLASS_FBI"));
-            ShowPlayerClassSelect(playerid);
-            SelectTextDraw(playerid, 0xA3B4C5FF);
-            return 1;
-        }
-        else if(playertextid == CS_FbiRight[playerid])
-        {
-            PlayerTextDrawSetPreviewModel(playerid, CS_FbiModel[playerid], GetNextModel(playerid, "CLASS_FBI"));
-            ShowPlayerClassSelect(playerid);
-            SelectTextDraw(playerid, 0xA3B4C5FF);
-            new string[60];
-            format( string, sizeof( string ),"Your id is: %i", skinSelectionFbiModels[currentFbiSkinSelected[playerid]]);
-            SCM(playerid, COLOR_RED, string);
-            return 1;
-        }
-        ///////////////////////////////////ARMED FORCES MODELS
-        else if(playertextid == CS_ArmyModel[playerid])
-        {
-            skinModelSeletected[playerid] = skinSelectionArmyModels[currentArmySkinSelected[playerid]];
-            Player[playerid][user_skin] = skinModelSeletected[playerid];
-            Player[playerid][user_class] = CLASS_ARMY;
-            SetPlayerSkin(playerid, skinSelectionArmyModels[currentArmySkinSelected[playerid]]);
-            return 1;
-        }
-        else if(playertextid == CS_ArmyLeft[playerid])
-        {
-            PlayerTextDrawSetPreviewModel(playerid, CS_ArmyModel[playerid], GetPrevModel(playerid, "CLASS_ARMY"));
-            ShowPlayerClassSelect(playerid);
-            SelectTextDraw(playerid, 0xA3B4C5FF);
-            return 1;
-        }
-        else if(playertextid == CS_ArmyRight[playerid])
-        {
-            PlayerTextDrawSetPreviewModel(playerid, CS_ArmyModel[playerid], GetNextModel(playerid, "CLASS_ARMY"));
-            ShowPlayerClassSelect(playerid);
-            SelectTextDraw(playerid, 0xA3B4C5FF);
-            new string[60];
-            format( string, sizeof( string ),"Your id is: %i", skinSelectionArmyModels[currentArmySkinSelected[playerid]]);
-            SCM(playerid, COLOR_RED, string);
-            return 1;
-        }
-        HidePlayerClassSelect(playerid);
-        CancelSelectTextDraw(playerid); 
-    }
-    return 0;
-}
-
 resetSkinSelect(playerid)
 {
     skinModelSeletected[playerid] = 0;
@@ -234,29 +121,6 @@ resetSkinSelect(playerid)
     currentPoliceSkinSelected[playerid] = 0;
     currentFbiSkinSelected[playerid] = 0;
     currentArmySkinSelected[playerid] = 0;
-}
-
-YCMD:tdtest(playerid, params[], help) 
-{
-    TextDrawShowForPlayer(playerid, PublicTD[0]);
-    TextDrawShowForPlayer(playerid, PublicTD[1]);
-    TextDrawShowForPlayer(playerid, PublicTD[2]);
-    TextDrawShowForPlayer(playerid, PublicTD[3]);
-    return 1;
-}
-
-YCMD:cstest(playerid, params[], help) 
-{
-    ShowPlayerClassSelect(playerid);
-    SelectTextDraw(playerid, 0xA3B4C5FF);
-    return 1;
-}
-
-YCMD:csclose(playerid, params[], help) 
-{
-    HidePlayerClassSelect(playerid);
-    CancelSelectTextDraw(playerid); 
-    return 1;
 }
 
 YCMD:myclass(playerid, params[], help) 
@@ -268,8 +132,10 @@ YCMD:myclass(playerid, params[], help)
 }
 
 
-classSelectionTD(playerid)
+csTextDrawCreate(playerid)
 {
+    resetSkinSelect(playerid);
+
     CSbox[playerid] = CreatePlayerTextDraw(playerid, 319.000000, 123.000000, "_");
     PlayerTextDrawFont(playerid, CSbox[playerid], 1);
     PlayerTextDrawLetterSize(playerid, CSbox[playerid], 0.741666, 26.949996);
@@ -563,6 +429,31 @@ classSelectionTD(playerid)
     PlayerTextDrawSetSelectable(playerid, CS_ArmyHeader[playerid], 0);
 }
 
+csTextDrawDestroy(playerid)
+{
+    PlayerTextDrawDestroy(playerid, CSbox[playerid]);
+    PlayerTextDrawDestroy(playerid, CSheader[playerid]);
+    PlayerTextDrawDestroy(playerid, CStag1[playerid]);
+    PlayerTextDrawDestroy(playerid, CStag2[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_CivModel[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_PoliceModel[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_FbiModel[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_ArmyModel[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_CivLeft[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_CivRight[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_PoliceLeft[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_PoliceRight[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_FbiLeft[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_FbiRight[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_ArmyLeft[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_ArmyRight[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_CivHeader[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_PoliceHeader[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_FbiHeader[playerid]);
+    PlayerTextDrawDestroy(playerid, CS_ArmyHeader[playerid]);
+}
+
+
 HidePlayerClassSelect(playerid)
 {
     PlayerTextDrawHide(playerid, CSbox[playerid]);
@@ -589,6 +480,7 @@ HidePlayerClassSelect(playerid)
 
 ShowPlayerClassSelect(playerid)
 {
+    HidePlayerClassSelect(playerid);
     PlayerTextDrawShow(playerid, CSbox[playerid]);
     PlayerTextDrawShow(playerid, CSheader[playerid]);
     PlayerTextDrawShow(playerid, CStag1[playerid]);
@@ -609,4 +501,5 @@ ShowPlayerClassSelect(playerid)
     PlayerTextDrawShow(playerid, CS_PoliceHeader[playerid]);
     PlayerTextDrawShow(playerid, CS_FbiHeader[playerid]);
     PlayerTextDrawShow(playerid, CS_ArmyHeader[playerid]);
+    SelectTextDraw(playerid, 0xA3B4C5FF);
 }

@@ -15,7 +15,6 @@ UpdatePlayerData(playerid, reason)
 
 
 	new query[145];
-	//mysql_format(Database, query, sizeof query, "UPDATE `players` SET `x` = %f, `y` = %f, `z` = %f, `angle` = %f, `interior` = %d WHERE `id` = %d LIMIT 1", Player[playerid][X_Pos], Player[playerid][Y_Pos], Player[playerid][Z_Pos], Player[playerid][A_Pos], GetPlayerInterior(playerid), Player[playerid][ID]);
 	mysql_format(Database, query, sizeof query, "UPDATE `players` SET \
 		`Tutorial` = %d, \
 		`Class` = %d, \
