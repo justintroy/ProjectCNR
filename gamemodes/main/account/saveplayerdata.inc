@@ -12,18 +12,24 @@ UpdatePlayerData(playerid, reason)
 		GetPlayerFacingAngle(playerid, Player[playerid][A_Pos]);
 	}*/
 
+	new ms = NetStats_GetConnectedTime(playerid);
+	Player[playerid][PlayTime] += (ms/1000);
 
 
-	new query[145];
+	new query[512];
 	mysql_format(Database, query, sizeof query, "UPDATE `players` SET \
 		`Tutorial` = %d, \
 		`Class` = %d, \
-		`Skin` = %d \
+		`Skin` = %d, \
+		`AdminLevel` = %d, \
+		`PlayTime` = %d \
 		WHERE `id` = %d LIMIT 1",
 		Player[playerid][Tutorial],
-		Player[playerid][user_class],
-		Player[playerid][user_skin],
-		Player[playerid][user_id]);
+		Player[playerid][Class],
+		Player[playerid][Skin],
+		Player[playerid][pAdmin],
+		Player[playerid][PlayTime],
+		Player[playerid][ID]);
 	mysql_tquery(Database, query);
 	return 1;
 }

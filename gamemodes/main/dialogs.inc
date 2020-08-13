@@ -6,28 +6,19 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 		case DIALOG_LOGIN:
 		{
-
 			if (!response) return Kick(playerid);
 
 			new newtext[41];
 		    format(newtext, sizeof(newtext), "xxxxxxx");
 		    PlayerTextDrawSetString(playerid, Login_PasswordInput[playerid], newtext);
 		    strcat(Player[playerid][TempLoginText], inputtext); 
-
-			/*new query[300], Password[BCRYPT_HASH_LENGTH];
-			mysql_format(Database, query, sizeof(query), "SELECT `Password` FROM `players` WHERE `Username` = '%e'", Player[playerid][user_name]);
-			mysql_query(Database, query);
-			cache_get_value_name(0, "Password", Password, BCRYPT_HASH_LENGTH);
-			bcrypt_check(inputtext, Password, "OnPasswordChecked", "d", playerid);*/
-
-			
 		}
 		case DIALOG_REGISTER:
 		{
 
 			if (!response) return Kick(playerid);
 
-			if (strlen(inputtext) <= 5) return ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "Registration", "Your password must be longer than 5 characters!\nPlease enter your password in the field below:", "Register", "Abort");
+			if (((strlen(inputtext) <= 5) || (strlen(inputtext) >= 26))) return ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "Registration", "Your password must be longer than 5 and less than 26 characters!\nPlease enter your password in the field below:", "Register", "Abort");
 
 			new newtext[41];
 		    format(newtext, sizeof(newtext), "xxxxxxx");
@@ -59,6 +50,8 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		    strcat(msg, "Pois ele sera a base de todo seu conhecimento aqui no servidor.\n\n");
 		    strcat(msg, string);
 		    ShowPlayerDialog(playerid, DIALOG_TUTORIAL1, DIALOG_STYLE_MSGBOX, MNLTAG" - TUTORIAL PAGE 2", msg, "YES", "");
+		    PlayerPlaySound(playerid, 1131, 0.0, 0.0, 0.0);
+   			PlayerPlaySound(playerid, 1057, 0.0, 0.0, 0.0);
 		}
 		case DIALOG_TUTORIAL1:
 		{
@@ -80,15 +73,56 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		    strcat(msg, "Pois ele sera a base de todo seu conhecimento aqui no servidor.\n\n");
 		    strcat(msg, string);
 		    ShowPlayerDialog(playerid, DIALOG_TUTORIAL5, DIALOG_STYLE_MSGBOX, MNLTAG" - TUTORIAL PAGE 3", msg, "YES", "");
+		    PlayerPlaySound(playerid, 1057, 0.0, 0.0, 0.0);
 		}
 		case DIALOG_TUTORIAL5:
 		{
-			Player[playerid][IsLoggedIn] = true;
-			Player[playerid][Tutorial] = 1;
-			SpawnPlayer(playerid);
+			RegisterTextDrawCreate(playerid);
+            RegisterTextDrawShow(playerid);
+            SendClientMessage(playerid, -1, "{3185FC}[MNL:CNR] {F9DC5C}Click on the password field to enter your password and click Register!");
+			PlayerPlaySound(playerid, 1057, 0.0, 0.0, 0.0);
 		}
 
+		case DIALOG_ADMINLOG:
+		{
+	        if(!response)
+        	{
+        		DeletePVar(playerid, "pReport_Start");
+        		return 1;
+        	}
+        	if(!strcmp(inputtext, "Next Page"))
+            {
+            	GM[AdminLogStartPage] += 10;
+				new string[256];
+				mysql_format(Database, string, sizeof(string),
+					"SELECT * FROM `adminlogs` LIMIT %d,%d",
+					AdminLogStartPage, AdminLogEndPage);
+				mysql_tquery(Database, string, "AdminLog", "i", playerid); 
+				SetPVarInt(playerid, "pReport_Start", GM[AdminLogStartPage]+1);
+            }
+            else
+            {
+	        	new szQuery[96];
+	            format(szQuery, sizeof(szQuery), "SELECT * FROM `adminlogs` WHERE `ID` = %d LIMIT 1", GetPVarInt(playerid, "pReport_Start") + listitem);
+	            mysql_tquery(Database, szQuery, "AdminLogInfo", "i", playerid);
+	        }
+		}
 		default: return 0; // dialog ID was not found, search in other scripts
 	}
+	
+#if defined Fix_OnDialogResponse
+	return Fix_OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]);
+#else
 	return 1;
+#endif
 }
+#if defined _ALS_OnDialogResponse
+	#undef OnDialogResponse
+#else
+	#define _ALS_OnDialogResponse
+#endif
+
+#define OnDialogResponse Fix_OnDialogResponse
+#if defined Fix_OnDialogResponse
+	forward Fix_OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]);
+#endif

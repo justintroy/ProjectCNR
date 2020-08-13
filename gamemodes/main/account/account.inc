@@ -1,4 +1,4 @@
-#include <YSI\y_hooks>
+#include <YSI_Coding\y_hooks>
 
 #include "classSelection\classSelection"
 #include "saveplayerdata"
@@ -10,14 +10,11 @@
 hook OnPlayerConnect(playerid)
 {
 	g_MysqlRaceCheck[playerid]++;
-
+	playerTD(playerid);
 	static const empty_player[E_PLAYERS];
 	Player[playerid] = empty_player;
-	
-	playerTD(playerid);
 
-	GetPlayerName(playerid, Player[playerid][user_name], MAX_PLAYER_NAME);
-
+	GetPlayerName(playerid, Player[playerid][Username], MAX_PLAYER_NAME);
 	PlayerTextDrawShow(playerid, Connecting_TD_Message[playerid][0]);
  	PlayerTextDrawShow(playerid, Connecting_TD_Message[playerid][1]);
  	PlayerTextDrawShow(playerid, Connecting_TD_Message[playerid][2]);
@@ -66,10 +63,9 @@ timer ConnectingMessages[5000](playerid)
 	InterpolateCameraPos(playerid, -1021.755798, 935.365417, 37.657863, -1532.593872, 562.846923, 52.115207, 120000);
 	InterpolateCameraLookAt(playerid, -1025.666137, 932.258544, 37.896369, -1536.640136, 559.911315, 52.217079, 120000);
 	SetPlayerVirtualWorld(playerid, 0);
-    SetPlayerPos(playerid, 1652.2787,-992.9540,50.2806);
 
 	new query[103];
-	mysql_format(Database, query, sizeof query, "SELECT * FROM `players` WHERE `Username` = '%e' LIMIT 1", Player[playerid][user_name]);
+	mysql_format(Database, query, sizeof query, "SELECT * FROM `players` WHERE `Username` = '%e' LIMIT 1", Player[playerid][Username]);
 	mysql_tquery(Database, query, "OnPlayerDataLoaded", "dd", playerid, g_MysqlRaceCheck[playerid]);
 	return 1;
 }
@@ -85,8 +81,6 @@ public OnPlayerDataLoaded(playerid, race_check)
 		Player[playerid][Cache_ID] = cache_save();
 		LoginTextDrawCreate(playerid);
 		LoginTextDrawShow(playerid);
-		/*format(string, sizeof string, "{F9DC5C}This account {009FB7}(%s) {F9DC5C}is registered. Please login by entering your password in the field below:", Player[playerid][user_name]);
-		ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, "{3185FC}MNL:CNR {F9DC5C}- Login", string, "Login", "Abort");*/
 		SendClientMessage(playerid, -1, "{3185FC}[MNL:CNR] {F9DC5C}You have 30 seconds to login.");
 		SendClientMessage(playerid, -1, "{3185FC}[MNL:CNR] {F9DC5C}Click on the password field to enter your password and click Proceed to log in!");
 
@@ -94,11 +88,9 @@ public OnPlayerDataLoaded(playerid, race_check)
 	}
 	else
 	{
-		RegisterTextDrawCreate(playerid);
-		RegisterTextDrawShow(playerid);
-		SendClientMessage(playerid, -1, "{3185FC}[MNL:CNR] {F9DC5C}Click on the password field to enter your password and click Register!");
-		/*format(string, sizeof string, "{F9DC5C} Welcome {009FB7}%s{F9DC5C}, you can register by entering your password in the field below:", Player[playerid][user_name]);
-		ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "{3185FC}MNL:CNR - Registration", string, "Register", "Abort");*/
+		csPrevTextDrawCreate(playerid);
+    	csTextDrawCreate(playerid);
+    	ShowPlayerClassSelect(playerid);
 	}
 	return 1;
 }
@@ -120,12 +112,10 @@ public OnPlayerRegister(playerid)
 	RegisterTextDrawHide(playerid);
 	RegisterTextDrawDestroy(playerid);
 
-	Player[playerid][user_id] = cache_insert_id();
-
-	csPrevTextDrawCreate(playerid);
-    csTextDrawCreate(playerid);
-    ShowPlayerClassSelect(playerid);
-
+	Player[playerid][ID] = cache_insert_id();
+	Player[playerid][IsLoggedIn] = true;
+	Player[playerid][Tutorial] = 1;
+	SpawnPlayer(playerid);
 	return 1;
 }
 
@@ -139,17 +129,16 @@ public _KickPlayerDelayed(playerid)
 forward OnPasswordHashed(playerid);
 public OnPasswordHashed(playerid)
 {
-	new hash[BCRYPT_HASH_LENGTH], query[300];
+	new hash[250], query[300];
 	bcrypt_get_hash(hash);
-	mysql_format(Database, query, sizeof(query), "INSERT INTO `players` (`Username`, `Password`, `IPAddress`, `RegistrationDate`, `Tutorial`) VALUES ('%e', '%e', '%e', NOW(), 0)", Player[playerid][user_name], hash, ReturnIP(playerid));
+	mysql_format(Database, query, sizeof(query), "INSERT INTO `players` (`Username`, `Password`, `IPAddress`, `RegistrationDate`, `Tutorial`) VALUES ('%e', '%e', '%e', NOW(), 0)", Player[playerid][Username], hash, ReturnIP(playerid));
 	mysql_tquery(Database, query, "OnPlayerRegister", "d", playerid);
 	return 1;
 }
-forward OnPasswordChecked(playerid);
-public OnPasswordChecked(playerid)
+forward OnPasswordChecked(playerid, bool:success);
+public OnPasswordChecked(playerid, bool:success)
 {
-	new bool:match = bcrypt_is_equal();
-	if(match)
+	if(success)
 	{
 		LoginTextDrawHide(playerid);
 		LoginTextDrawDestroy(playerid);
@@ -160,6 +149,7 @@ public OnPasswordChecked(playerid)
 		cache_set_active(Player[playerid][Cache_ID]);
 
 		AssignPlayerData(playerid);
+		AssignPlayerInventory(playerid);
 
 		// remove the active cache from memory and unsets the active cache as well
 		cache_delete(Player[playerid][Cache_ID]);
@@ -168,11 +158,12 @@ public OnPasswordChecked(playerid)
 		KillTimer(Player[playerid][LoginTimer]);
 		Player[playerid][LoginTimer] = 0;
 		Player[playerid][IsLoggedIn] = true;
+		ClearChatbox(playerid, 10);
 
 		// spawn the player to their last saved position after login
 		//SetSpawnInfo(playerid, NO_TEAM, 0, Player[playerid][X_Pos], Player[playerid][Y_Pos], Player[playerid][Z_Pos], Player[playerid][A_Pos], 0, 0, 0, 0, 0, 0);
+		//SetSpawnInfo(playerid, NO_TEAM, Player[playerid][Skin], -1984.7754, 660.3203, 46.5683, 180.0, 24, 999, -1, -1, -1, -1);
 		SpawnPlayer(playerid);
-		StopAudioStreamForPlayer(playerid);
 	}
 	else
 	{
@@ -199,7 +190,7 @@ ReturnIP(playerid)
 	return PlayerIP;
 }
 
-DelayedKick(playerid, time = 500)
+DelayedKick(playerid, time = 1500)
 {
 	SetTimerEx("_KickPlayerDelayed", time, false, "d", playerid);
 	return 1;

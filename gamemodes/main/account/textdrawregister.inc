@@ -65,7 +65,7 @@ RegisterTextDrawCreate(playerid)
 	PlayerTextDrawSetProportional(playerid, Register_PrevTag1[playerid], 1);
 	PlayerTextDrawSetSelectable(playerid, Register_PrevTag1[playerid], 0);
 
-	Register_PrevTag2[playerid] = CreatePlayerTextDraw(playerid, 401.000000, 374.000000, "discord.com/invite/En2QDFZ");
+	Register_PrevTag2[playerid] = CreatePlayerTextDraw(playerid, 401.000000, 374.000000, SERVER_DISCORD);
 	PlayerTextDrawFont(playerid, Register_PrevTag2[playerid], 2);
 	PlayerTextDrawLetterSize(playerid, Register_PrevTag2[playerid], 0.141662, 0.750000);
 	PlayerTextDrawTextSize(playerid, Register_PrevTag2[playerid], 443.500000, 127.500000);
@@ -262,7 +262,7 @@ RegisterTextDrawDestroy(playerid)
 RegisterTextDrawShow(playerid)
 {
 	new newtext[41];
-    format(newtext, sizeof(newtext), "Welcome %s!", Player[playerid][user_name]);
+    format(newtext, sizeof(newtext), "Welcome %s!", Player[playerid][Username]);
     PlayerTextDrawSetString(playerid, Register_Welcome[playerid], newtext);
 	PlayerTextDrawShow(playerid, Register_Box[playerid]);
 	PlayerTextDrawShow(playerid, Register_Header[playerid]);

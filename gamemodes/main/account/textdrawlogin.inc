@@ -66,7 +66,7 @@ LoginTextDrawCreate(playerid)
 	PlayerTextDrawSetProportional(playerid, Login_PrevTag1[playerid], 1);
 	PlayerTextDrawSetSelectable(playerid, Login_PrevTag1[playerid], 0);
 
-	Login_PrevTag2[playerid] = CreatePlayerTextDraw(playerid, 401.000000, 374.000000, "discord.com/invite/En2QDFZ");
+	Login_PrevTag2[playerid] = CreatePlayerTextDraw(playerid, 401.000000, 374.000000, SERVER_DISCORD);
 	PlayerTextDrawFont(playerid, Login_PrevTag2[playerid], 2);
 	PlayerTextDrawLetterSize(playerid, Login_PrevTag2[playerid], 0.141662, 0.750000);
 	PlayerTextDrawTextSize(playerid, Login_PrevTag2[playerid], 443.500000, 127.500000);
@@ -263,7 +263,7 @@ LoginTextDrawDestroy(playerid)
 LoginTextDrawShow(playerid)
 {
 	new newtext[41];
-    format(newtext, sizeof(newtext), "Welcome back, %s!", Player[playerid][user_name]);
+    format(newtext, sizeof(newtext), "Welcome back, %s!", Player[playerid][Username]);
     PlayerTextDrawSetString(playerid, Login_Welcome[playerid], newtext);
 
 	PlayerTextDrawShow(playerid, Login_Box[playerid]);

@@ -1,3 +1,55 @@
+#include <YSI_Coding\y_hooks>
+
+LoadObject(playerid)
+{
+	TextDrawShowForPlayer(playerid, GM[LoadingTD][0]);
+	TextDrawShowForPlayer(playerid, GM[LoadingTD][1]);
+	TextDrawShowForPlayer(playerid, GM[LoadingTD][2]);
+	TextDrawShowForPlayer(playerid, GM[LoadingTD][3]);
+	TextDrawShowForPlayer(playerid, GM[LoadingTD][4]);
+	TogglePlayerControllable(playerid, false);
+	/*Player[playerid][Spawned] = false;
+	Player[playerid][LoadWorld] = false;*/
+	defer ObjectLoaded(playerid);
+	return 1;
+}
+
+GetName(playerid)
+{
+	new name[MAX_PLAYER_NAME];
+	GetPlayerName(playerid, name, MAX_PLAYER_NAME);
+	return name;
+}
+
+stock Float:GetDistanceBetweenPoints(Float:x1, Float:y1, Float:z1, Float:x2, Float:y2, Float:z2) // By Gabriel "Larcius" Cordes
+{
+	return floatadd(floatadd(floatsqroot(floatpower(floatsub(x1,x2),2)),floatsqroot(floatpower(floatsub(y1,y2),2))),floatsqroot(floatpower(floatsub(z1,z2),2)));
+}
+
+stock Float:GetDistanceToPoint(playerid, Float:x1, Float:y1, Float:z1) // By Gabriel "Larcius" Cordes
+{
+	if(IsPlayerConnected(playerid))
+	{
+		new Float:x2, Float:y2, Float:z2;
+		GetPlayerPos(playerid, x2, y2, z2);
+		return GetDistanceBetweenPoints(x1, y1, z1, x2, y2, z2);
+	}
+	return FLOAT_INFINITY;
+}
+
+stock GetPlayerNameFromId(id)
+{
+	new name[MAX_PLAYER_NAME], query[256], Cache:result;
+	mysql_format(Database, query, sizeof(query), "SELECT `Username` FROM `players` WHERE `ID` = %d", id);
+	result = mysql_query(Database, query, true);
+	if(cache_num_rows() > 0)
+		cache_get_value(0, "Username", name);
+	else
+		format(name, sizeof(name), "NAME NOT FOUND");
+	cache_delete(result);
+	return name;
+}
+
 forward  ClearChatbox(playerid, lines);
 public ClearChatbox(playerid, lines) 
 {
@@ -38,7 +90,7 @@ stock LoadStaticVehiclesFromFile(const filename[]) // gl_common.inc
 	new index;
 	new vid;
 	new vehicles_loaded;
-	new time = GetTickCount();
+	new time = gettime();
 	
 	file_ptr = fopen(filename,filemode:io_read);
 	if(!file_ptr) return 0;
@@ -92,6 +144,94 @@ stock LoadStaticVehiclesFromFile(const filename[]) // gl_common.inc
 	}
 
 	fclose(file_ptr);
-	printf("Loaded %d vehicles from: %s (%d ms)",vehicles_loaded,filename,GetTickCount() - time);
+	printf("Loaded %d vehicles from: %s (%d ms)",vehicles_loaded,filename,gettime() - time);
 	return vehicles_loaded;
+}
+
+stock SendAdminMessage(color, string[])
+{
+	foreach(new i : Player)
+	{
+		if(Player[i][pAdmin] >= 1)
+		{
+		    SendClientMessage(i, color, string);
+		}
+	}
+}
+
+stock SendClientMessageEx(playerid, color, const text[], {Float, _}:...)
+{
+	static
+	    args,
+	    str[144];
+	if ((args = numargs()) == 3)
+	{
+	    SendClientMessage(playerid, color, text);
+	}
+	else
+	{
+		while (--args >= 3)
+		{
+			#emit LCTRL 5
+			#emit LOAD.alt args
+			#emit SHL.C.alt 2
+			#emit ADD.C 12
+			#emit ADD
+			#emit LOAD.I
+			#emit PUSH.pri
+		}
+		#emit PUSH.S text
+		#emit PUSH.C 144
+		#emit PUSH.C str
+		#emit PUSH.S 8
+		#emit SYSREQ.C format
+		#emit LCTRL 5
+		#emit SCTRL 4
+
+		SendClientMessage(playerid, color, str);
+
+		#emit RETN
+	}
+	return 1;
+}
+
+stock SendClientMessageToAllEx(color, const str[], {Float,_}:...)
+{
+	static
+	    args,
+	    start,
+	    end,
+	    string[144]
+	;
+	#emit LOAD.S.pri 8
+	#emit STOR.pri args
+
+	if (args > 8)
+	{
+		#emit ADDR.pri str
+		#emit STOR.pri start
+
+	    for (end = start + (args - 8); end > start; end -= 4)
+		{
+	        #emit LREF.pri end
+	        #emit PUSH.pri
+		}
+		#emit PUSH.S str
+		#emit PUSH.C 144
+		#emit PUSH.C string
+
+		#emit LOAD.pri args
+		#emit ADD.C 4
+		#emit PUSH.pri
+		#emit SYSREQ.C format
+
+        #emit LCTRL 5
+		#emit SCTRL 4
+
+		foreach (new i : Player) {
+			SendClientMessage(i, color, string);
+		}
+		return 1;
+	}
+	return SendClientMessageToAll(color, str);
 }

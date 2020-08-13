@@ -1,24 +1,27 @@
-new
-	MySQL: Database
-;
+new MySQL: Database;
 
 enum E_PLAYERS
 {
-	user_id,
-	user_name[MAX_PLAYER_NAME],
-	user_ip,
-	user_playhours,
+	ID,
+	Username[MAX_PLAYER_NAME],
+	IP,
+	PlayTime,
 	Tutorial,
-	user_class,
-	user_skin,
-
+	Class,
+	Skin,
+	pAdmin,
 
 	Cache: Cache_ID,
 	bool: IsLoggedIn,
 	LoginAttempts,
 	LoginTimer,
-	TempLoginText[128]
+	TempLoginText[128],
+
+	LastCPEntered,
+
+	Tick[2] //anti cmd and chat spam
 };
+new Player[MAX_PLAYERS][E_PLAYERS];
 
 enum
 {
@@ -30,14 +33,20 @@ enum
 	DIALOG_TUTORIAL0,
 	DIALOG_TUTORIAL1,
 	/*.......*/
-	DIALOG_TUTORIAL5
+	DIALOG_TUTORIAL5,
+
+	DIALOG_ADMINLOG
 };
 
-new Player[MAX_PLAYERS][E_PLAYERS];
+enum _server
+{
+	Text:LoadingTD[5],
+	AdminLogStartPage, //command YCMD:adminlogs
+	AdminLogEndPage
+}
+new GM[_server];
+
 
 new g_MysqlRaceCheck[MAX_PLAYERS];
 
-new
-	PlayerText:Connecting_TD_Message[MAX_PLAYERS][6];
-
-new Vehicle[MAX_PLAYERS];
+new PlayerText:Connecting_TD_Message[MAX_PLAYERS][6];

@@ -1,17 +1,25 @@
-YCMD:jetpack(playerid, params[], help)
+
+YCMD:enter(playerid, params[], help) 
 {
-	if (help) return SCM(playerid, COLOR_RED, "Gives player a jetpack.");
-	SetPlayerSpecialAction(playerid, SPECIAL_ACTION_USEJETPACK);
+	OnPlayerEnter(playerid);
 	return 1;
 }
 
+YCMD:exit(playerid, params[], help) 
+{
+	OnPlayerEnter(playerid);
+	return 1;
+}
+
+
 YCMD:myid(playerid, params[], help)
 {
-	new string[60];
+	new string[1024];
 	if (help) return SCM(playerid, COLOR_RED, "Shows your playerid");
 
 	
-	format( string, sizeof( string ),"Your id is: %i", Player[playerid][user_id]);
+	format( string, sizeof( string ),"Your id is: %i. Log: %i. Registered IP: %s. PlayTime: %d", 
+		Player[playerid][ID], Player[playerid][IsLoggedIn], Player[playerid][IP], Player[playerid][PlayTime]);
 	SCM(playerid, COLOR_RED, string);
 	return 1;
 }
@@ -19,35 +27,21 @@ YCMD:myid(playerid, params[], help)
 YCMD:help(playerid, params[], help)
 {
     if (help) return SendClientMessage(playerid, -1, "Displays help about commands");
-    // If help system occured, "/help help" the player will get the message above.
     if (isnull(params)) return SendClientMessage(playerid, -1, "Syntax Error: /help [Command]");
-    // If the parameters are null "/help" the player will get the syntax message above ( COLOR = -1 wich is some sort of black )
     Command_ReProcess(playerid, params, true);
-    // Call to put text through the command processor, with the help functions enabled or disabled.
+
     return 1;
 }
 
 YCMD:tp(playerid, params[], help) 
 {
-	new Float:x, Float:y, Float: z;
-	if (help) return SCM(playerid, COLOR_RED, "Teleport to coordinates. /tp <x, y, z>");
-	if(sscanf(params, "fff", x, y, z))	return SendClientMessage(playerid, COLOR_RED, "[USAGE] /tp <x, y, z>");
+	new Float:x, Float:y, Float: z, interior, world;
+	if (help) return SCM(playerid, COLOR_RED, "Teleport to coordinates. /tp <x, y, z, interiorid, world>");
+	if(sscanf(params, "fffdd", x, y, z, interior, world))	return SendClientMessage(playerid, COLOR_RED, "[USAGE] /tp <x, y, z, interiorid, world>");
 	
+	SetPlayerVirtualWorld(playerid, world);
 	SetPlayerPos(playerid, x, y, z);
-
-	return 1;
-}
-
-YCMD:audio(playerid, params[], help) 
-{
-	PlayAudioStreamForPlayer(playerid, "http://striiming.trio.ee/dfm64.mp3");
-	return 1;
-}
-
-
-YCMD:audio2(playerid, params[], help) 
-{
-	PlayAudioStreamForPlayer(playerid, "http://uc89302be8dd3538a5118da93a96.dl.dropboxusercontent.com/cd/0/inline/A8MpFQhvtGM9IKBtnDltS_n_3wPNcKdMNj2jUjySyfTXQZHLAasM9_HfTK0LPSXf-s2_My9qdgiE_hBFw5L_pqWatNVQXnweP9J5baoi7NG7Vu8sdSQJ2QnyAa8MTsWCe_Y/file#");	
+	SetPlayerInterior(playerid, interior);
 	return 1;
 }
 
@@ -77,7 +71,7 @@ YCMD:cargo(playerid, params[], help)
 	return 1;
 }
 
-YCMD:spawn(playerid, params[], help) 
+/*YCMD:spawnveh(playerid, params[], help) 
 {
 	new car;
 	new string[128];
@@ -96,4 +90,4 @@ YCMD:spawn(playerid, params[], help)
 	    PutPlayerInVehicle(playerid, Vehicle[playerid], 0);
 	}
 	return 1;
-}
+}*/

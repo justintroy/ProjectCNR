@@ -126,7 +126,7 @@ resetSkinSelect(playerid)
 YCMD:myclass(playerid, params[], help) 
 {
     new string[60];
-    format( string, sizeof( string ),"Your current class is: %i, skin id: %i", Player[playerid][user_class], Player[playerid][user_skin]);
+    format( string, sizeof( string ),"Your current class is: %i, skin id: %i", Player[playerid][Class], Player[playerid][Skin]);
     SCM(playerid, COLOR_RED, string);
     return 1;
 }
@@ -178,7 +178,7 @@ csTextDrawCreate(playerid)
     PlayerTextDrawSetProportional(playerid, CStag1[playerid], 1);
     PlayerTextDrawSetSelectable(playerid, CStag1[playerid], 0);
 
-    CStag2[playerid] = CreatePlayerTextDraw(playerid, 488.000000, 374.000000, "discord.com/invite/En2QDFZ");
+    CStag2[playerid] = CreatePlayerTextDraw(playerid, 488.000000, 374.000000, SERVER_DISCORD);
     PlayerTextDrawFont(playerid, CStag2[playerid], 2);
     PlayerTextDrawLetterSize(playerid, CStag2[playerid], 0.141663, 0.750000);
     PlayerTextDrawTextSize(playerid, CStag2[playerid], 443.500000, 127.500000);

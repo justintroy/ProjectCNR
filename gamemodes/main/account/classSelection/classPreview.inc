@@ -76,7 +76,7 @@ csPrevTextDrawCreate(playerid)
 	PlayerTextDrawSetProportional(playerid, CS_PrevTag1[playerid], 1);
 	PlayerTextDrawSetSelectable(playerid, CS_PrevTag1[playerid], 0);
 
-	CS_PrevTag2[playerid] = CreatePlayerTextDraw(playerid, 401.000000, 374.000000, "discord.com/invite/En2QDFZ");
+	CS_PrevTag2[playerid] = CreatePlayerTextDraw(playerid, 401.000000, 374.000000, SERVER_DISCORD);
 	PlayerTextDrawFont(playerid, CS_PrevTag2[playerid], 2);
 	PlayerTextDrawLetterSize(playerid, CS_PrevTag2[playerid], 0.141662, 0.750000);
 	PlayerTextDrawTextSize(playerid, CS_PrevTag2[playerid], 443.500000, 127.500000);
@@ -135,7 +135,7 @@ csPrevTextDrawCreate(playerid)
 	PlayerTextDrawSetProportional(playerid, CS_PrevClass[playerid], 1);
 	PlayerTextDrawSetSelectable(playerid, CS_PrevClass[playerid], 0);
 
-	CS_PrevNameInput[playerid] = CreatePlayerTextDraw(playerid, 304.000000, 154.000000, Player[playerid][user_name]);
+	CS_PrevNameInput[playerid] = CreatePlayerTextDraw(playerid, 304.000000, 154.000000, Player[playerid][Username]);
 	PlayerTextDrawFont(playerid, CS_PrevNameInput[playerid], 3);
 	PlayerTextDrawLetterSize(playerid, CS_PrevNameInput[playerid], 0.404166, 1.649999);
 	PlayerTextDrawTextSize(playerid, CS_PrevNameInput[playerid], 440.500000, 17.000000);

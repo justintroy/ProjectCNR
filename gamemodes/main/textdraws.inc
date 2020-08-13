@@ -1,7 +1,75 @@
-/*buildTD()
+buildTD()
 {
+	GM[LoadingTD][0] = TextDrawCreate(320.000000, 180.000000, "_");
+	TextDrawFont(GM[LoadingTD][0], 1);
+	TextDrawLetterSize(GM[LoadingTD][0], 0.600000, 9.750000);
+	TextDrawTextSize(GM[LoadingTD][0], 305.500000, 140.000000);
+	TextDrawSetOutline(GM[LoadingTD][0], 1);
+	TextDrawSetShadow(GM[LoadingTD][0], 0);
+	TextDrawAlignment(GM[LoadingTD][0], 2);
+	TextDrawColor(GM[LoadingTD][0], -1);
+	TextDrawBackgroundColor(GM[LoadingTD][0], 255);
+	TextDrawBoxColor(GM[LoadingTD][0], 1077890228);
+	TextDrawUseBox(GM[LoadingTD][0], 1);
+	TextDrawSetProportional(GM[LoadingTD][0], 1);
+	TextDrawSetSelectable(GM[LoadingTD][0], 0);
 
-}*/
+	GM[LoadingTD][1] = TextDrawCreate(243.000000, 180.000000, "_");
+	TextDrawFont(GM[LoadingTD][1], 1);
+	TextDrawLetterSize(GM[LoadingTD][1], 0.570833, 9.699999);
+	TextDrawTextSize(GM[LoadingTD][1], 294.000000, 1.500000);
+	TextDrawSetOutline(GM[LoadingTD][1], 1);
+	TextDrawSetShadow(GM[LoadingTD][1], 0);
+	TextDrawAlignment(GM[LoadingTD][1], 2);
+	TextDrawColor(GM[LoadingTD][1], -256);
+	TextDrawBackgroundColor(GM[LoadingTD][1], 830864384);
+	TextDrawBoxColor(GM[LoadingTD][1], 830864484);
+	TextDrawUseBox(GM[LoadingTD][1], 1);
+	TextDrawSetProportional(GM[LoadingTD][1], 1);
+	TextDrawSetSelectable(GM[LoadingTD][1], 0);
+
+	GM[LoadingTD][2] = TextDrawCreate(320.000000, 191.000000, "MNL: CNR");
+	TextDrawFont(GM[LoadingTD][2], 3);
+	TextDrawLetterSize(GM[LoadingTD][2], 0.720833, 2.449999);
+	TextDrawTextSize(GM[LoadingTD][2], 400.000000, 114.500000);
+	TextDrawSetOutline(GM[LoadingTD][2], 1);
+	TextDrawSetShadow(GM[LoadingTD][2], 0);
+	TextDrawAlignment(GM[LoadingTD][2], 2);
+	TextDrawColor(GM[LoadingTD][2], 830864639);
+	TextDrawBackgroundColor(GM[LoadingTD][2], 40);
+	TextDrawBoxColor(GM[LoadingTD][2], 50);
+	TextDrawUseBox(GM[LoadingTD][2], 0);
+	TextDrawSetProportional(GM[LoadingTD][2], 1);
+	TextDrawSetSelectable(GM[LoadingTD][2], 0);
+
+	GM[LoadingTD][3] = TextDrawCreate(320.000000, 217.000000, SERVER_DISCORD);
+	TextDrawFont(GM[LoadingTD][3], 1);
+	TextDrawLetterSize(GM[LoadingTD][3], 0.233333, 1.050000);
+	TextDrawTextSize(GM[LoadingTD][3], 400.000000, 114.500000);
+	TextDrawSetOutline(GM[LoadingTD][3], 1);
+	TextDrawSetShadow(GM[LoadingTD][3], 0);
+	TextDrawAlignment(GM[LoadingTD][3], 2);
+	TextDrawColor(GM[LoadingTD][3], -102998785);
+	TextDrawBackgroundColor(GM[LoadingTD][3], 40);
+	TextDrawBoxColor(GM[LoadingTD][3], 50);
+	TextDrawUseBox(GM[LoadingTD][3], 0);
+	TextDrawSetProportional(GM[LoadingTD][3], 1);
+	TextDrawSetSelectable(GM[LoadingTD][3], 0);
+
+	GM[LoadingTD][4] = TextDrawCreate(321.000000, 252.000000, "Loading... Please wait");
+	TextDrawFont(GM[LoadingTD][4], 2);
+	TextDrawLetterSize(GM[LoadingTD][4], 0.233333, 1.050000);
+	TextDrawTextSize(GM[LoadingTD][4], 401.500000, 131.000000);
+	TextDrawSetOutline(GM[LoadingTD][4], 0);
+	TextDrawSetShadow(GM[LoadingTD][4], 0);
+	TextDrawAlignment(GM[LoadingTD][4], 2);
+	TextDrawColor(GM[LoadingTD][4], -102998785);
+	TextDrawBackgroundColor(GM[LoadingTD][4], 255);
+	TextDrawBoxColor(GM[LoadingTD][4], 50);
+	TextDrawUseBox(GM[LoadingTD][4], 0);
+	TextDrawSetProportional(GM[LoadingTD][4], 1);
+	TextDrawSetSelectable(GM[LoadingTD][4], 0);
+}
 
 playerTD(playerid)
 {
