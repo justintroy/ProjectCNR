@@ -15,6 +15,10 @@ UpdatePlayerData(playerid, reason)
 	new ms = NetStats_GetConnectedTime(playerid);
 	Player[playerid][PlayTime] += (ms/1000);
 
+	if(reason == 1)
+	{
+		print("Reason is 1 xD");
+	}
 
 	new query[512];
 	mysql_format(Database, query, sizeof query, "UPDATE `players` SET \

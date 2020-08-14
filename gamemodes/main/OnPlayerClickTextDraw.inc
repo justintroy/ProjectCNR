@@ -1,6 +1,6 @@
 public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 {
-    if(_:playertextid != INVALID_TEXT_DRAW)
+    if(Text:playertextid != INVALID_TEXT_DRAW)
     {
         if(playertextid == Register_PasswordInput[playerid])
         {

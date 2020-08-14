@@ -98,7 +98,7 @@ public OnUserBanDataLoad(playerid)
 		{
 			SendServerMessage(playerid, " You are banned permanently.");
 		}
-		SendServerMessage(playerid, "If you think this is a mistake, kindly submit a appeal ticket at " SERVER_DISCORD);
+		SendServerMessage(playerid, "If you think this is a mistake, kindly submit a appeal ticket at "SERVER_DISCORD"");
 		defer KickBannedPlayer(playerid);
 	}
 	

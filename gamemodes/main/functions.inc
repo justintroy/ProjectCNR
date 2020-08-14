@@ -148,7 +148,7 @@ stock LoadStaticVehiclesFromFile(const filename[]) // gl_common.inc
 	return vehicles_loaded;
 }
 
-stock SendAdminMessage(color, string[])
+stock SendAdminMessage(color, const string[])
 {
 	foreach(new i : Player)
 	{

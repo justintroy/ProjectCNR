@@ -152,8 +152,8 @@ YCMD:admin(playerid, params[], help)
 	return 1;
 }
 
-stock AdminLogEx(adminid, action[])
-{
+stock AdminLogEx(adminid, const action[])
+{ 
     new query[2048];
 	mysql_format(Database, query, sizeof query, "INSERT INTO `adminlogs` \
 		(`AdminName`, \

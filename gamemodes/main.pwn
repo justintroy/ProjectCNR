@@ -5,7 +5,7 @@
 #include <streamer>
 #include <sscanf2>
 #include <samp_bcrypt>
-#include <android-check>
+//#include <android-check>
 
 #include <YSI_Coding\y_inline>
 #include <YSI_Data\y_iterate>
@@ -17,21 +17,21 @@
 
 //#include "main\anticheat"
 
-#include "main\defines"
-#include "main\variables"
-#include "main\functions"
-#include "main\timers"
-#include "main\cmds"
-#include "main\admin\adminsys"
-#include "main\account\account"
-#include "main\textdraws"
-#include "main\OnPlayerClickTextDraw"
-#include "main\dialogs"
-#include "main\maps\objects"
+#include <defines>
+#include <variables>
+#include <functions>
+#include <timers>
+#include <cmds>
+#include <adminsys>
+#include <account>
+#include <textdraws>
+#include <OnPlayerClickTextDraw>
+#include <dialogs>
+#include <objects>
 
-#include "main\player\inventory"
+#include <inventory>
 
-#include "main\core\biz"
+#include <biz>
 
 
 

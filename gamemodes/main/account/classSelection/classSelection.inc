@@ -50,7 +50,7 @@ new skinSelectionArmyModels[] = {
     287, 191, 179
 };
 
-GetNextModel(playerid, class[])
+GetNextModel(playerid, const class[])
 {
     switch(YHash(class))
     {
@@ -82,7 +82,7 @@ GetNextModel(playerid, class[])
     return 0;
 }
 
-GetPrevModel(playerid, class[])
+GetPrevModel(playerid, const class[])
 {
     switch(YHash(class))
     {
