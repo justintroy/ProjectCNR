@@ -1,2 +1,20 @@
 
 *.exe
+dependencies/amx_assembly/
+dependencies/code-parse.inc/
+dependencies/formatex/
+dependencies/indirection/
+dependencies/md-sort/
+dependencies/MySQL-Prepared-Statements/
+dependencies/pawn-stdlib/
+dependencies/progress2/
+dependencies/SA-MP-MySQL/
+dependencies/samp-bcrypt/
+dependencies/samp-logger/
+dependencies/samp-map-zones/
+dependencies/samp-plugin-crashdetect/
+dependencies/samp-stdlib/
+dependencies/samp-streamer-plugin/
+dependencies/sscanf/
+dependencies/timestamp/
+dependencies/YSI-Includes/
