@@ -1,4 +1,5 @@
 #define YSI_NO_HEAP_MALLOC
+#define YSI_NO_OPTIMISATION_MESSAGE
 
 #include <a_samp>
 #include <a_mysql>
@@ -7,6 +8,8 @@
 #include <samp_bcrypt>
 //#include <android-check>
 
+#define SETUP_TABLE			(true) //set to true if tables not set yet
+
 #include <YSI_Coding\y_inline>
 #include <YSI_Data\y_iterate>
 #include <YSI_Visual\y_commands>
@@ -14,11 +17,12 @@
 #include <YSI_Coding\y_hooks>
 #include <YSI_Coding\y_timers>
 #include <YSI_Coding\y_stringhash>
-
+#include <formatex>
 //#include "main\anticheat"
 
 #include <defines>
 #include <variables>
+#include <cfunctions>
 #include <functions>
 #include <timers>
 #include <cmds>
@@ -27,13 +31,15 @@
 #include <textdraws>
 #include <OnPlayerClickTextDraw>
 #include <dialogs>
-#include <objects>
+#include <map>
 
 #include <inventory>
 
 #include <biz>
 
-
+#if SETUP_TABLE
+	#include <setuptable>
+#endif
 
 main()
 {	
@@ -49,7 +55,7 @@ public OnGameModeInit()
 	UsePlayerPedAnims();
 	DisableInteriorEnterExits();
 	EnableStuntBonusForAll(0);
-	Database = mysql_connect(MYSQL_HOSTNAME, MYSQL_USERNAME, "mypassword", MYSQL_DATABASE);
+	Database = mysql_connect(MYSQL_HOSTNAME, MYSQL_USERNAME, "", MYSQL_DATABASE);
 	if(Database == MYSQL_INVALID_HANDLE || mysql_errno(Database) != 0)
 	{
 		print("SERVER: MySQL Connection failed, shutting the server down!");
@@ -57,11 +63,11 @@ public OnGameModeInit()
 		return 1;
 	}
 	print("SERVER: MySQL Connection was successful.");
+	CallLocalFunction("OnMySQLConnected", "");
 
 	LoadStaticVehiclesFromFile("vehicles/sf_airport.txt");
 	LoadStaticVehiclesFromFile("vehicles/sf_gen.txt");
 	LoadStaticVehiclesFromFile("vehicles/sf_law.txt");
-	loadMaps();
 
 	SetGameModeText("Blank Script");
 

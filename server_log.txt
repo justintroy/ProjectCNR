@@ -1,0 +1,2274 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:23:40] language = ""  (string)
+[16:23:40] 
+[16:23:40] Server Plugins
+[16:23:40] --------------
+[16:23:40]  Loading plugin: sscanf
+[16:23:40] 
+
+[16:23:40]  ===============================
+
+[16:23:40]       sscanf plugin loaded.     
+
+[16:23:40]          Version:  2.8.3        
+
+[16:23:40]   (c) 2018 Alex "Y_Less" Cole  
+
+[16:23:40]  ===============================
+
+[16:23:40]   Loaded.
+[16:23:40]  Loading plugin: crashdetect
+[16:23:40]   CrashDetect plugin 4.19.4
+[16:23:40]   Loaded.
+[16:23:40]  Loading plugin: mysql
+[16:23:40]  >> plugin.mysql: R41-4 successfully loaded.
+[16:23:40]   Loaded.
+[16:23:40]  Loading plugin: samp_bcrypt
+[16:23:40] [SampBcrypt] [info]: Version: 0.2.3
+[16:23:40]   Loaded.
+[16:23:40]  Loading plugin: streamer
+[16:23:40] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[16:23:40]   Loaded.
+[16:23:40]  Loaded 5 plugins.
+
+[16:23:40] 
+[16:23:40] Filterscripts
+[16:23:40] ---------------
+[16:23:40]   Loaded 0 filterscripts.
+
+[16:23:41]  
+[16:23:41]  ========================================== 
+[16:23:41]  |                                        | 
+[16:23:41]  |    Generating code, this may take a    | 
+[16:23:41]  |           little bit of time.          | 
+[16:23:41]  |                                        | 
+[16:23:41]  |             Please wait...             | 
+[16:23:41]  |                                        | 
+[16:23:41]  | You can disable this message with:     | 
+[16:23:41]  |                                        | 
+[16:23:41]  |   #define YSI_NO_OPTIMISATION_MESSAGE  | 
+[16:23:41]  |                                        | 
+[16:23:41]  ========================================== 
+[16:23:41]  |                                        | 
+[16:23:41]  | Note that this code generation works   | 
+[16:23:41]  | best with the JIT plugin, which you    | 
+[16:23:41]  | are not currently using.  Get it here: | 
+[16:23:41]  |                                        | 
+[16:23:41]  |        https://git.io/jit-plugin       | 
+[16:23:41]  |                                        | 
+[16:23:41]  ========================================== 
+[16:23:41]  
+[16:24:20]  
+[16:24:20]  ========================================== 
+[16:24:20]  |                                        | 
+[16:24:20]  |   File dumped to YSI code cache:       | 
+[16:24:20]  |                                        | 
+[16:24:20]  |      scriptfiles/YSI_CACHE.amx         | 
+[16:24:20]  |                                        | 
+[16:24:20]  | Load this file instead to skip this    | 
+[16:24:20]  | code optimisation step in the future.  | 
+[16:24:20]  | Note that if you have multiple scripts | 
+[16:24:20]  | loading at once (i.e. gamemodes,       | 
+[16:24:20]  | filterscripts, and modules) you may    | 
+[16:24:20]  | need to load and cache them            | 
+[16:24:20]  | individually so that they don't        | 
+[16:24:20]  | clobber each other.  If you don't, in  | 
+[16:24:20]  | "server.cfg", the following works:     | 
+[16:24:20]  |                                        | 
+[16:24:20]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[16:24:20]  |                                        | 
+[16:24:20]  | You can disable this message with:     | 
+[16:24:20]  |                                        | 
+[16:24:20]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[16:24:20]  |                                        | 
+[16:24:20]  | You can disable this caching with:     | 
+[16:24:20]  |                                        | 
+[16:24:20]  |   #define YSI_NO_MODE_CACHE            | 
+[16:24:20]  |                                        | 
+[16:24:20]  | You can explicitly enable it with:     | 
+[16:24:20]  |                                        | 
+[16:24:20]  |   #define YSI_YES_MODE_CACHE           | 
+[16:24:20]  |                                        | 
+[16:24:20]  ========================================== 
+[16:24:20]  
+[16:24:20]  
+[16:24:20]  
+[16:24:20]  
+[16:24:20]  ========================================== 
+[16:24:20]  |                                        | 
+[16:24:20]  |         YSI version 5.03.0689          | 
+[16:24:20]  |         By Alex "Y_Less" Cole          | 
+[16:24:20]  |                                        | 
+[16:24:20]  | You can disable this message with:     | 
+[16:24:20]  |                                        | 
+[16:24:20]  |   #define YSI_NO_VERSION_CHECK         | 
+[16:24:20]  |                                        | 
+[16:24:20]  ========================================== 
+[16:24:20]  
+[16:24:20]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[16:24:20] Creating Objects (Mechanicmap.inc)
+[16:24:20] SERVER: MySQL Connection failed, shutting the server down!
+[16:24:20] 
+-----------------------------------
+[16:24:20] ---GROUNDBREAKING COPS N ROBBERS----
+[16:24:20] -----------------------------------
+
+[16:24:20] Number of vehicle models: 1
+[16:24:20] --- Server Shutting Down.
+[16:24:20] 
+
+[16:24:20]  ===============================
+
+[16:24:20]      sscanf plugin unloaded.    
+
+[16:24:20]  ===============================
+
+[16:24:20] plugin.mysql: Unloading plugin...
+[16:24:20] plugin.mysql: Plugin unloaded.
+[16:24:20] 
+
+*** Streamer Plugin v2.9.4 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:48:11] language = ""  (string)
+[16:48:11] 
+[16:48:11] Server Plugins
+[16:48:11] --------------
+[16:48:11]  Loading plugin: sscanf
+[16:48:11] 
+
+[16:48:11]  ===============================
+
+[16:48:11]       sscanf plugin loaded.     
+
+[16:48:11]          Version:  2.8.3        
+
+[16:48:11]   (c) 2018 Alex "Y_Less" Cole  
+
+[16:48:11]  ===============================
+
+[16:48:11]   Loaded.
+[16:48:11]  Loading plugin: crashdetect
+[16:48:11]   CrashDetect plugin 4.19.4
+[16:48:11]   Loaded.
+[16:48:11]  Loading plugin: mysql
+[16:48:12]  >> plugin.mysql: R41-4 successfully loaded.
+[16:48:12]   Loaded.
+[16:48:12]  Loading plugin: samp_bcrypt
+[16:48:12] [SampBcrypt] [info]: Version: 0.2.3
+[16:48:12]   Loaded.
+[16:48:12]  Loading plugin: streamer
+[16:48:12] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[16:48:12]   Loaded.
+[16:48:12]  Loaded 5 plugins.
+
+[16:48:12] 
+[16:48:12] Filterscripts
+[16:48:12] ---------------
+[16:48:12]   Loaded 0 filterscripts.
+
+[16:48:12]  
+[16:48:12]  ========================================== 
+[16:48:12]  |                                        | 
+[16:48:12]  |    Generating code, this may take a    | 
+[16:48:12]  |           little bit of time.          | 
+[16:48:12]  |                                        | 
+[16:48:12]  |             Please wait...             | 
+[16:48:12]  |                                        | 
+[16:48:12]  | You can disable this message with:     | 
+[16:48:12]  |                                        | 
+[16:48:12]  |   #define YSI_NO_OPTIMISATION_MESSAGE  | 
+[16:48:12]  |                                        | 
+[16:48:12]  ========================================== 
+[16:48:12]  |                                        | 
+[16:48:12]  | Note that this code generation works   | 
+[16:48:12]  | best with the JIT plugin, which you    | 
+[16:48:12]  | are not currently using.  Get it here: | 
+[16:48:12]  |                                        | 
+[16:48:12]  |        https://git.io/jit-plugin       | 
+[16:48:12]  |                                        | 
+[16:48:12]  ========================================== 
+[16:48:12]  
+[16:48:52]  
+[16:48:52]  ========================================== 
+[16:48:52]  |                                        | 
+[16:48:52]  |   File dumped to YSI code cache:       | 
+[16:48:52]  |                                        | 
+[16:48:52]  |      scriptfiles/YSI_CACHE.amx         | 
+[16:48:52]  |                                        | 
+[16:48:52]  | Load this file instead to skip this    | 
+[16:48:52]  | code optimisation step in the future.  | 
+[16:48:52]  | Note that if you have multiple scripts | 
+[16:48:52]  | loading at once (i.e. gamemodes,       | 
+[16:48:52]  | filterscripts, and modules) you may    | 
+[16:48:52]  | need to load and cache them            | 
+[16:48:52]  | individually so that they don't        | 
+[16:48:52]  | clobber each other.  If you don't, in  | 
+[16:48:52]  | "server.cfg", the following works:     | 
+[16:48:52]  |                                        | 
+[16:48:52]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[16:48:52]  |                                        | 
+[16:48:52]  | You can disable this message with:     | 
+[16:48:52]  |                                        | 
+[16:48:52]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[16:48:52]  |                                        | 
+[16:48:52]  | You can disable this caching with:     | 
+[16:48:52]  |                                        | 
+[16:48:52]  |   #define YSI_NO_MODE_CACHE            | 
+[16:48:52]  |                                        | 
+[16:48:52]  | You can explicitly enable it with:     | 
+[16:48:52]  |                                        | 
+[16:48:52]  |   #define YSI_YES_MODE_CACHE           | 
+[16:48:52]  |                                        | 
+[16:48:52]  ========================================== 
+[16:48:52]  
+[16:48:52]  
+[16:48:52]  
+[16:48:52]  
+[16:48:52]  ========================================== 
+[16:48:52]  |                                        | 
+[16:48:52]  |         YSI version 5.03.0689          | 
+[16:48:52]  |         By Alex "Y_Less" Cole          | 
+[16:48:52]  |                                        | 
+[16:48:52]  | You can disable this message with:     | 
+[16:48:52]  |                                        | 
+[16:48:52]  |   #define YSI_NO_VERSION_CHECK         | 
+[16:48:52]  |                                        | 
+[16:48:52]  ========================================== 
+[16:48:52]  
+[16:48:52]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[16:48:52] Creating Objects (Mechanicmap.inc)
+[16:48:52] SERVER: MySQL Connection was successful.
+[16:48:52] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[16:48:52] 
+-----------------------------------
+[16:48:52] ---GROUNDBREAKING COPS N ROBBERS----
+[16:48:52] -----------------------------------
+
+[16:48:52] Number of vehicle models: 1
+[16:50:39] [connection] incoming connection: 127.0.0.1:58119 id: 0
+[16:50:39] [join] XomoX has joined the server (0:127.0.0.1)
+[16:50:39] Removed Objects For Player (Mechanicmap.inc)
+[16:51:21] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:10:12] language = ""  (string)
+[20:10:12] 
+[20:10:12] Server Plugins
+[20:10:12] --------------
+[20:10:12]  Loading plugin: sscanf
+[20:10:12] 
+
+[20:10:12]  ===============================
+
+[20:10:12]       sscanf plugin loaded.     
+
+[20:10:12]          Version:  2.8.3        
+
+[20:10:12]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:10:12]  ===============================
+
+[20:10:12]   Loaded.
+[20:10:12]  Loading plugin: crashdetect
+[20:10:12]   CrashDetect plugin 4.19.4
+[20:10:12]   Loaded.
+[20:10:12]  Loading plugin: mysql
+[20:10:14]  >> plugin.mysql: R41-4 successfully loaded.
+[20:10:14]   Loaded.
+[20:10:14]  Loading plugin: samp_bcrypt
+[20:10:14] [SampBcrypt] [info]: Version: 0.2.3
+[20:10:14]   Loaded.
+[20:10:14]  Loading plugin: streamer
+[20:10:15] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:10:15]   Loaded.
+[20:10:15]  Loaded 5 plugins.
+
+[20:10:15] 
+[20:10:15] Filterscripts
+[20:10:15] ---------------
+[20:10:15]   Loaded 0 filterscripts.
+
+[20:10:15] [debug] Run time error 19: "File or function is not found"
+[20:10:15] [debug]  printfex
+[20:10:15] [debug] Run time error 19: "File or function is not found"
+[20:10:15] [debug]  printfex
+[20:10:15] Script[gamemodes/main.amx]: Run time error 19: "File or function is not found"
+[20:10:15] Number of vehicle models: 0
+[20:12:19] --- Server Shutting Down.
+[20:12:19] [debug] Run time error 19: "File or function is not found"
+[20:12:19] [debug]  printfex
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:13:32] language = ""  (string)
+[20:13:32] 
+[20:13:32] Server Plugins
+[20:13:32] --------------
+[20:13:32]  Loading plugin: sscanf
+[20:13:32] 
+
+[20:13:32]  ===============================
+
+[20:13:32]       sscanf plugin loaded.     
+
+[20:13:32]          Version:  2.8.3        
+
+[20:13:32]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:13:32]  ===============================
+
+[20:13:32]   Loaded.
+[20:13:32]  Loading plugin: crashdetect
+[20:13:32]   CrashDetect plugin 4.19.4
+[20:13:32]   Loaded.
+[20:13:32]  Loading plugin: mysql
+[20:13:33]  >> plugin.mysql: R41-4 successfully loaded.
+[20:13:33]   Loaded.
+[20:13:33]  Loading plugin: samp_bcrypt
+[20:13:33] [SampBcrypt] [info]: Version: 0.2.3
+[20:13:33]   Loaded.
+[20:13:33]  Loading plugin: streamer
+[20:13:33] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:13:33]   Loaded.
+[20:13:33]  Loaded 5 plugins.
+
+[20:13:34] 
+[20:13:34] Filterscripts
+[20:13:34] ---------------
+[20:13:34]   Loaded 0 filterscripts.
+
+[20:13:34] [debug] Run time error 19: "File or function is not found"
+[20:13:34] [debug]  printfex
+[20:13:34] [debug] Run time error 19: "File or function is not found"
+[20:13:34] [debug]  printfex
+[20:13:34] Script[gamemodes/main.amx]: Run time error 19: "File or function is not found"
+[20:13:34] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:21:36] language = ""  (string)
+[20:21:36] 
+[20:21:36] Server Plugins
+[20:21:36] --------------
+[20:21:36]  Loading plugin: sscanf
+[20:21:36] 
+
+[20:21:36]  ===============================
+
+[20:21:36]       sscanf plugin loaded.     
+
+[20:21:36]          Version:  2.8.3        
+
+[20:21:36]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:21:36]  ===============================
+
+[20:21:36]   Loaded.
+[20:21:36]  Loading plugin: crashdetect
+[20:21:36]   CrashDetect plugin 4.20
+[20:21:36]   Loaded.
+[20:21:36]  Loading plugin: mysql
+[20:21:37]  >> plugin.mysql: R41-4 successfully loaded.
+[20:21:37]   Loaded.
+[20:21:37]  Loading plugin: samp_bcrypt
+[20:21:37] [SampBcrypt] [info]: Version: 0.2.3
+[20:21:37]   Loaded.
+[20:21:37]  Loading plugin: streamer
+[20:21:37] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:21:37]   Loaded.
+[20:21:37]  Loaded 5 plugins.
+
+[20:21:37] 
+[20:21:37] Filterscripts
+[20:21:37] ---------------
+[20:21:37]   Loaded 0 filterscripts.
+
+[20:21:37] [debug] Run time error 19: "File or function is not found"
+[20:21:37] [debug]  printfex
+[20:21:37] [debug] Run time error 19: "File or function is not found"
+[20:21:37] [debug]  printfex
+[20:21:37] Script[gamemodes/main.amx]: Run time error 19: "File or function is not found"
+[20:21:37] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:26:04] language = ""  (string)
+[20:26:04] 
+[20:26:04] Server Plugins
+[20:26:04] --------------
+[20:26:04]  Loading plugin: sscanf
+[20:26:05] 
+
+[20:26:05]  ===============================
+
+[20:26:05]       sscanf plugin loaded.     
+
+[20:26:05]          Version:  2.8.3        
+
+[20:26:05]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:26:05]  ===============================
+
+[20:26:05]   Loaded.
+[20:26:05]  Loading plugin: crashdetect
+[20:26:05]   CrashDetect plugin 4.20
+[20:26:05]   Loaded.
+[20:26:05]  Loading plugin: mysql
+[20:26:06]  >> plugin.mysql: R41-4 successfully loaded.
+[20:26:06]   Loaded.
+[20:26:06]  Loading plugin: samp_bcrypt
+[20:26:06] [SampBcrypt] [info]: Version: 0.2.3
+[20:26:06]   Loaded.
+[20:26:06]  Loading plugin: streamer
+[20:26:06] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:26:06]   Loaded.
+[20:26:06]  Loaded 5 plugins.
+
+[20:26:06] 
+[20:26:06] Filterscripts
+[20:26:06] ---------------
+[20:26:06]   Loaded 0 filterscripts.
+
+[20:26:07] [debug] Run time error 19: "File or function is not found"
+[20:26:07] [debug]  printfex
+[20:26:07] [debug] Run time error 19: "File or function is not found"
+[20:26:07] [debug]  printfex
+[20:26:07] Script[gamemodes/main.amx]: Run time error 19: "File or function is not found"
+[20:26:07] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:27:53] language = ""  (string)
+[20:27:53] 
+[20:27:53] Server Plugins
+[20:27:53] --------------
+[20:27:53]  Loaded 0 plugins.
+
+[20:27:53] 
+[20:27:53] Filterscripts
+[20:27:53] ---------------
+[20:27:53]   Loaded 0 filterscripts.
+
+[20:27:53] Script[gamemodes/main.amx]: Run time error 19: "File or function is not found"
+[20:27:53] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:28:55] language = ""  (string)
+[20:28:55] 
+[20:28:55] Server Plugins
+[20:28:55] --------------
+[20:28:55]  Loading plugin: sscanf
+[20:28:55] 
+
+[20:28:55]  ===============================
+
+[20:28:55]       sscanf plugin loaded.     
+
+[20:28:55]          Version:  2.8.3        
+
+[20:28:55]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:28:55]  ===============================
+
+[20:28:55]   Loaded.
+[20:28:55]  Loading plugin: crashdetect
+[20:28:55]   CrashDetect plugin 4.20
+[20:28:55]   Loaded.
+[20:28:55]  Loading plugin: mysql
+[20:28:56]  >> plugin.mysql: R41-4 successfully loaded.
+[20:28:56]   Loaded.
+[20:28:56]  Loading plugin: samp_bcrypt
+[20:28:56] [SampBcrypt] [info]: Version: 0.2.3
+[20:28:56]   Loaded.
+[20:28:56]  Loading plugin: streamer
+[20:28:56] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:28:56]   Loaded.
+[20:28:56]  Loaded 5 plugins.
+
+[20:28:56] 
+[20:28:56] Filterscripts
+[20:28:56] ---------------
+[20:28:56]   Loaded 0 filterscripts.
+
+[20:28:56] [debug] Long callback execution detected (hang or performance issue)
+[20:28:56] [debug] AMX backtrace:
+[20:28:56] [debug] #0 000013a0 in public OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:201
+[20:28:56]  
+[20:28:56]  ========================================== 
+[20:28:56]  |                                        | 
+[20:28:56]  |    Generating code, this may take a    | 
+[20:28:56]  |           little bit of time.          | 
+[20:28:56]  |                                        | 
+[20:28:56]  |             Please wait...             | 
+[20:28:56]  |                                        | 
+[20:28:56]  | You can disable this message with:     | 
+[20:28:56]  |                                        | 
+[20:28:56]  |   #define YSI_NO_OPTIMISATION_MESSAGE  | 
+[20:28:56]  |                                        | 
+[20:28:56]  ========================================== 
+[20:28:56]  |                                        | 
+[20:28:56]  | Note that this code generation works   | 
+[20:28:56]  | best with the JIT plugin, which you    | 
+[20:28:56]  | are not currently using.  Get it here: | 
+[20:28:56]  |                                        | 
+[20:28:56]  |        https://git.io/jit-plugin       | 
+[20:28:56]  |                                        | 
+[20:28:56]  ========================================== 
+[20:28:56]  
+[20:29:40]  
+[20:29:40]  ========================================== 
+[20:29:40]  |                                        | 
+[20:29:40]  |   File dumped to YSI code cache:       | 
+[20:29:40]  |                                        | 
+[20:29:40]  |      scriptfiles/YSI_CACHE.amx         | 
+[20:29:40]  |                                        | 
+[20:29:40]  | Load this file instead to skip this    | 
+[20:29:40]  | code optimisation step in the future.  | 
+[20:29:40]  | Note that if you have multiple scripts | 
+[20:29:40]  | loading at once (i.e. gamemodes,       | 
+[20:29:40]  | filterscripts, and modules) you may    | 
+[20:29:40]  | need to load and cache them            | 
+[20:29:40]  | individually so that they don't        | 
+[20:29:40]  | clobber each other.  If you don't, in  | 
+[20:29:40]  | "server.cfg", the following works:     | 
+[20:29:40]  |                                        | 
+[20:29:40]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[20:29:40]  |                                        | 
+[20:29:40]  | You can disable this message with:     | 
+[20:29:40]  |                                        | 
+[20:29:40]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[20:29:40]  |                                        | 
+[20:29:40]  | You can disable this caching with:     | 
+[20:29:40]  |                                        | 
+[20:29:40]  |   #define YSI_NO_MODE_CACHE            | 
+[20:29:40]  |                                        | 
+[20:29:40]  | You can explicitly enable it with:     | 
+[20:29:40]  |                                        | 
+[20:29:40]  |   #define YSI_YES_MODE_CACHE           | 
+[20:29:40]  |                                        | 
+[20:29:40]  ========================================== 
+[20:29:40]  
+[20:29:40]  
+[20:29:40]  
+[20:29:40]  
+[20:29:40]  ========================================== 
+[20:29:40]  |                                        | 
+[20:29:40]  |         YSI version 5.03.0689          | 
+[20:29:40]  |         By Alex "Y_Less" Cole          | 
+[20:29:40]  |                                        | 
+[20:29:40]  | You can disable this message with:     | 
+[20:29:40]  |                                        | 
+[20:29:40]  |   #define YSI_NO_VERSION_CHECK         | 
+[20:29:40]  |                                        | 
+[20:29:40]  ========================================== 
+[20:29:40]  
+[20:29:40]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[20:29:40] Creating Objects (Mechanicmap.inc)
+[20:29:41] SERVER: MySQL Connection was successful.
+[20:29:41] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[20:29:41] 
+-----------------------------------
+[20:29:41] ---GROUNDBREAKING COPS N ROBBERS----
+[20:29:41] -----------------------------------
+
+[20:29:41] Number of vehicle models: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:34:48] language = ""  (string)
+[20:34:48] 
+[20:34:48] Server Plugins
+[20:34:48] --------------
+[20:34:48]  Loading plugin: sscanf
+[20:34:48] 
+
+[20:34:48]  ===============================
+
+[20:34:48]       sscanf plugin loaded.     
+
+[20:34:48]          Version:  2.8.3        
+
+[20:34:48]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:34:48]  ===============================
+
+[20:34:48]   Loaded.
+[20:34:48]  Loading plugin: crashdetect
+[20:34:48]   CrashDetect plugin 4.20
+[20:34:48]   Loaded.
+[20:34:48]  Loading plugin: mysql
+[20:34:49]  >> plugin.mysql: R41-4 successfully loaded.
+[20:34:49]   Loaded.
+[20:34:49]  Loading plugin: samp_bcrypt
+[20:34:49] [SampBcrypt] [info]: Version: 0.2.3
+[20:34:49]   Loaded.
+[20:34:49]  Loading plugin: streamer
+[20:34:49] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:34:49]   Loaded.
+[20:34:49]  Loaded 5 plugins.
+
+[20:34:49] 
+[20:34:49] Filterscripts
+[20:34:49] ---------------
+[20:34:49]   Loaded 0 filterscripts.
+
+[20:34:49]  
+[20:34:49]  ========================================== 
+[20:34:49]  |                                        | 
+[20:34:49]  |    Generating code, this may take a    | 
+[20:34:49]  |           little bit of time.          | 
+[20:34:49]  |                                        | 
+[20:34:49]  |             Please wait...             | 
+[20:34:49]  |                                        | 
+[20:34:49]  | You can disable this message with:     | 
+[20:34:49]  |                                        | 
+[20:34:49]  |   #define YSI_NO_OPTIMISATION_MESSAGE  | 
+[20:34:49]  |                                        | 
+[20:34:49]  ========================================== 
+[20:34:49]  |                                        | 
+[20:34:49]  | Note that this code generation works   | 
+[20:34:49]  | best with the JIT plugin, which you    | 
+[20:34:49]  | are not currently using.  Get it here: | 
+[20:34:49]  |                                        | 
+[20:34:49]  |        https://git.io/jit-plugin       | 
+[20:34:49]  |                                        | 
+[20:34:49]  ========================================== 
+[20:34:49]  
+[20:35:34]  
+[20:35:34]  ========================================== 
+[20:35:34]  |                                        | 
+[20:35:34]  |   File dumped to YSI code cache:       | 
+[20:35:34]  |                                        | 
+[20:35:34]  |      scriptfiles/YSI_CACHE.amx         | 
+[20:35:34]  |                                        | 
+[20:35:34]  | Load this file instead to skip this    | 
+[20:35:34]  | code optimisation step in the future.  | 
+[20:35:34]  | Note that if you have multiple scripts | 
+[20:35:34]  | loading at once (i.e. gamemodes,       | 
+[20:35:34]  | filterscripts, and modules) you may    | 
+[20:35:34]  | need to load and cache them            | 
+[20:35:34]  | individually so that they don't        | 
+[20:35:34]  | clobber each other.  If you don't, in  | 
+[20:35:34]  | "server.cfg", the following works:     | 
+[20:35:34]  |                                        | 
+[20:35:34]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[20:35:34]  |                                        | 
+[20:35:34]  | You can disable this message with:     | 
+[20:35:34]  |                                        | 
+[20:35:34]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[20:35:34]  |                                        | 
+[20:35:34]  | You can disable this caching with:     | 
+[20:35:34]  |                                        | 
+[20:35:34]  |   #define YSI_NO_MODE_CACHE            | 
+[20:35:34]  |                                        | 
+[20:35:34]  | You can explicitly enable it with:     | 
+[20:35:34]  |                                        | 
+[20:35:34]  |   #define YSI_YES_MODE_CACHE           | 
+[20:35:34]  |                                        | 
+[20:35:34]  ========================================== 
+[20:35:34]  
+[20:35:34] [debug] Long callback execution detected (hang or performance issue)
+[20:35:34] [debug] AMX backtrace:
+[20:35:34] [debug] #0 0000aaa4 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=70, &buffer=@027b69bc 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:466
+[20:35:34] [debug] #1 0000ae24 in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b69dc 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[20:35:34] [debug] #2 0000ccc8 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[20:35:34] [debug] #3 0000908c in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[20:35:34] [debug] #4 000014e0 in public OnVehicleMod () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[20:35:34]  
+[20:35:34]  
+[20:35:34]  
+[20:35:34]  ========================================== 
+[20:35:34]  |                                        | 
+[20:35:34]  |         YSI version 5.03.0689          | 
+[20:35:34]  |         By Alex "Y_Less" Cole          | 
+[20:35:34]  |                                        | 
+[20:35:34]  | You can disable this message with:     | 
+[20:35:34]  |                                        | 
+[20:35:34]  |   #define YSI_NO_VERSION_CHECK         | 
+[20:35:34]  |                                        | 
+[20:35:34]  ========================================== 
+[20:35:34]  
+[20:35:34]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[20:35:34] Creating Objects (Mechanicmap.inc)
+[20:35:34] SERVER: MySQL Connection was successful.
+[20:35:34] Setting up 'players' table...
+[20:35:34] Setting up 'business' table...
+[20:35:34] Setting up 'inventory' table...
+[20:35:34] Setting up 'bans' table...
+[20:35:34] Setting up 'adminlogs' table...
+[20:35:34] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[20:35:34] 
+-----------------------------------
+[20:35:34] ---GROUNDBREAKING COPS N ROBBERS----
+[20:35:34] -----------------------------------
+
+[20:35:34] Number of vehicle models: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:36:05] language = ""  (string)
+[20:36:05] 
+[20:36:05] Server Plugins
+[20:36:05] --------------
+[20:36:05]  Loaded 0 plugins.
+
+[20:36:05] 
+[20:36:05] Filterscripts
+[20:36:05] ---------------
+[20:36:05]   Loaded 0 filterscripts.
+
+[20:36:06] Script[gamemodes/main.amx]: Run time error 19: "File or function is not found"
+[20:36:06] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:36:38] language = ""  (string)
+[20:36:38] 
+[20:36:38] Server Plugins
+[20:36:38] --------------
+[20:36:38]  Loading plugin: sscanf
+[20:36:38] 
+
+[20:36:38]  ===============================
+
+[20:36:38]       sscanf plugin loaded.     
+
+[20:36:38]          Version:  2.8.3        
+
+[20:36:38]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:36:38]  ===============================
+
+[20:36:38]   Loaded.
+[20:36:38]  Loading plugin: crashdetect
+[20:36:38]   CrashDetect plugin 4.20
+[20:36:38]   Loaded.
+[20:36:38]  Loading plugin: mysql
+[20:36:38]  >> plugin.mysql: R41-4 successfully loaded.
+[20:36:38]   Loaded.
+[20:36:38]  Loading plugin: samp_bcrypt
+[20:36:38] [SampBcrypt] [info]: Version: 0.2.3
+[20:36:38]   Loaded.
+[20:36:38]  Loading plugin: streamer
+[20:36:38] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:36:38]   Loaded.
+[20:36:38]  Loaded 5 plugins.
+
+[20:36:38] 
+[20:36:38] Filterscripts
+[20:36:38] ---------------
+[20:36:38]   Loaded 0 filterscripts.
+
+[20:36:39]  
+[20:36:39]  ========================================== 
+[20:36:39]  |                                        | 
+[20:36:39]  |    Generating code, this may take a    | 
+[20:36:39]  |           little bit of time.          | 
+[20:36:39]  |                                        | 
+[20:36:39]  |             Please wait...             | 
+[20:36:39]  |                                        | 
+[20:36:39]  | You can disable this message with:     | 
+[20:36:39]  |                                        | 
+[20:36:39]  |   #define YSI_NO_OPTIMISATION_MESSAGE  | 
+[20:36:39]  |                                        | 
+[20:36:39]  ========================================== 
+[20:36:39]  |                                        | 
+[20:36:39]  | Note that this code generation works   | 
+[20:36:39]  | best with the JIT plugin, which you    | 
+[20:36:39]  | are not currently using.  Get it here: | 
+[20:36:39]  |                                        | 
+[20:36:39]  |        https://git.io/jit-plugin       | 
+[20:36:39]  |                                        | 
+[20:36:39]  ========================================== 
+[20:36:39]  
+[20:37:26]  
+[20:37:26]  ========================================== 
+[20:37:26]  |                                        | 
+[20:37:26]  |   File dumped to YSI code cache:       | 
+[20:37:26]  |                                        | 
+[20:37:26]  |      scriptfiles/YSI_CACHE.amx         | 
+[20:37:26]  |                                        | 
+[20:37:26]  | Load this file instead to skip this    | 
+[20:37:26]  | code optimisation step in the future.  | 
+[20:37:26]  | Note that if you have multiple scripts | 
+[20:37:26]  | loading at once (i.e. gamemodes,       | 
+[20:37:26]  | filterscripts, and modules) you may    | 
+[20:37:26]  | need to load and cache them            | 
+[20:37:26]  | individually so that they don't        | 
+[20:37:26]  | clobber each other.  If you don't, in  | 
+[20:37:26]  | "server.cfg", the following works:     | 
+[20:37:26]  |                                        | 
+[20:37:26]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[20:37:26]  |                                        | 
+[20:37:26]  | You can disable this message with:     | 
+[20:37:26]  |                                        | 
+[20:37:26]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[20:37:26]  |                                        | 
+[20:37:26]  | You can disable this caching with:     | 
+[20:37:26]  |                                        | 
+[20:37:26]  |   #define YSI_NO_MODE_CACHE            | 
+[20:37:26]  |                                        | 
+[20:37:26]  | You can explicitly enable it with:     | 
+[20:37:26]  |                                        | 
+[20:37:26]  |   #define YSI_YES_MODE_CACHE           | 
+[20:37:26]  |                                        | 
+[20:37:26]  ========================================== 
+[20:37:26]  
+[20:37:26] [debug] Long callback execution detected (hang or performance issue)
+[20:37:27] [debug] AMX backtrace:
+[20:37:27] [debug] #0 0000aaec in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=16, &buffer=@027b5e4c 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:469
+[20:37:27] [debug] #1 0000ae24 in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b5e6c 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[20:37:27] [debug] #2 0000ccc8 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[20:37:27] [debug] #3 0000908c in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[20:37:27] [debug] #4 000014e0 in public OnVehicleMod () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[20:37:27]  
+[20:37:27]  
+[20:37:27]  
+[20:37:27]  ========================================== 
+[20:37:27]  |                                        | 
+[20:37:27]  |         YSI version 5.03.0689          | 
+[20:37:27]  |         By Alex "Y_Less" Cole          | 
+[20:37:27]  |                                        | 
+[20:37:27]  | You can disable this message with:     | 
+[20:37:27]  |                                        | 
+[20:37:27]  |   #define YSI_NO_VERSION_CHECK         | 
+[20:37:27]  |                                        | 
+[20:37:27]  ========================================== 
+[20:37:27]  
+[20:37:27]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[20:37:28] Creating Objects (Mechanicmap.inc)
+[20:37:31] SERVER: MySQL Connection was successful.
+[20:37:31] Setting up 'players' table...
+[20:37:31] Setting up 'business' table...
+[20:37:31] Setting up 'inventory' table...
+[20:37:31] Setting up 'bans' table...
+[20:37:31] Setting up 'adminlogs' table...
+[20:37:31] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[20:37:31] 
+-----------------------------------
+[20:37:31] ---GROUNDBREAKING COPS N ROBBERS----
+[20:37:31] -----------------------------------
+
+[20:37:31] Number of vehicle models: 1
+[20:39:29] [connection] incoming connection: 127.0.0.1:49457 id: 0
+[20:39:30] [join] XomoX has joined the server (0:127.0.0.1)
+[20:39:30] Removed Objects For Player (Mechanicmap.inc)
+[20:39:58] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:42:00] language = ""  (string)
+[20:42:00] 
+[20:42:00] Server Plugins
+[20:42:00] --------------
+[20:42:00]  Loaded 0 plugins.
+
+[20:42:01] 
+[20:42:01] Filterscripts
+[20:42:01] ---------------
+[20:42:01]   Loaded 0 filterscripts.
+
+[20:42:02] Script[gamemodes/main.amx]: Run time error 19: "File or function is not found"
+[20:42:02] Number of vehicle models: 0
+[20:42:42] [connection] incoming connection: 127.0.0.1:65131 id: 0
+[20:42:43] [join] XomoX has joined the server (0:127.0.0.1)
+[20:42:43] Removed Objects For Player (Mechanicmap.inc)
+[20:43:04] [part] XomoX has left the server (0:1)
+[20:43:27] [connection] incoming connection: 127.0.0.1:64755 id: 0
+[20:43:28] [join] XomoX has joined the server (0:127.0.0.1)
+[20:43:28] Removed Objects For Player (Mechanicmap.inc)
+[20:44:30] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:50:00] language = ""  (string)
+[20:50:00] 
+[20:50:00] Server Plugins
+[20:50:00] --------------
+[20:50:00]  Loading plugin: sscanf
+[20:50:00] 
+
+[20:50:00]  ===============================
+
+[20:50:00]       sscanf plugin loaded.     
+
+[20:50:00]          Version:  2.8.3        
+
+[20:50:00]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:50:00]  ===============================
+
+[20:50:00]   Loaded.
+[20:50:00]  Loading plugin: crashdetect
+[20:50:00]   CrashDetect plugin 4.20
+[20:50:00]   Loaded.
+[20:50:00]  Loading plugin: mysql
+[20:50:01]  >> plugin.mysql: R41-4 successfully loaded.
+[20:50:01]   Loaded.
+[20:50:01]  Loading plugin: samp_bcrypt
+[20:50:01] [SampBcrypt] [info]: Version: 0.2.3
+[20:50:01]   Loaded.
+[20:50:01]  Loading plugin: streamer
+[20:50:01] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:50:01]   Loaded.
+[20:50:01]  Loaded 5 plugins.
+
+[20:50:01] 
+[20:50:01] Filterscripts
+[20:50:01] ---------------
+[20:50:01]   Loaded 0 filterscripts.
+
+[20:50:01]  
+[20:50:01]  ========================================== 
+[20:50:01]  |                                        | 
+[20:50:01]  |    Generating code, this may take a    | 
+[20:50:01]  |           little bit of time.          | 
+[20:50:01]  |                                        | 
+[20:50:01]  |             Please wait...             | 
+[20:50:01]  |                                        | 
+[20:50:01]  | You can disable this message with:     | 
+[20:50:01]  |                                        | 
+[20:50:01]  |   #define YSI_NO_OPTIMISATION_MESSAGE  | 
+[20:50:01]  |                                        | 
+[20:50:01]  ========================================== 
+[20:50:01]  |                                        | 
+[20:50:01]  | Note that this code generation works   | 
+[20:50:01]  | best with the JIT plugin, which you    | 
+[20:50:01]  | are not currently using.  Get it here: | 
+[20:50:01]  |                                        | 
+[20:50:01]  |        https://git.io/jit-plugin       | 
+[20:50:01]  |                                        | 
+[20:50:01]  ========================================== 
+[20:50:01]  
+[20:50:44]  
+[20:50:44]  ========================================== 
+[20:50:44]  |                                        | 
+[20:50:44]  |   File dumped to YSI code cache:       | 
+[20:50:44]  |                                        | 
+[20:50:44]  |      scriptfiles/YSI_CACHE.amx         | 
+[20:50:44]  |                                        | 
+[20:50:44]  | Load this file instead to skip this    | 
+[20:50:44]  | code optimisation step in the future.  | 
+[20:50:44]  | Note that if you have multiple scripts | 
+[20:50:44]  | loading at once (i.e. gamemodes,       | 
+[20:50:44]  | filterscripts, and modules) you may    | 
+[20:50:44]  | need to load and cache them            | 
+[20:50:44]  | individually so that they don't        | 
+[20:50:44]  | clobber each other.  If you don't, in  | 
+[20:50:44]  | "server.cfg", the following works:     | 
+[20:50:44]  |                                        | 
+[20:50:44]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[20:50:44]  |                                        | 
+[20:50:44]  | You can disable this message with:     | 
+[20:50:44]  |                                        | 
+[20:50:44]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[20:50:44]  |                                        | 
+[20:50:44]  | You can disable this caching with:     | 
+[20:50:44]  |                                        | 
+[20:50:44]  |   #define YSI_NO_MODE_CACHE            | 
+[20:50:44]  |                                        | 
+[20:50:44]  | You can explicitly enable it with:     | 
+[20:50:44]  |                                        | 
+[20:50:44]  |   #define YSI_YES_MODE_CACHE           | 
+[20:50:44]  |                                        | 
+[20:50:44]  ========================================== 
+[20:50:44]  
+[20:50:44] [debug] Long callback execution detected (hang or performance issue)
+[20:50:44] [debug] AMX backtrace:
+[20:50:44] [debug] #0 0000aaec in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=16, &buffer=@027b5e4c 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:469
+[20:50:44] [debug] #1 0000ae24 in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b5e6c 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[20:50:44] [debug] #2 0000ccc8 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[20:50:44] [debug] #3 0000908c in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[20:50:44] [debug] #4 000014e0 in public OnVehicleMod () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[20:50:44]  
+[20:50:44]  
+[20:50:44]  
+[20:50:44]  ========================================== 
+[20:50:44]  |                                        | 
+[20:50:44]  |         YSI version 5.03.0689          | 
+[20:50:44]  |         By Alex "Y_Less" Cole          | 
+[20:50:44]  |                                        | 
+[20:50:44]  | You can disable this message with:     | 
+[20:50:44]  |                                        | 
+[20:50:44]  |   #define YSI_NO_VERSION_CHECK         | 
+[20:50:44]  |                                        | 
+[20:50:44]  ========================================== 
+[20:50:44]  
+[20:50:44]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[20:50:44] Creating Objects (Mechanicmap.inc)
+[20:50:44] SERVER: MySQL Connection was successful.
+[20:50:44] Setting up 'players' table...
+[20:50:44] Setting up 'business' table...
+[20:50:44] Setting up 'inventory' table...
+[20:50:44] Setting up 'bans' table...
+[20:50:44] Setting up 'adminlogs' table...
+[20:50:44] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[20:50:44] 
+-----------------------------------
+[20:50:44] ---GROUNDBREAKING COPS N ROBBERS----
+[20:50:44] -----------------------------------
+
+[20:50:44] Number of vehicle models: 1
+[20:51:37] [connection] incoming connection: 127.0.0.1:49771 id: 0
+[20:51:37] [join] XomoX has joined the server (0:127.0.0.1)
+[20:51:37] Removed Objects For Player (Mechanicmap.inc)
+[20:52:02] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:53:30] language = ""  (string)
+[20:53:30] 
+[20:53:30] Server Plugins
+[20:53:30] --------------
+[20:53:30]  Loaded 0 plugins.
+
+[20:53:31] 
+[20:53:31] Filterscripts
+[20:53:31] ---------------
+[20:53:31]   Loaded 0 filterscripts.
+
+[20:53:32] Script[gamemodes/main.amx]: Run time error 19: "File or function is not found"
+[20:53:32] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:53:59] language = ""  (string)
+[20:53:59] 
+[20:53:59] Server Plugins
+[20:53:59] --------------
+[20:53:59]  Loading plugin: sscanf
+[20:53:59] 
+
+[20:53:59]  ===============================
+
+[20:53:59]       sscanf plugin loaded.     
+
+[20:53:59]          Version:  2.8.3        
+
+[20:53:59]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:53:59]  ===============================
+
+[20:53:59]   Loaded.
+[20:53:59]  Loading plugin: crashdetect
+[20:53:59]   CrashDetect plugin 4.20
+[20:53:59]   Loaded.
+[20:53:59]  Loading plugin: mysql
+[20:54:00]  >> plugin.mysql: R41-4 successfully loaded.
+[20:54:00]   Loaded.
+[20:54:00]  Loading plugin: samp_bcrypt
+[20:54:00] [SampBcrypt] [info]: Version: 0.2.3
+[20:54:00]   Loaded.
+[20:54:00]  Loading plugin: streamer
+[20:54:00] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:54:00]   Loaded.
+[20:54:00]  Loaded 5 plugins.
+
+[20:54:00] 
+[20:54:00] Filterscripts
+[20:54:00] ---------------
+[20:54:00]   Loaded 0 filterscripts.
+
+[20:54:00]  
+[20:54:00]  ========================================== 
+[20:54:00]  |                                        | 
+[20:54:00]  |    Generating code, this may take a    | 
+[20:54:00]  |           little bit of time.          | 
+[20:54:00]  |                                        | 
+[20:54:00]  |             Please wait...             | 
+[20:54:00]  |                                        | 
+[20:54:00]  | You can disable this message with:     | 
+[20:54:00]  |                                        | 
+[20:54:00]  |   #define YSI_NO_OPTIMISATION_MESSAGE  | 
+[20:54:00]  |                                        | 
+[20:54:00]  ========================================== 
+[20:54:00]  |                                        | 
+[20:54:00]  | Note that this code generation works   | 
+[20:54:00]  | best with the JIT plugin, which you    | 
+[20:54:00]  | are not currently using.  Get it here: | 
+[20:54:00]  |                                        | 
+[20:54:00]  |        https://git.io/jit-plugin       | 
+[20:54:00]  |                                        | 
+[20:54:00]  ========================================== 
+[20:54:00]  
+[20:54:43]  
+[20:54:43]  ========================================== 
+[20:54:43]  |                                        | 
+[20:54:43]  |   File dumped to YSI code cache:       | 
+[20:54:43]  |                                        | 
+[20:54:43]  |      scriptfiles/YSI_CACHE.amx         | 
+[20:54:43]  |                                        | 
+[20:54:43]  | Load this file instead to skip this    | 
+[20:54:43]  | code optimisation step in the future.  | 
+[20:54:43]  | Note that if you have multiple scripts | 
+[20:54:43]  | loading at once (i.e. gamemodes,       | 
+[20:54:43]  | filterscripts, and modules) you may    | 
+[20:54:43]  | need to load and cache them            | 
+[20:54:43]  | individually so that they don't        | 
+[20:54:43]  | clobber each other.  If you don't, in  | 
+[20:54:43]  | "server.cfg", the following works:     | 
+[20:54:43]  |                                        | 
+[20:54:43]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[20:54:43]  |                                        | 
+[20:54:43]  | You can disable this message with:     | 
+[20:54:43]  |                                        | 
+[20:54:43]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[20:54:43]  |                                        | 
+[20:54:43]  | You can disable this caching with:     | 
+[20:54:43]  |                                        | 
+[20:54:43]  |   #define YSI_NO_MODE_CACHE            | 
+[20:54:43]  |                                        | 
+[20:54:43]  | You can explicitly enable it with:     | 
+[20:54:43]  |                                        | 
+[20:54:43]  |   #define YSI_YES_MODE_CACHE           | 
+[20:54:43]  |                                        | 
+[20:54:43]  ========================================== 
+[20:54:43]  
+[20:54:43] [debug] Long callback execution detected (hang or performance issue)
+[20:54:43] [debug] AMX backtrace:
+[20:54:43] [debug] #0 0000aafc in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=40, &buffer=@027b5e18 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:469
+[20:54:43] [debug] #1 0000ae24 in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b5e38 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[20:54:43] [debug] #2 0000ccc8 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[20:54:43] [debug] #3 0000908c in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[20:54:43] [debug] #4 000014e0 in public OnVehicleMod () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[20:54:43]  
+[20:54:43]  
+[20:54:43]  
+[20:54:43]  ========================================== 
+[20:54:43]  |                                        | 
+[20:54:43]  |         YSI version 5.03.0689          | 
+[20:54:43]  |         By Alex "Y_Less" Cole          | 
+[20:54:43]  |                                        | 
+[20:54:43]  | You can disable this message with:     | 
+[20:54:43]  |                                        | 
+[20:54:43]  |   #define YSI_NO_VERSION_CHECK         | 
+[20:54:43]  |                                        | 
+[20:54:43]  ========================================== 
+[20:54:43]  
+[20:54:43]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[20:54:43] Creating Objects (Mechanicmap.inc)
+[20:54:43] SERVER: MySQL Connection was successful.
+[20:54:43] Setting up 'players' table...
+[20:54:43] Setting up 'business' table...
+[20:54:43] Setting up 'inventory' table...
+[20:54:43] Setting up 'bans' table...
+[20:54:43] Setting up 'adminlogs' table...
+[20:54:43] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[20:54:43] 
+-----------------------------------
+[20:54:43] ---GROUNDBREAKING COPS N ROBBERS----
+[20:54:43] -----------------------------------
+
+[20:54:43] Number of vehicle models: 1
+[20:55:20] [connection] incoming connection: 127.0.0.1:49309 id: 0
+[20:55:20] [join] XomoX has joined the server (0:127.0.0.1)
+[20:55:21] Removed Objects For Player (Mechanicmap.inc)
+[20:56:05] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:57:46] language = ""  (string)
+[20:57:46] 
+[20:57:46] Server Plugins
+[20:57:46] --------------
+[20:57:46]  Loading plugin: sscanf
+[20:57:46] 
+
+[20:57:46]  ===============================
+
+[20:57:46]       sscanf plugin loaded.     
+
+[20:57:46]          Version:  2.8.3        
+
+[20:57:46]   (c) 2018 Alex "Y_Less" Cole  
+
+[20:57:46]  ===============================
+
+[20:57:46]   Loaded.
+[20:57:46]  Loading plugin: crashdetect
+[20:57:47]   CrashDetect plugin 4.20
+[20:57:47]   Loaded.
+[20:57:47]  Loading plugin: mysql
+[20:57:47]  >> plugin.mysql: R41-4 successfully loaded.
+[20:57:47]   Loaded.
+[20:57:47]  Loading plugin: samp_bcrypt
+[20:57:47] [SampBcrypt] [info]: Version: 0.2.3
+[20:57:47]   Loaded.
+[20:57:47]  Loading plugin: streamer
+[20:57:47] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[20:57:47]   Loaded.
+[20:57:47]  Loaded 5 plugins.
+
+[20:57:47] 
+[20:57:47] Filterscripts
+[20:57:47] ---------------
+[20:57:47]   Loaded 0 filterscripts.
+
+[20:58:33]  
+[20:58:33]  ========================================== 
+[20:58:33]  |                                        | 
+[20:58:33]  |   File dumped to YSI code cache:       | 
+[20:58:33]  |                                        | 
+[20:58:33]  |      scriptfiles/YSI_CACHE.amx         | 
+[20:58:33]  |                                        | 
+[20:58:33]  | Load this file instead to skip this    | 
+[20:58:33]  | code optimisation step in the future.  | 
+[20:58:33]  | Note that if you have multiple scripts | 
+[20:58:33]  | loading at once (i.e. gamemodes,       | 
+[20:58:33]  | filterscripts, and modules) you may    | 
+[20:58:33]  | need to load and cache them            | 
+[20:58:33]  | individually so that they don't        | 
+[20:58:33]  | clobber each other.  If you don't, in  | 
+[20:58:33]  | "server.cfg", the following works:     | 
+[20:58:33]  |                                        | 
+[20:58:33]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[20:58:33]  |                                        | 
+[20:58:33]  | You can disable this message with:     | 
+[20:58:33]  |                                        | 
+[20:58:33]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[20:58:33]  |                                        | 
+[20:58:33]  | You can disable this caching with:     | 
+[20:58:33]  |                                        | 
+[20:58:33]  |   #define YSI_NO_MODE_CACHE            | 
+[20:58:33]  |                                        | 
+[20:58:33]  | You can explicitly enable it with:     | 
+[20:58:33]  |                                        | 
+[20:58:33]  |   #define YSI_YES_MODE_CACHE           | 
+[20:58:33]  |                                        | 
+[20:58:33]  ========================================== 
+[20:58:33]  
+[20:58:33] [debug] Long callback execution detected (hang or performance issue)
+[20:58:33] [debug] AMX backtrace:
+[20:58:33] [debug] #0 0000a714 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=100, &buffer=@027b30d8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:463
+[20:58:33] [debug] #1 0000aa9c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b30f8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[20:58:33] [debug] #2 0000c940 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[20:58:33] [debug] #3 00008d04 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[20:58:33] [debug] #4 000014e0 in public OnRuntimeError () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[20:58:33]  
+[20:58:33]  
+[20:58:33]  
+[20:58:33]  ========================================== 
+[20:58:33]  |                                        | 
+[20:58:33]  |         YSI version 5.03.0689          | 
+[20:58:33]  |         By Alex "Y_Less" Cole          | 
+[20:58:33]  |                                        | 
+[20:58:33]  | You can disable this message with:     | 
+[20:58:33]  |                                        | 
+[20:58:33]  |   #define YSI_NO_VERSION_CHECK         | 
+[20:58:33]  |                                        | 
+[20:58:33]  ========================================== 
+[20:58:33]  
+[20:58:34]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[20:58:34] Creating Objects (Mechanicmap.inc)
+[20:58:34] SERVER: MySQL Connection failed, shutting the server down!
+[20:58:34] 
+-----------------------------------
+[20:58:34] ---GROUNDBREAKING COPS N ROBBERS----
+[20:58:34] -----------------------------------
+
+[20:58:34] Number of vehicle models: 1
+[20:58:34] --- Server Shutting Down.
+[20:58:34] [debug] Long callback execution detected (hang or performance issue)
+[20:58:34] [debug] AMX backtrace:
+[20:58:34] [debug] #0 0000a6bc in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=93, &buffer=@027b30e4 0, pattern=1601784128) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:457
+[20:58:34] [debug] #1 0000aa9c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b3104 0, pattern=1601784128) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[20:58:34] [debug] #2 0000cae8 in ScriptInit_PreExitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:207
+[20:58:34] [debug] #3 00008e38 in public OnGameModeExit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:643
+[20:58:34] 
+
+[20:58:34]  ===============================
+
+[20:58:34]      sscanf plugin unloaded.    
+
+[20:58:34]  ===============================
+
+[20:58:34] plugin.mysql: Unloading plugin...
+[20:58:34] plugin.mysql: Plugin unloaded.
+[20:58:34] 
+
+*** Streamer Plugin v2.9.4 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:00:18] language = ""  (string)
+[21:00:18] 
+[21:00:18] Server Plugins
+[21:00:18] --------------
+[21:00:18]  Loading plugin: sscanf
+[21:00:18] 
+
+[21:00:18]  ===============================
+
+[21:00:18]       sscanf plugin loaded.     
+
+[21:00:18]          Version:  2.8.3        
+
+[21:00:18]   (c) 2018 Alex "Y_Less" Cole  
+
+[21:00:18]  ===============================
+
+[21:00:18]   Loaded.
+[21:00:18]  Loading plugin: crashdetect
+[21:00:18]   CrashDetect plugin 4.20
+[21:00:18]   Loaded.
+[21:00:18]  Loading plugin: mysql
+[21:00:19]  >> plugin.mysql: R41-4 successfully loaded.
+[21:00:19]   Loaded.
+[21:00:19]  Loading plugin: samp_bcrypt
+[21:00:19] [SampBcrypt] [info]: Version: 0.2.3
+[21:00:19]   Loaded.
+[21:00:19]  Loading plugin: streamer
+[21:00:19] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[21:00:19]   Loaded.
+[21:00:19]  Loaded 5 plugins.
+
+[21:00:19] 
+[21:00:19] Filterscripts
+[21:00:19] ---------------
+[21:00:19]   Loaded 0 filterscripts.
+
+[21:01:03]  
+[21:01:03]  ========================================== 
+[21:01:03]  |                                        | 
+[21:01:03]  |   File dumped to YSI code cache:       | 
+[21:01:03]  |                                        | 
+[21:01:03]  |      scriptfiles/YSI_CACHE.amx         | 
+[21:01:03]  |                                        | 
+[21:01:03]  | Load this file instead to skip this    | 
+[21:01:03]  | code optimisation step in the future.  | 
+[21:01:03]  | Note that if you have multiple scripts | 
+[21:01:03]  | loading at once (i.e. gamemodes,       | 
+[21:01:03]  | filterscripts, and modules) you may    | 
+[21:01:03]  | need to load and cache them            | 
+[21:01:03]  | individually so that they don't        | 
+[21:01:03]  | clobber each other.  If you don't, in  | 
+[21:01:03]  | "server.cfg", the following works:     | 
+[21:01:03]  |                                        | 
+[21:01:03]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[21:01:03]  |                                        | 
+[21:01:03]  | You can disable this message with:     | 
+[21:01:03]  |                                        | 
+[21:01:03]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[21:01:03]  |                                        | 
+[21:01:03]  | You can disable this caching with:     | 
+[21:01:03]  |                                        | 
+[21:01:03]  |   #define YSI_NO_MODE_CACHE            | 
+[21:01:03]  |                                        | 
+[21:01:03]  | You can explicitly enable it with:     | 
+[21:01:03]  |                                        | 
+[21:01:03]  |   #define YSI_YES_MODE_CACHE           | 
+[21:01:03]  |                                        | 
+[21:01:03]  ========================================== 
+[21:01:03]  
+[21:01:03] [debug] Long callback execution detected (hang or performance issue)
+[21:01:03] [debug] AMX backtrace:
+[21:01:03] [debug] #0 0000a714 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=100, &buffer=@027b30d8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:463
+[21:01:03] [debug] #1 0000aa9c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b30f8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[21:01:03] [debug] #2 0000c940 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[21:01:03] [debug] #3 00008d04 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[21:01:03] [debug] #4 000014e0 in public OnRuntimeError () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[21:01:03]  
+[21:01:03]  
+[21:01:03]  
+[21:01:03]  ========================================== 
+[21:01:03]  |                                        | 
+[21:01:03]  |         YSI version 5.03.0689          | 
+[21:01:03]  |         By Alex "Y_Less" Cole          | 
+[21:01:03]  |                                        | 
+[21:01:03]  | You can disable this message with:     | 
+[21:01:03]  |                                        | 
+[21:01:03]  |   #define YSI_NO_VERSION_CHECK         | 
+[21:01:03]  |                                        | 
+[21:01:03]  ========================================== 
+[21:01:03]  
+[21:01:03]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[21:01:03] Creating Objects (Mechanicmap.inc)
+[21:01:03] SERVER: MySQL Connection failed, shutting the server down!
+[21:01:03] 
+-----------------------------------
+[21:01:03] ---GROUNDBREAKING COPS N ROBBERS----
+[21:01:03] -----------------------------------
+
+[21:01:03] Number of vehicle models: 1
+[21:01:03] --- Server Shutting Down.
+[21:01:03] [debug] Long callback execution detected (hang or performance issue)
+[21:01:03] [debug] AMX backtrace:
+[21:01:03] [debug] #0 0000a6bc in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=93, &buffer=@027b30e4 0, pattern=1601784128) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:457
+[21:01:03] [debug] #1 0000aa9c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b3104 0, pattern=1601784128) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[21:01:03] [debug] #2 0000cae8 in ScriptInit_PreExitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:207
+[21:01:03] [debug] #3 00008e38 in public OnGameModeExit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:643
+[21:01:03] 
+
+[21:01:03]  ===============================
+
+[21:01:03]      sscanf plugin unloaded.    
+
+[21:01:03]  ===============================
+
+[21:01:03] plugin.mysql: Unloading plugin...
+[21:01:03] plugin.mysql: Plugin unloaded.
+[21:01:03] 
+
+*** Streamer Plugin v2.9.4 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:01:45] language = ""  (string)
+[21:01:45] 
+[21:01:45] Server Plugins
+[21:01:45] --------------
+[21:01:45]  Loading plugin: sscanf
+[21:01:46] 
+
+[21:01:46]  ===============================
+
+[21:01:46]       sscanf plugin loaded.     
+
+[21:01:46]          Version:  2.8.3        
+
+[21:01:46]   (c) 2018 Alex "Y_Less" Cole  
+
+[21:01:46]  ===============================
+
+[21:01:46]   Loaded.
+[21:01:46]  Loading plugin: crashdetect
+[21:01:46]   CrashDetect plugin 4.20
+[21:01:46]   Loaded.
+[21:01:46]  Loading plugin: mysql
+[21:01:46]  >> plugin.mysql: R41-4 successfully loaded.
+[21:01:46]   Loaded.
+[21:01:46]  Loading plugin: samp_bcrypt
+[21:01:46] [SampBcrypt] [info]: Version: 0.2.3
+[21:01:46]   Loaded.
+[21:01:46]  Loading plugin: streamer
+[21:01:46] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[21:01:46]   Loaded.
+[21:01:46]  Loaded 5 plugins.
+
+[21:01:46] 
+[21:01:46] Filterscripts
+[21:01:46] ---------------
+[21:01:46]   Loaded 0 filterscripts.
+
+[21:01:46] [debug] Long callback execution detected (hang or performance issue)
+[21:01:46] [debug] AMX backtrace:
+[21:01:46] [debug] #0 000013a0 in public OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:201
+[21:02:31]  
+[21:02:31]  ========================================== 
+[21:02:31]  |                                        | 
+[21:02:31]  |   File dumped to YSI code cache:       | 
+[21:02:31]  |                                        | 
+[21:02:31]  |      scriptfiles/YSI_CACHE.amx         | 
+[21:02:31]  |                                        | 
+[21:02:31]  | Load this file instead to skip this    | 
+[21:02:31]  | code optimisation step in the future.  | 
+[21:02:31]  | Note that if you have multiple scripts | 
+[21:02:31]  | loading at once (i.e. gamemodes,       | 
+[21:02:31]  | filterscripts, and modules) you may    | 
+[21:02:31]  | need to load and cache them            | 
+[21:02:31]  | individually so that they don't        | 
+[21:02:31]  | clobber each other.  If you don't, in  | 
+[21:02:31]  | "server.cfg", the following works:     | 
+[21:02:31]  |                                        | 
+[21:02:31]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[21:02:31]  |                                        | 
+[21:02:31]  | You can disable this message with:     | 
+[21:02:31]  |                                        | 
+[21:02:31]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[21:02:31]  |                                        | 
+[21:02:31]  | You can disable this caching with:     | 
+[21:02:31]  |                                        | 
+[21:02:31]  |   #define YSI_NO_MODE_CACHE            | 
+[21:02:31]  |                                        | 
+[21:02:31]  | You can explicitly enable it with:     | 
+[21:02:31]  |                                        | 
+[21:02:31]  |   #define YSI_YES_MODE_CACHE           | 
+[21:02:31]  |                                        | 
+[21:02:31]  ========================================== 
+[21:02:31]  
+[21:02:31]  
+[21:02:31]  
+[21:02:31]  
+[21:02:31]  ========================================== 
+[21:02:31]  |                                        | 
+[21:02:31]  |         YSI version 5.03.0689          | 
+[21:02:31]  |         By Alex "Y_Less" Cole          | 
+[21:02:31]  |                                        | 
+[21:02:31]  | You can disable this message with:     | 
+[21:02:31]  |                                        | 
+[21:02:31]  |   #define YSI_NO_VERSION_CHECK         | 
+[21:02:31]  |                                        | 
+[21:02:31]  ========================================== 
+[21:02:31]  
+[21:02:31]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[21:02:34] Creating Objects (Mechanicmap.inc)
+[21:02:57] SERVER: MySQL Connection was successful.
+[21:02:57] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[21:02:57] 
+-----------------------------------
+[21:02:57] ---GROUNDBREAKING COPS N ROBBERS----
+[21:02:57] -----------------------------------
+
+[21:02:57] Number of vehicle models: 1
+[21:03:51] [connection] incoming connection: 127.0.0.1:65111 id: 0
+[21:03:52] [join] XomoX has joined the server (0:127.0.0.1)
+[21:03:52] Removed Objects For Player (Mechanicmap.inc)
+[21:05:34] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:07:54] language = ""  (string)
+[21:07:54] 
+[21:07:54] Server Plugins
+[21:07:54] --------------
+[21:07:54]  Loading plugin: sscanf
+[21:07:55] 
+
+[21:07:55]  ===============================
+
+[21:07:55]       sscanf plugin loaded.     
+
+[21:07:55]          Version:  2.8.3        
+
+[21:07:55]   (c) 2018 Alex "Y_Less" Cole  
+
+[21:07:55]  ===============================
+
+[21:07:55]   Loaded.
+[21:07:55]  Loading plugin: crashdetect
+[21:07:55]   CrashDetect plugin 4.20
+[21:07:55]   Loaded.
+[21:07:55]  Loading plugin: mysql
+[21:07:55]  >> plugin.mysql: R41-4 successfully loaded.
+[21:07:55]   Loaded.
+[21:07:55]  Loading plugin: samp_bcrypt
+[21:07:55] [SampBcrypt] [info]: Version: 0.2.3
+[21:07:55]   Loaded.
+[21:07:55]  Loading plugin: streamer
+[21:07:55] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[21:07:55]   Loaded.
+[21:07:55]  Loaded 5 plugins.
+
+[21:07:55] 
+[21:07:55] Filterscripts
+[21:07:55] ---------------
+[21:07:55]   Loaded 0 filterscripts.
+
+[21:08:39]  
+[21:08:39]  ========================================== 
+[21:08:39]  |                                        | 
+[21:08:39]  |   File dumped to YSI code cache:       | 
+[21:08:39]  |                                        | 
+[21:08:39]  |      scriptfiles/YSI_CACHE.amx         | 
+[21:08:39]  |                                        | 
+[21:08:39]  | Load this file instead to skip this    | 
+[21:08:39]  | code optimisation step in the future.  | 
+[21:08:39]  | Note that if you have multiple scripts | 
+[21:08:39]  | loading at once (i.e. gamemodes,       | 
+[21:08:39]  | filterscripts, and modules) you may    | 
+[21:08:39]  | need to load and cache them            | 
+[21:08:39]  | individually so that they don't        | 
+[21:08:39]  | clobber each other.  If you don't, in  | 
+[21:08:39]  | "server.cfg", the following works:     | 
+[21:08:39]  |                                        | 
+[21:08:39]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[21:08:39]  |                                        | 
+[21:08:39]  | You can disable this message with:     | 
+[21:08:39]  |                                        | 
+[21:08:39]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[21:08:39]  |                                        | 
+[21:08:39]  | You can disable this caching with:     | 
+[21:08:39]  |                                        | 
+[21:08:39]  |   #define YSI_NO_MODE_CACHE            | 
+[21:08:39]  |                                        | 
+[21:08:39]  | You can explicitly enable it with:     | 
+[21:08:39]  |                                        | 
+[21:08:39]  |   #define YSI_YES_MODE_CACHE           | 
+[21:08:39]  |                                        | 
+[21:08:39]  ========================================== 
+[21:08:39]  
+[21:08:39] [debug] Long callback execution detected (hang or performance issue)
+[21:08:39] [debug] AMX backtrace:
+[21:08:39] [debug] #0 0000a758 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=40, &buffer=@027b3094 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:469
+[21:08:39] [debug] #1 0000aa9c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b30b4 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[21:08:39] [debug] #2 0000c940 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[21:08:39] [debug] #3 00008d04 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[21:08:39] [debug] #4 000014e0 in public OnRuntimeError () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[21:08:39]  
+[21:08:39]  
+[21:08:39]  
+[21:08:39]  ========================================== 
+[21:08:39]  |                                        | 
+[21:08:39]  |         YSI version 5.03.0689          | 
+[21:08:39]  |         By Alex "Y_Less" Cole          | 
+[21:08:39]  |                                        | 
+[21:08:39]  | You can disable this message with:     | 
+[21:08:39]  |                                        | 
+[21:08:39]  |   #define YSI_NO_VERSION_CHECK         | 
+[21:08:39]  |                                        | 
+[21:08:39]  ========================================== 
+[21:08:39]  
+[21:08:39]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[21:08:39] Creating Objects (Mechanicmap.inc)
+[21:08:39] SERVER: MySQL Connection was successful.
+[21:08:39] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[21:08:39] 
+-----------------------------------
+[21:08:39] ---GROUNDBREAKING COPS N ROBBERS----
+[21:08:39] -----------------------------------
+
+[21:08:39] Number of vehicle models: 1
+[21:09:05] [connection] incoming connection: 127.0.0.1:51007 id: 0
+[21:09:06] [join] XomoX has joined the server (0:127.0.0.1)
+[21:09:06] Removed Objects For Player (Mechanicmap.inc)
+[21:09:32] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:11:05] language = ""  (string)
+[21:11:05] 
+[21:11:05] Server Plugins
+[21:11:05] --------------
+[21:11:05]  Loading plugin: sscanf
+[21:11:05] 
+
+[21:11:05]  ===============================
+
+[21:11:05]       sscanf plugin loaded.     
+
+[21:11:05]          Version:  2.8.3        
+
+[21:11:05]   (c) 2018 Alex "Y_Less" Cole  
+
+[21:11:05]  ===============================
+
+[21:11:05]   Loaded.
+[21:11:05]  Loading plugin: crashdetect
+[21:11:06]   CrashDetect plugin 4.20
+[21:11:06]   Loaded.
+[21:11:06]  Loading plugin: mysql
+[21:11:06]  >> plugin.mysql: R41-4 successfully loaded.
+[21:11:06]   Loaded.
+[21:11:06]  Loading plugin: samp_bcrypt
+[21:11:06] [SampBcrypt] [info]: Version: 0.2.3
+[21:11:06]   Loaded.
+[21:11:06]  Loading plugin: streamer
+[21:11:06] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[21:11:06]   Loaded.
+[21:11:06]  Loaded 5 plugins.
+
+[21:11:06] 
+[21:11:06] Filterscripts
+[21:11:06] ---------------
+[21:11:06]   Loaded 0 filterscripts.
+
+[21:11:51]  
+[21:11:51]  ========================================== 
+[21:11:51]  |                                        | 
+[21:11:51]  |   File dumped to YSI code cache:       | 
+[21:11:51]  |                                        | 
+[21:11:51]  |      scriptfiles/YSI_CACHE.amx         | 
+[21:11:51]  |                                        | 
+[21:11:51]  | Load this file instead to skip this    | 
+[21:11:51]  | code optimisation step in the future.  | 
+[21:11:51]  | Note that if you have multiple scripts | 
+[21:11:51]  | loading at once (i.e. gamemodes,       | 
+[21:11:51]  | filterscripts, and modules) you may    | 
+[21:11:51]  | need to load and cache them            | 
+[21:11:51]  | individually so that they don't        | 
+[21:11:51]  | clobber each other.  If you don't, in  | 
+[21:11:51]  | "server.cfg", the following works:     | 
+[21:11:51]  |                                        | 
+[21:11:51]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[21:11:51]  |                                        | 
+[21:11:51]  | You can disable this message with:     | 
+[21:11:51]  |                                        | 
+[21:11:51]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[21:11:51]  |                                        | 
+[21:11:51]  | You can disable this caching with:     | 
+[21:11:51]  |                                        | 
+[21:11:51]  |   #define YSI_NO_MODE_CACHE            | 
+[21:11:51]  |                                        | 
+[21:11:51]  | You can explicitly enable it with:     | 
+[21:11:51]  |                                        | 
+[21:11:51]  |   #define YSI_YES_MODE_CACHE           | 
+[21:11:51]  |                                        | 
+[21:11:51]  ========================================== 
+[21:11:51]  
+[21:11:51] [debug] Long callback execution detected (hang or performance issue)
+[21:11:51] [debug] AMX backtrace:
+[21:11:51] [debug] #0 0000a7d4 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=61, &buffer=@027b4ffc 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:475
+[21:11:51] [debug] #1 0000aa9c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b501c 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[21:11:51] [debug] #2 0000c940 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[21:11:51] [debug] #3 00008d04 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[21:11:51] [debug] #4 000014e0 in public OnVehicleMod () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[21:11:51]  
+[21:11:51]  
+[21:11:51]  
+[21:11:51]  ========================================== 
+[21:11:51]  |                                        | 
+[21:11:51]  |         YSI version 5.03.0689          | 
+[21:11:51]  |         By Alex "Y_Less" Cole          | 
+[21:11:51]  |                                        | 
+[21:11:51]  | You can disable this message with:     | 
+[21:11:51]  |                                        | 
+[21:11:51]  |   #define YSI_NO_VERSION_CHECK         | 
+[21:11:51]  |                                        | 
+[21:11:51]  ========================================== 
+[21:11:51]  
+[21:11:51]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[21:11:51] Creating Objects (Mechanicmap.inc)
+[21:11:51] SERVER: MySQL Connection was successful.
+[21:11:51] Setting up 'players' table...
+[21:11:51] Setting up 'business' table...
+[21:11:51] Setting up 'inventory' table...
+[21:11:51] Setting up 'bans' table...
+[21:11:51] Setting up 'adminlogs' table...
+[21:11:51] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[21:11:51] 
+-----------------------------------
+[21:11:51] ---GROUNDBREAKING COPS N ROBBERS----
+[21:11:51] -----------------------------------
+
+[21:11:51] Number of vehicle models: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:13:48] language = ""  (string)
+[21:13:48] 
+[21:13:48] Server Plugins
+[21:13:48] --------------
+[21:13:48]  Loading plugin: sscanf
+[21:13:48] 
+
+[21:13:48]  ===============================
+
+[21:13:48]       sscanf plugin loaded.     
+
+[21:13:48]          Version:  2.8.3        
+
+[21:13:48]   (c) 2018 Alex "Y_Less" Cole  
+
+[21:13:48]  ===============================
+
+[21:13:48]   Loaded.
+[21:13:48]  Loading plugin: crashdetect
+[21:13:48]   CrashDetect plugin 4.20
+[21:13:48]   Loaded.
+[21:13:48]  Loading plugin: mysql
+[21:13:49]  >> plugin.mysql: R41-4 successfully loaded.
+[21:13:49]   Loaded.
+[21:13:49]  Loading plugin: samp_bcrypt
+[21:13:49] [SampBcrypt] [info]: Version: 0.2.3
+[21:13:49]   Loaded.
+[21:13:49]  Loading plugin: streamer
+[21:13:49] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[21:13:49]   Loaded.
+[21:13:49]  Loaded 5 plugins.
+
+[21:13:49] 
+[21:13:49] Filterscripts
+[21:13:49] ---------------
+[21:13:49]   Loaded 0 filterscripts.
+
+[21:14:33]  
+[21:14:33]  ========================================== 
+[21:14:33]  |                                        | 
+[21:14:33]  |   File dumped to YSI code cache:       | 
+[21:14:33]  |                                        | 
+[21:14:33]  |      scriptfiles/YSI_CACHE.amx         | 
+[21:14:33]  |                                        | 
+[21:14:33]  | Load this file instead to skip this    | 
+[21:14:33]  | code optimisation step in the future.  | 
+[21:14:33]  | Note that if you have multiple scripts | 
+[21:14:33]  | loading at once (i.e. gamemodes,       | 
+[21:14:33]  | filterscripts, and modules) you may    | 
+[21:14:33]  | need to load and cache them            | 
+[21:14:33]  | individually so that they don't        | 
+[21:14:33]  | clobber each other.  If you don't, in  | 
+[21:14:33]  | "server.cfg", the following works:     | 
+[21:14:33]  |                                        | 
+[21:14:33]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[21:14:33]  |                                        | 
+[21:14:33]  | You can disable this message with:     | 
+[21:14:33]  |                                        | 
+[21:14:33]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[21:14:33]  |                                        | 
+[21:14:33]  | You can disable this caching with:     | 
+[21:14:33]  |                                        | 
+[21:14:33]  |   #define YSI_NO_MODE_CACHE            | 
+[21:14:33]  |                                        | 
+[21:14:33]  | You can explicitly enable it with:     | 
+[21:14:33]  |                                        | 
+[21:14:33]  |   #define YSI_YES_MODE_CACHE           | 
+[21:14:33]  |                                        | 
+[21:14:33]  ========================================== 
+[21:14:33]  
+[21:14:33] [debug] Long callback execution detected (hang or performance issue)
+[21:14:33] [debug] AMX backtrace:
+[21:14:33] [debug] #0 0000a6f8 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=39, &buffer=@027b508c 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:461
+[21:14:33] [debug] #1 0000aa9c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b50ac 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[21:14:33] [debug] #2 0000c940 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[21:14:33] [debug] #3 00008d04 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[21:14:33] [debug] #4 000014e0 in public OnVehicleMod () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[21:14:33]  
+[21:14:33]  
+[21:14:33]  
+[21:14:33]  ========================================== 
+[21:14:33]  |                                        | 
+[21:14:33]  |         YSI version 5.03.0689          | 
+[21:14:33]  |         By Alex "Y_Less" Cole          | 
+[21:14:33]  |                                        | 
+[21:14:33]  | You can disable this message with:     | 
+[21:14:33]  |                                        | 
+[21:14:33]  |   #define YSI_NO_VERSION_CHECK         | 
+[21:14:33]  |                                        | 
+[21:14:33]  ========================================== 
+[21:14:33]  
+[21:14:33]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[21:14:33] Creating Objects (Mechanicmap.inc)
+[21:14:33] SERVER: MySQL Connection was successful.
+[21:14:33] Setting up 'players' table...
+[21:14:33] Setting up 'business' table...
+[21:14:33] Setting up 'inventory' table...
+[21:14:33] Setting up 'bans' table...
+[21:14:33] Setting up 'adminlogs' table...
+[21:14:33] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[21:14:33] 
+-----------------------------------
+[21:14:33] ---GROUNDBREAKING COPS N ROBBERS----
+[21:14:33] -----------------------------------
+
+[21:14:33] Number of vehicle models: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:18:05] language = ""  (string)
+[21:18:05] 
+[21:18:05] Server Plugins
+[21:18:05] --------------
+[21:18:05]  Loading plugin: sscanf
+[21:18:05] 
+
+[21:18:05]  ===============================
+
+[21:18:05]       sscanf plugin loaded.     
+
+[21:18:05]          Version:  2.8.3        
+
+[21:18:05]   (c) 2018 Alex "Y_Less" Cole  
+
+[21:18:05]  ===============================
+
+[21:18:05]   Loaded.
+[21:18:05]  Loading plugin: crashdetect
+[21:18:06]   CrashDetect plugin 4.20
+[21:18:06]   Loaded.
+[21:18:06]  Loading plugin: mysql
+[21:18:06]  >> plugin.mysql: R41-4 successfully loaded.
+[21:18:06]   Loaded.
+[21:18:06]  Loading plugin: samp_bcrypt
+[21:18:06] [SampBcrypt] [info]: Version: 0.2.3
+[21:18:06]   Loaded.
+[21:18:06]  Loading plugin: streamer
+[21:18:06] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[21:18:06]   Loaded.
+[21:18:06]  Loaded 5 plugins.
+
+[21:18:06] 
+[21:18:06] Filterscripts
+[21:18:06] ---------------
+[21:18:06]   Loaded 0 filterscripts.
+
+[21:18:51]  
+[21:18:51]  ========================================== 
+[21:18:51]  |                                        | 
+[21:18:51]  |   File dumped to YSI code cache:       | 
+[21:18:51]  |                                        | 
+[21:18:51]  |      scriptfiles/YSI_CACHE.amx         | 
+[21:18:51]  |                                        | 
+[21:18:51]  | Load this file instead to skip this    | 
+[21:18:51]  | code optimisation step in the future.  | 
+[21:18:51]  | Note that if you have multiple scripts | 
+[21:18:51]  | loading at once (i.e. gamemodes,       | 
+[21:18:51]  | filterscripts, and modules) you may    | 
+[21:18:51]  | need to load and cache them            | 
+[21:18:51]  | individually so that they don't        | 
+[21:18:51]  | clobber each other.  If you don't, in  | 
+[21:18:51]  | "server.cfg", the following works:     | 
+[21:18:51]  |                                        | 
+[21:18:51]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[21:18:51]  |                                        | 
+[21:18:51]  | You can disable this message with:     | 
+[21:18:51]  |                                        | 
+[21:18:51]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[21:18:51]  |                                        | 
+[21:18:51]  | You can disable this caching with:     | 
+[21:18:51]  |                                        | 
+[21:18:51]  |   #define YSI_NO_MODE_CACHE            | 
+[21:18:51]  |                                        | 
+[21:18:51]  | You can explicitly enable it with:     | 
+[21:18:51]  |                                        | 
+[21:18:51]  |   #define YSI_YES_MODE_CACHE           | 
+[21:18:51]  |                                        | 
+[21:18:51]  ========================================== 
+[21:18:51]  
+[21:18:51] [debug] Long callback execution detected (hang or performance issue)
+[21:18:51] [debug] AMX backtrace:
+[21:18:51] [debug] #0 0000a6d4 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=110, &buffer=@027b50a0 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:457
+[21:18:51] [debug] #1 0000aa9c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b50c0 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[21:18:51] [debug] #2 0000c940 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[21:18:51] [debug] #3 00008d04 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[21:18:51] [debug] #4 000014e0 in public OnVehicleMod () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[21:18:51]  
+[21:18:51]  
+[21:18:51]  
+[21:18:51]  ========================================== 
+[21:18:51]  |                                        | 
+[21:18:51]  |         YSI version 5.03.0689          | 
+[21:18:51]  |         By Alex "Y_Less" Cole          | 
+[21:18:51]  |                                        | 
+[21:18:51]  | You can disable this message with:     | 
+[21:18:51]  |                                        | 
+[21:18:51]  |   #define YSI_NO_VERSION_CHECK         | 
+[21:18:51]  |                                        | 
+[21:18:51]  ========================================== 
+[21:18:51]  
+[21:18:51]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[21:18:51] Creating Objects (Mechanicmap.inc)
+[21:18:51] SERVER: MySQL Connection was successful.
+[21:18:51] Setting up 'players' table...
+[21:18:51] Setting up 'business' table...
+[21:18:51] Setting up 'inventory' table...
+[21:18:51] Setting up 'bans' table...
+[21:18:51] Setting up 'adminlogs' table...
+[21:18:51] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[21:18:51] 
+-----------------------------------
+[21:18:51] ---GROUNDBREAKING COPS N ROBBERS----
+[21:18:51] -----------------------------------
+
+[21:18:51] Number of vehicle models: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:25:54] language = ""  (string)
+[21:25:54] 
+[21:25:54] Server Plugins
+[21:25:54] --------------
+[21:25:54]  Loading plugin: sscanf
+[21:25:54] 
+
+[21:25:54]  ===============================
+
+[21:25:54]       sscanf plugin loaded.     
+
+[21:25:54]          Version:  2.8.3        
+
+[21:25:54]   (c) 2018 Alex "Y_Less" Cole  
+
+[21:25:54]  ===============================
+
+[21:25:54]   Loaded.
+[21:25:54]  Loading plugin: crashdetect
+[21:25:54]   CrashDetect plugin 4.20
+[21:25:54]   Loaded.
+[21:25:54]  Loading plugin: mysql
+[21:25:55]  >> plugin.mysql: R41-4 successfully loaded.
+[21:25:55]   Loaded.
+[21:25:55]  Loading plugin: samp_bcrypt
+[21:25:55] [SampBcrypt] [info]: Version: 0.2.3
+[21:25:55]   Loaded.
+[21:25:55]  Loading plugin: streamer
+[21:25:55] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[21:25:55]   Loaded.
+[21:25:55]  Loaded 5 plugins.
+
+[21:25:55] 
+[21:25:55] Filterscripts
+[21:25:55] ---------------
+[21:25:55]   Loaded 0 filterscripts.
+
+[21:26:41]  
+[21:26:41]  ========================================== 
+[21:26:41]  |                                        | 
+[21:26:41]  |   File dumped to YSI code cache:       | 
+[21:26:41]  |                                        | 
+[21:26:41]  |      scriptfiles/YSI_CACHE.amx         | 
+[21:26:41]  |                                        | 
+[21:26:41]  | Load this file instead to skip this    | 
+[21:26:41]  | code optimisation step in the future.  | 
+[21:26:41]  | Note that if you have multiple scripts | 
+[21:26:41]  | loading at once (i.e. gamemodes,       | 
+[21:26:41]  | filterscripts, and modules) you may    | 
+[21:26:41]  | need to load and cache them            | 
+[21:26:41]  | individually so that they don't        | 
+[21:26:41]  | clobber each other.  If you don't, in  | 
+[21:26:41]  | "server.cfg", the following works:     | 
+[21:26:41]  |                                        | 
+[21:26:41]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[21:26:41]  |                                        | 
+[21:26:41]  | You can disable this message with:     | 
+[21:26:41]  |                                        | 
+[21:26:41]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[21:26:41]  |                                        | 
+[21:26:41]  | You can disable this caching with:     | 
+[21:26:41]  |                                        | 
+[21:26:41]  |   #define YSI_NO_MODE_CACHE            | 
+[21:26:41]  |                                        | 
+[21:26:41]  | You can explicitly enable it with:     | 
+[21:26:41]  |                                        | 
+[21:26:41]  |   #define YSI_YES_MODE_CACHE           | 
+[21:26:41]  |                                        | 
+[21:26:41]  ========================================== 
+[21:26:41]  
+[21:26:41] [debug] Long callback execution detected (hang or performance issue)
+[21:26:41] [debug] AMX backtrace:
+[21:26:41] [debug] #0 0000a770 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=68, &buffer=@027b5054 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:469
+[21:26:41] [debug] #1 0000aa9c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027b5074 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[21:26:41] [debug] #2 0000c940 in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[21:26:41] [debug] #3 00008d04 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[21:26:41] [debug] #4 000014e0 in public OnVehicleMod () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[21:26:41]  
+[21:26:41]  
+[21:26:41]  
+[21:26:41]  ========================================== 
+[21:26:41]  |                                        | 
+[21:26:41]  |         YSI version 5.03.0689          | 
+[21:26:41]  |         By Alex "Y_Less" Cole          | 
+[21:26:41]  |                                        | 
+[21:26:41]  | You can disable this message with:     | 
+[21:26:41]  |                                        | 
+[21:26:41]  |   #define YSI_NO_VERSION_CHECK         | 
+[21:26:41]  |                                        | 
+[21:26:41]  ========================================== 
+[21:26:41]  
+[21:26:41]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[21:26:41] Creating Objects (Mechanicmap.inc)
+[21:26:41] SERVER: MySQL Connection was successful.
+[21:26:41] Setting up 'players' table...
+[21:26:41] Setting up 'business' table...
+[21:26:41] Setting up 'inventory' table...
+[21:26:41] Setting up 'bans' table...
+[21:26:41] Setting up 'adminlogs' table...
+[21:26:41] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[21:26:41] 
+-----------------------------------
+[21:26:41] ---GROUNDBREAKING COPS N ROBBERS----
+[21:26:41] -----------------------------------
+
+[21:26:41] Number of vehicle models: 1
+[21:27:10] [connection] incoming connection: 127.0.0.1:55411 id: 0
+[21:27:10] [join] XomoX has joined the server (0:127.0.0.1)
+[21:27:11] [debug] Long callback execution detected (hang or performance issue)
+[21:27:11] [debug] AMX backtrace:
+[21:27:11] [debug] #0 000752f8 in playerTD (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\utils\textdraws.inc:100
+[21:27:11] [debug] #1 00071958 in @yH_OnPlayerConnect@009 (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\account\account.inc:14
+[21:27:11] [debug] #2 00020838 in public OnPlayerConnect (0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[21:27:11] Removed Objects For Player (Mechanicmap.inc)
+[21:30:12] Reason is 1 xD
+[21:30:12] [part] XomoX has left the server (0:1)

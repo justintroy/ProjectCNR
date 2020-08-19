@@ -11,12 +11,12 @@
 		"Y-Less/code-parse.inc",
 		"Y-Less/indirection",
 		"Southclaws/formatex",
-		"Zeex/samp-plugin-crashdetect:v4.19.4",
+		"Zeex/samp-plugin-crashdetect:v4.20",
 		"pBlueG/SA-MP-MySQL:R41-4",
 		"Sreyas-Sreelal/samp-bcrypt:0.2.3",
 		"Southclaws/samp-logger",
 		"PatrickGTR/MySQL-Prepared-Statements",
-		"samp-incognito/samp-streamer-plugin:v2.9.4",
+		"samp-incognito/samp-streamer-plugin",
 		"kristoisberg/samp-map-zones",
 		"Southclaws/progress2",
 		"CnRXoMoX/timestamp"
@@ -34,12 +34,16 @@
 				"-Z"
 			],
 			"includes": [
-                "gamemodes/main",
+				"gamemodes/main",
+				"gamemodes/utils",
                 "gamemodes/main/account",
                 "gamemodes/main/admin",
-                "gamemodes/main/core",
+				"gamemodes/main/core",
+				"gamemodes/main/tables",
                 "gamemodes/main/maps",
-				"gamemodes/main/player"
+				"gamemodes/main/player",
+				"gamemodes/main/cmds",
+				"gamemodes/main/anti-cheat"
 			],
 			"constants": {
 				"DEV_BUILD": "1"
@@ -58,7 +62,6 @@
 		"mapname": "San Andreas",
 		"weburl": "www.sa-mp.com",
         "gamemodetext": "Unknown",
-        "filterscripts": ["objectedtr"],
 		"announce": true,
 		"lanmode": false,
 		"query": true,

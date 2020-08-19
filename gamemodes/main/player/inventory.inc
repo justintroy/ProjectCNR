@@ -17,6 +17,7 @@ enum E_INVENTORY
 }
 new PlayerInventory[MAX_PLAYERS][MAX_INVENTORYSLOT][E_INVENTORY];
 
+#include <YSI_Coding\y_hooks>
 
 hook OnPlayerConnect(playerid)
 {
@@ -25,6 +26,7 @@ hook OnPlayerConnect(playerid)
         PlayerInventory[playerid][i][InvItemType] = 0;
         PlayerInventory[playerid][i][InvItemAmount] = 0;
     }
+    return 1;
 }
 
 new ItemArray [MAX_ITEMS] [] =
