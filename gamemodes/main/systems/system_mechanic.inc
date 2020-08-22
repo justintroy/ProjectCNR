@@ -498,24 +498,25 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
         if(IsPlayerMechanic(playerid))
         {
             new targetid = GetClosestPlayer(playerid, 2.0);
-            if(IsPlayerInAnyVehicle(targetid)) {
-                if(GetPlayerAssistant(targetid) != -1) {
-                    SendErrorMessage(playerid, "Player is already getting assisted");
-                    return 1;
-                }
-                if(GetPlayerLastVehicle(targetid) == -1) {
-                    SendErrorMessage(playerid, "Player has no Vehicle entered recently");
-                    return 1;
-                }
-                if(GetPlayerOfferedService(playerid)) {
-                    SendErrorMessage(playerid, "Someone offered an Mech Service to the player");
-                    return 1;
-                }
-                AcceptTimer[targetid] = defer MechAcceptTimer(targetid);
-                SetPlayerAssistedby(targetid, playerid);
-                SetPlayerClientID(playerid, targetid);
-                SetPlayerOfferedService(targetid, true);
+            if(GetPlayerAssistant(targetid) != -1) {
+                SendErrorMessage(playerid, "Player is already getting assisted");
+                return 1;
             }
+            if(GetPlayerLastVehicle(targetid) == -1) {
+                SendErrorMessage(playerid, "Player has no Vehicle entered recently");
+                return 1;
+            }
+            if(GetPlayerOfferedService(playerid)) {
+                SendErrorMessage(playerid, "Someone offered an Mech Service to the player");
+                return 1;
+            }
+            AcceptTimer[targetid] = defer MechAcceptTimer(targetid);
+            SendServerMessageF(playerid, "Offered Mechanic to %p (%d)", targetid, targetid);
+            SendServerMessage(targetid, "You have been offered Mechanic Services use /acceptmech");
+            SetPlayerAssistedby(targetid, playerid);
+            SetPlayerClientID(playerid, targetid);
+            SetPlayerOfferedService(targetid, true);
+            
         }
     }
     return 1;
