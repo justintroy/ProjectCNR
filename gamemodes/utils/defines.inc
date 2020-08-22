@@ -85,3 +85,7 @@
 
 #define OS_TYPE_ANDROID 					0
 #define OS_TYPE_PC 							1
+//--------------------------DIALOG MACROS--------------------
+#define DIALOGID_MECHMENU                   10
+#define DIALOGID_NITROMENU                  11
+#define DIALOGID_RAMPSELMENU                12

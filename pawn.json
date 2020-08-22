@@ -22,34 +22,6 @@
 		"CnRXoMoX/timestamp"
 	],
 	"local": true,
-	"builds": [
-		{
-			"name": "dev",
-			"version": "3.10.10",
-			"args": [
-				"-;+",
-				"-(+",
-				"-d3",
-				"-E",
-				"-Z"
-			],
-			"includes": [
-				"gamemodes/main",
-				"gamemodes/utils",
-                "gamemodes/main/account",
-                "gamemodes/main/admin",
-				"gamemodes/main/core",
-				"gamemodes/main/tables",
-                "gamemodes/main/maps",
-				"gamemodes/main/player",
-				"gamemodes/main/cmds",
-				"gamemodes/main/anti-cheat"
-			],
-			"constants": {
-				"DEV_BUILD": "1"
-			}
-		}
-	],
 	"runtime": {
 		"version": "0.3.7",
 		"mode": "server",
@@ -61,7 +33,7 @@
 		"language": "",
 		"mapname": "San Andreas",
 		"weburl": "www.sa-mp.com",
-        "gamemodetext": "Unknown",
+		"gamemodetext": "Unknown",
 		"announce": true,
 		"lanmode": false,
 		"query": true,
@@ -88,5 +60,36 @@
 		"conncookies": true,
 		"cookielogging": false,
 		"output": true
-	}
+	},
+	"builds": [
+		{
+			"name": "dev",
+			"version": "3.10.10",
+			"args": [
+				"-;+",
+				"-(+",
+				"-d3",
+				"-E",
+				"-Z"
+			],
+			"includes": [
+				"gamemodes/main",
+				"gamemodes/utils",
+				"gamemodes/main/account",
+				"gamemodes/main/admin",
+				"gamemodes/main/core",
+				"gamemodes/main/tables",
+				"gamemodes/main/systems",
+				"gamemodes/main/user-interface",
+				"gamemodes/main/maps",
+				"gamemodes/main/player",
+				"gamemodes/main/cmds",
+				"gamemodes/main/anti-cheat"
+			],
+			"constants": {
+				"DEV_BUILD": "1"
+			},
+			"compiler": {}
+		}
+	]
 }

@@ -8,7 +8,7 @@
 #include <samp_bcrypt>
 //#include <android-check>
 
-#define SETUP_TABLE			(true) //set to true if tables not set yet
+#define SETUP_TABLE			(false) //set to true if tables not set yet
 
 #include <YSI_Coding\y_inline>
 #include <YSI_Data\y_iterate>
@@ -24,6 +24,7 @@
 #include <variables>
 #include <cfunctions>
 #include <functions>
+#include <ui>
 #include <timers>
 #include <cmds>
 #include <adminsys>
@@ -32,7 +33,7 @@
 #include <OnPlayerClickTextDraw>
 #include <dialogs>
 #include <map>
-
+#include <system_mechanic>
 #include <inventory>
 
 #include <biz>

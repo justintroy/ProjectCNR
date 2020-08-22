@@ -10,8 +10,6 @@ hook OnGameModeInit()
 
     AddVehicleComponent(carvid, 1010);
     AddVehicleComponent(carvid, 1078);
-    tmpobjid = CreateDynamicObject(19325,0.0,0.0,-1000.0,0.0,0.0,0.0,-1,-1,-1,300.0,300.0);
-    AttachDynamicObjectToVehicle(tmpobjid, carvid, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000);
     tmpobjid = CreateDynamicObject(18648,0.0,0.0,-1000.0,0.0,0.0,0.0,-1,-1,-1,300.0,300.0);
     AttachDynamicObjectToVehicle(tmpobjid, carvid, 0.949, 0.000, -0.649, 0.000, 0.000, 0.000);
     tmpobjid = CreateDynamicObject(18648,0.0,0.0,-1000.0,0.0,0.0,0.0,-1,-1,-1,300.0,300.0);

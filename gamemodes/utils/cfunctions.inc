@@ -44,3 +44,8 @@ stock SendMsgAllF(colour, const fmat[], {Float,_}:...) {
     return SendClientMessageToAll(colour, chat_msgOut);
 }
 
+stock SendServerMessageToAllF(const fmat[], {Float,_}:...) {
+    formatex(chat_msgOut, sizeof(chat_msgOut), fmat, ___(2));
+    return SendMsgAllF(COLOR_LIGHTBLUE, "[MNLCNR]: "C_WHITE"%s", chat_msgOut);
+}
+

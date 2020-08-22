@@ -235,3 +235,87 @@ stock SendClientMessageToAllEx(color, const str[], {Float,_}:...)
 	}
 	return SendClientMessageToAll(color, str);
 }
+
+stock GetXYInFrontOfPlayer(playerid, &Float:x, &Float:y, Float:distance)
+{
+    new Float:a;
+    GetPlayerPos(playerid, x, y, a);
+    GetPlayerFacingAngle(playerid, a);
+    if (GetPlayerVehicleID(playerid))
+    {
+      GetVehicleZAngle(GetPlayerVehicleID(playerid), a);
+    }
+    x += (distance * floatsin(-a, degrees));
+    y += (distance * floatcos(-a, degrees));
+}
+
+stock PlayerIsNearPlayer(playerid, targetid, Float:radius)
+{
+	new
+        Float:x,
+        Float:y,
+        Float:z;
+
+	GetPlayerPos(playerid, x, y, z);
+
+    new
+        matchingVW = GetPlayerVirtualWorld(playerid) == GetPlayerVirtualWorld(targetid),
+        matchingInt = GetPlayerInterior(playerid) == GetPlayerInterior(targetid),
+        inRange = IsPlayerInRangeOfPoint(targetid, radius, x, y, z);
+
+	return matchingVW && matchingInt && inRange;
+}
+
+stock GetClosestPlayer(playerid, Float:range = 10000.0)
+{
+    new
+        Float:x,
+        Float:y,
+        Float:z;
+
+    GetPlayerPos(playerid, x, y, z);
+
+    return GetClosestPlayerFromPoint(x, y, z, range, playerid);
+}
+
+stock Float:Distance(Float:x1, Float:y1, Float:z1, Float:x2, Float:y2, Float:z2) {
+    return VectorSize(x1 - x2, y1 - y2, z1 - z2);
+}
+
+GetClosestPlayerFromPoint(Float:x, Float:y, Float:z, &Float:lowestdistance = 10000.0, exceptionid = INVALID_PLAYER_ID)
+{
+    new
+        Float:px,
+        Float:py,
+        Float:pz,
+        Float:distance,
+        closestplayer = -1;
+
+    foreach(new i : Player)
+    {
+        if (i == exceptionid)
+            continue;
+
+        GetPlayerPos(i, px, py, pz);
+
+        distance = Distance(px, py, pz, x, y, z);
+
+        if (distance < lowestdistance)
+        {
+            lowestdistance = distance;
+            closestplayer = i;
+        }
+    }
+    return closestplayer;
+}
+
+stock GetVehicleRelativePos(vehicleid, &Float:x, &Float:y, &Float:z, Float:xoff= 0.0, Float:yoff= 0.0, Float:zoff= 0.0)
+{
+    new Float:rot;
+    GetVehicleZAngle(vehicleid, rot);
+    rot = 360 - rot;
+    GetVehiclePos(vehicleid, x, y, z);
+    x = floatsin(rot, degrees) * yoff + floatcos(rot, degrees) * xoff + x;
+    y = floatcos(rot, degrees) * yoff - floatsin(rot, degrees) * xoff + y;
+    z = zoff + z;
+}
