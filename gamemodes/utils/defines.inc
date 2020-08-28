@@ -75,7 +75,7 @@
 
 #define SCM 								SendClientMessage
 #define MNLTAG								"{3185FC}MNL:CNR{F9DC5C}"
-#define SERVER_DISCORD						"(discord.gg/enWJtgJ)"
+#define SERVER_DISCORD						"(discord.gg/m3D6Ff2)"
 
 #define INVALIDCLASS						0
 #define CLASS_CIVILIAN						1
@@ -89,3 +89,4 @@
 #define DIALOGID_MECHMENU                   10
 #define DIALOGID_NITROMENU                  11
 #define DIALOGID_RAMPSELMENU                12
+#define DIALOGID_TIREMENU                   13

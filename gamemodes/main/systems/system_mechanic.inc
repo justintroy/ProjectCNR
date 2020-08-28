@@ -1,3 +1,7 @@
+/*
+    Created By XomoX#8227
+*/
+
 #include <YSI_Coding\y_hooks>
 #include <mechfunctions>
 
@@ -9,8 +13,8 @@ static
     ToolCP,
     PlayerSelectedRamp[MAX_PLAYERS],
     bool:Ramp1IsBeingUsed,
-    bool:Ramp2IsBeingUsed
-    //bool:ToolsIsBeingUsed
+    bool:Ramp2IsBeingUsed,
+    bool:ToolsIsBeingUsed
 ;
 
 static
@@ -26,11 +30,44 @@ static
     bool:PlayerIsMechanic[MAX_PLAYERS]
 ;
 
+static
+    PlayerSelectedTire[MAX_PLAYERS]
+;
+
+enum {
+    TIRE_NONE = 0,
+    TIRE_SHADOW = 1,
+    TIRE_MEGA,
+    TIRE_RIMSHINE,
+    TIRE_WIRES,
+    TIRE_CLASSIC,
+    TIRE_TWIST,
+    TIRE_CUTTER,
+    TIRE_SWITCH,
+    TIRE_GROVE,
+    TIRE_IMPORT,
+    TIRE_DOLLAR,
+    TIRE_TRANS,
+    TIRE_ATOMIC
+} 
+
 enum {
     TYPE_INVALID_SELECTION = -1,
     TYPE_REPAIR = 0,
-    TYPE_NITROUS
+    TYPE_NITROUS,
+    TYPE_HYDRAULICS,
+    TYPE_TIRE
 }
+SetPlayerSelectedTire(playerid, tireid)
+{
+    PlayerSelectedTire[playerid] = tireid;
+}
+
+GetPlayerSelectedTire(playerid)
+{
+    return PlayerSelectedTire[playerid];
+}
+//-----------------------Check if player has been offered an service-----------------
 SetPlayerOfferedService(playerid, bool:bool)
 {
     PlayerHasBeenOffered[playerid] = bool;
@@ -171,6 +208,8 @@ ResetMechanicVars(playerid, targetid)
     SetServiceType(targetid, -1);
     SetPlayerAssistedby(playerid, -1);
     SetPlayerAssistedby(targetid, -1);
+    SetPlayerSelectedTire(playerid, 0);
+    SetPlayerSelectedTire(targetid, 0);
     TogglePlayerAllowedToTakeAction(playerid, false);
     TogglePlayerAllowedToTakeAction(targetid, false);
     SetPlayerAssisted(playerid, false);
@@ -185,7 +224,11 @@ ResetMechanicVars(playerid, targetid)
     else if(GetPlayerSelectedRamp(playerid) == 2 || GetPlayerSelectedRamp(targetid) == 2) {
         Ramp2IsBeingUsed = false;
     }
+    else if(GetPlayerSelectedRamp(playerid) == 3 || GetPlayerSelectedRamp(targetid) == 3) {
+        ToolsIsBeingUsed = false;
+    }
     SetPlayerSelectedRamp(playerid, 0);
+    SetPlayerSelectedRamp(targetid, 0);
     SetPlayerCantEnterVehicle(playerid, false);
     SetPlayerCantEnterVehicle(targetid, false);
 }
@@ -230,8 +273,10 @@ ShowPlayerRampSelection(playerid)
 ShowPlayerMechMenu(playerid)
 {
     static const text[] = "\
-        Fix Vehicle\n \
-        Nitros \
+        Fix Vehicle\n\
+        Hydraulics\n\
+        Nitros\n\
+        Tires\
     ";
     ShowPlayerDialog(playerid, DIALOGID_MECHMENU, DIALOG_STYLE_LIST, "Mechanic Services", text, "Select", "Cancel");
 }
@@ -239,11 +284,31 @@ ShowPlayerMechMenu(playerid)
 ShowPlayerNirtoMenu(playerid)
 {
     static const text[] = "\
-        Nitro x2\n \
-        Nitro x5\n \
-        Nitro x10 \
+        Nitro x2\n\
+        Nitro x5\n\
+        Nitro x10\
     ";
     ShowPlayerDialog(playerid, DIALOGID_NITROMENU, DIALOG_STYLE_LIST, "Nitro", text, "Select", "Back");
+}
+
+ShowPlayerTireMenu(playerid)
+{
+    static const text[] = "\
+        Shadow\n\
+        Mega\n\
+        Rimshine\n\
+        Wires\n\
+        Classic\n\
+        Twist\n\
+        Cutter\n\
+        Switch\n\
+        Grove\n\
+        Import\n\
+        Dollar\n\
+        Trance\n\
+        Atomic\
+    ";
+    ShowPlayerDialog(playerid, DIALOGID_TIREMENU, DIALOG_STYLE_LIST, "Tires", text, "Select", "Back");
 }
 //--------------------------------------------------------------------------------------------
 
@@ -266,16 +331,30 @@ hook OnPlayerStateChange(playerid, newstate, oldstate)
             {
                 Ramp1CP = CreateDynamicRaceCP(2, -1651.9893, 449.2363, 7.1797, -1651.9893, 449.2363, 7.1797, 3.0, -1, -1, playerid, .streamdistance = 300.0);
             }
+            else if(GetServiceType(playerid) == TYPE_HYDRAULICS && GetPlayerLastVehicle(GetPlayerClientID(playerid)) == GetPlayerVehicleID(playerid)) 
+            {
+                Ramp1CP = CreateDynamicRaceCP(2, -1651.9893, 449.2363, 7.1797, -1651.9893, 449.2363, 7.1797, 3.0, -1, -1, playerid, .streamdistance = 300.0);
+            }
         }
         else if(GetPlayerSelectedRamp(playerid) == 2) {
             if(GetServiceType(playerid) == TYPE_REPAIR && GetPlayerLastVehicle(GetPlayerClientID(playerid)) == GetPlayerVehicleID(playerid))
             {
                 Ramp2CP = CreateDynamicRaceCP(2, -1657.5564, 444.3009, 7.1797, -1657.5564, 444.3009, 7.1797, 3.0, -1, -1, playerid, .streamdistance = 300.0);
             }
+            else if(GetServiceType(playerid) == TYPE_HYDRAULICS && GetPlayerLastVehicle(GetPlayerClientID(playerid)) == GetPlayerVehicleID(playerid))
+            {
+                Ramp2CP = CreateDynamicRaceCP(2, -1657.5564, 444.3009, 7.1797, -1657.5564, 444.3009, 7.1797, 3.0, -1, -1, playerid, .streamdistance = 300.0);
+            }
         }
-        if(GetServiceType(playerid) == TYPE_NITROUS && GetPlayerLastVehicle(GetPlayerClientID(playerid)) == GetPlayerVehicleID(playerid))
-        {
-            ToolCP = CreateDynamicRaceCP(2, -1678.919555, 439.157318, 6.859688, -1678.919555, 439.157318, 6.859688, 3.0, -1, -1, playerid, .streamdistance = 300.0);
+        else if(GetPlayerSelectedRamp(playerid) == 3) {
+            if(GetServiceType(playerid) == TYPE_NITROUS && GetPlayerLastVehicle(GetPlayerClientID(playerid)) == GetPlayerVehicleID(playerid))
+            {
+                ToolCP = CreateDynamicRaceCP(2, -1678.919555, 439.157318, 6.859688, -1678.919555, 439.157318, 6.859688, 3.0, -1, -1, playerid, .streamdistance = 300.0);
+            }
+            else if(GetServiceType(playerid) == TYPE_TIRE && GetPlayerLastVehicle(GetPlayerClientID(playerid)) == GetPlayerVehicleID(playerid))
+            {
+                ToolCP = CreateDynamicRaceCP(2, -1678.919555, 439.157318, 6.859688, -1678.919555, 439.157318, 6.859688, 3.0, -1, -1, playerid, .streamdistance = 300.0);
+            }
         }
     }
     return 1;
@@ -296,6 +375,20 @@ hook OnGameModeInit()
     CreateVehicle(411, -1695.0503, 380.6482, 6.9261, 72.5674, 0, 0, -1);
     Ramp1IsBeingUsed = false;
     Ramp2IsBeingUsed = false;
+    ToolsIsBeingUsed = false;
+    return 1;
+}
+
+hook OnPlayerDisconnect(playerid, reason)
+{
+    if(GetPlayerClientID(playerid) != -1)
+    {
+        ResetMechanicVars(playerid, GetPlayerClientID(playerid));
+    }
+    if(GetPlayerAssistant(playerid) != -1)
+    {
+        ResetMechanicVars(playerid, GetPlayerAssistant(playerid));
+    }
     return 1;
 }
 
@@ -306,9 +399,20 @@ hook OnPlayerEnterDynRaceCP(playerid, checkpointid)
         if(GetServiceType(playerid) == TYPE_REPAIR) {
             Textlabel[playerid] = CreateDynamic3DTextLabel("Type /vehfix to fix the vehicle", -1, -1662.113037, 454.551239, 6.187244, 50.0, .playerid = playerid);
             TogglePlayerAllowedToTakeAction(playerid, true);
-            RemovePlayerFromVehicle(playerid);
             SetVehiclePos(GetPlayerLastVehicle(playerid), -1658.5066, 456.4714, 8.8089);
             SetVehicleZAngle(GetPlayerLastVehicle(playerid), 224.1429);
+            RemovePlayerFromVehicle(playerid);
+            SetPlayerCantEnterVehicle(playerid, true);
+            if(IsValidDynamicRaceCP(Ramp1CP)) {
+                DestroyDynamicRaceCP(Ramp1CP);
+            }
+        }
+        else if(GetServiceType(playerid) == TYPE_HYDRAULICS) {
+            Textlabel[playerid] = CreateDynamic3DTextLabel("Type /installhydraulics to fix the vehicle", -1, -1662.113037, 454.551239, 6.187244, 50.0, .playerid = playerid);
+            TogglePlayerAllowedToTakeAction(playerid, true);
+            SetVehiclePos(GetPlayerLastVehicle(playerid), -1658.5066, 456.4714, 8.8089);
+            SetVehicleZAngle(GetPlayerLastVehicle(playerid), 224.1429);
+            RemovePlayerFromVehicle(playerid);
             SetPlayerCantEnterVehicle(playerid, true);
             if(IsValidDynamicRaceCP(Ramp1CP)) {
                 DestroyDynamicRaceCP(Ramp1CP);
@@ -320,9 +424,20 @@ hook OnPlayerEnterDynRaceCP(playerid, checkpointid)
         if(GetServiceType(playerid) == TYPE_REPAIR) {
             Textlabel[playerid] = CreateDynamic3DTextLabel("Type /vehfix to fix the vehicle", -1, -1667.213378, 450.031311, 6.187244, 50.0, .playerid = playerid);
             TogglePlayerAllowedToTakeAction(playerid, true);
-            RemovePlayerFromVehicle(playerid);
             SetVehiclePos(GetPlayerLastVehicle(playerid), -1663.8922, 451.4243, 8.8086);
             SetVehicleZAngle(GetPlayerLastVehicle(playerid), 224.7540);
+            RemovePlayerFromVehicle(playerid);
+            SetPlayerCantEnterVehicle(playerid, true);
+            if(IsValidDynamicRaceCP(Ramp2CP)) {
+                DestroyDynamicRaceCP(Ramp2CP);
+            }
+        }
+        else if(GetServiceType(playerid) == TYPE_HYDRAULICS) {
+            Textlabel[playerid] = CreateDynamic3DTextLabel("Type /installhydraulics to fix the vehicle", -1, -1667.213378, 450.031311, 6.187244, 50.0, .playerid = playerid);
+            TogglePlayerAllowedToTakeAction(playerid, true);
+            SetVehiclePos(GetPlayerLastVehicle(playerid), -1663.8922, 451.4243, 8.8086);
+            SetVehicleZAngle(GetPlayerLastVehicle(playerid), 224.7540);
+            RemovePlayerFromVehicle(playerid);
             SetPlayerCantEnterVehicle(playerid, true);
             if(IsValidDynamicRaceCP(Ramp2CP)) {
                 DestroyDynamicRaceCP(Ramp2CP);
@@ -334,9 +449,20 @@ hook OnPlayerEnterDynRaceCP(playerid, checkpointid)
         if(GetServiceType(playerid) == TYPE_NITROUS) {
             Textlabel[playerid] = CreateDynamic3DTextLabel("Type /getnitro to get a nitro", -1, -1678.919555, 439.157318, 6.859688, 50.0, .playerid = playerid);
             TogglePlayerAllowedToTakeAction(playerid, true);
-            RemovePlayerFromVehicle(playerid);
             SetVehiclePos(GetPlayerLastVehicle(playerid), -1678.7200, 432.2533, 6.9068);
             SetVehicleZAngle(GetPlayerLastVehicle(playerid), 224.4441);
+            RemovePlayerFromVehicle(playerid);
+            SetPlayerCantEnterVehicle(playerid, true);
+            if(IsValidDynamicRaceCP(ToolCP)) {
+                DestroyDynamicRaceCP(ToolCP);
+            }
+        }
+        else if(GetServiceType(playerid) == TYPE_TIRE) {
+            Textlabel[playerid] = CreateDynamic3DTextLabel("Type /gettire to get a nitro", -1, -1678.919555, 439.157318, 6.859688, 50.0, .playerid = playerid);
+            TogglePlayerAllowedToTakeAction(playerid, true);
+            SetVehiclePos(GetPlayerLastVehicle(playerid), -1678.7200, 432.2533, 6.9068);
+            SetVehicleZAngle(GetPlayerLastVehicle(playerid), 224.4441);
+            RemovePlayerFromVehicle(playerid);
             SetPlayerCantEnterVehicle(playerid, true);
             if(IsValidDynamicRaceCP(ToolCP)) {
                 DestroyDynamicRaceCP(ToolCP);
@@ -352,27 +478,20 @@ CMD:goto(playerid, params[])
     return 1;
 }
 
+CMD:showmenu(playerid, params[])
+{
+    SetPlayerAssistedby(playerid, playerid);
+    SetPlayerClientID(playerid, playerid);
+    ShowPlayerMechMenu(playerid);
+    return 1;
+}
+
 CMD:nrg(playerid, params[])
 {
     new Float:x, Float:y, Float:z;
     GetPlayerPos(playerid, x, y, z);
     GetXYInFrontOfPlayer(playerid, x, y, 5.0);
     CreateVehicle(522, x, y, z, 90, 0, 0, -1);
-    return 1;
-}
-
-CMD:toggleramp(playerid, params[])
-{
-    if(Ramp1IsBeingUsed)
-    {
-        Ramp1IsBeingUsed = false;
-        SendServerMessage(playerid, "Ramp 1 has been toggled off");
-    }
-    else if(!Ramp1IsBeingUsed)
-    {
-        Ramp1IsBeingUsed = true;
-        SendServerMessage(playerid, "Ramp 1 has been toggled on");
-    }
     return 1;
 }
 
@@ -416,13 +535,34 @@ CMD:vehfix(playerid, params[])
     return 1;
 }
 
+CMD:installhydraulics(playerid, params[]) {
+    if(!IsPlayerMechanic(playerid)) {
+        return SendErrorMessage(playerid, "You're not a Mechanic!");
+    }
+    if(!IsPlayerInRangeOfPoint(playerid, 3.0, -1662.113037, 454.551239, 6.187244) && GetPlayerSelectedRamp(playerid) == 1) {
+        return SendErrorMessage(playerid, "You're not close the the Tuning Computer");
+    }
+    else if(!IsPlayerInRangeOfPoint(playerid, 3.0, -1667.213378, 450.031311, 6.187244) && GetPlayerSelectedRamp(playerid) == 2) {
+        return SendErrorMessage(playerid, "You're not close the the Tuning Computer");
+    }
+    if(GetServiceType(playerid) != TYPE_HYDRAULICS) {
+        return SendErrorMessage(playerid, "You can't add a hydraulics because its not requested");
+    }
+    if(!PlayerAllowedTotakeAction(playerid)) {
+        return SendErrorMessage(playerid, "You need to get the vehicle to the ramp"); 
+    }
+    defer installHydraulicsTime(playerid, GetPlayerClientID(playerid));
+    ApplyAnimation(playerid, "ped", "ATM", 4.1, 1, 0, 0, 0, 0, 1);
+    return 1;
+}
+
 CMD:getnitro(playerid, params[])
 {
     if(!IsPlayerMechanic(playerid)) {
         return SendErrorMessage(playerid, "You're not a mechanic!");
     }
     if(GetServiceType(playerid) != TYPE_NITROUS) {
-        return SendErrorMessage(playerid, "You can't place a Nitro on the vehicle you're not serving anyone!");
+        return SendErrorMessage(playerid, "You can't get a Nitro on the vehicle you're not serving anyone!");
     }
     if(!PlayerAllowedTotakeAction(playerid)) {
         return SendErrorMessage(playerid, "Park the car near the tools");
@@ -452,6 +592,46 @@ CMD:placenitro(playerid, params[])
         return SendErrorMessage(playerid, "You're not on the Rear of the vehicle");
     }
     defer PlaceNiro(playerid, GetNitroRequest(playerid));
+    ApplyAnimation(playerid, "BOMBER", "BOM_Plant", 4.1, 1, 0, 0, 0, 0, 1);
+    return 1;
+}
+
+CMD:gettire(playerid, params[])
+{
+    if(!IsPlayerMechanic(playerid)) {
+        return SendErrorMessage(playerid, "You're not a mechanic!");
+    }
+    if(GetServiceType(playerid) != TYPE_TIRE) {
+        return SendErrorMessage(playerid, "You can't get a Nitro on the vehicle you're not serving anyone!");
+    }
+    if(!PlayerAllowedTotakeAction(playerid)) {
+        return SendErrorMessage(playerid, "Park the car near the tools");
+    }
+    defer GetComp(playerid, 2);
+    ApplyAnimation(playerid, "BOMBER", "BOM_Plant", 4.1, 1, 0, 0, 0, 0, 1);
+    return 1;
+}
+
+CMD:placetire(playerid, params[])
+{
+    new Float:x, Float:y, Float:z;
+    GetVehicleRelativePos(GetPlayerLastVehicle(playerid), x, y, z, 1.0, 1.0, 0.0);
+    if(!IsPlayerMechanic(playerid)) {
+        return SendErrorMessage(playerid, "You're not a mechanic!");
+    }
+    if(GetServiceType(playerid) != TYPE_TIRE) {
+        return SendErrorMessage(playerid, "You can't place a Tire on the vehicle you're not serving anyone!");
+    }
+    if(!PlayerAllowedTotakeAction(playerid)) {
+        return SendErrorMessage(playerid, "Park the car near the tools");
+    }
+    if(!IsPlayerHasTheComponent(playerid)) {
+        return SendErrorMessage(playerid, "You don't have the component left");
+    }
+    if(!IsPlayerInRangeOfPoint(playerid, 3.0, x, y, z)) {
+        return SendErrorMessage(playerid, "You're not on the Rear of the vehicle");
+    }
+    defer PlaceTire(playerid, GetPlayerSelectedTire(playerid));
     ApplyAnimation(playerid, "BOMBER", "BOM_Plant", 4.1, 1, 0, 0, 0, 0, 1);
     return 1;
 }
@@ -488,6 +668,7 @@ CMD:acceptmech(playerid, params[])
         return SendErrorMessage(playerid, "You didn't recieved an offer yet!");
     }
     ShowPlayerMechMenu(playerid);
+    SetPlayerOfferedService(playerid, false);
     stop AcceptTimer[playerid];
     return 1;
 }
@@ -535,7 +716,37 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             }
             if(listitem == 1)
             {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1087)) {
+                    SendErrorMessage(playerid, "You can't add a Hydraulics in this vehicle");
+                    ResetMechanicVars(playerid, GetPlayerAssistant(playerid));
+                    return 1;
+                }
+                ShowPlayerRampSelection(GetPlayerAssistant(playerid));
+                SetServiceType(GetPlayerAssistant(playerid), TYPE_HYDRAULICS);
+            }
+            if(listitem == 2)
+            {
+                if(ToolsIsBeingUsed) {
+                    new targetid = GetPlayerAssistant(playerid);
+                    SendErrorMessage(targetid, "Player selected nitro but Tools is being used");
+                    SendErrorMessage(playerid, "Tools is being used by another player");
+                    return 1;
+                }
+                ToolsIsBeingUsed = true;
+                SetPlayerSelectedRamp(GetPlayerAssistant(playerid), 3);
                 ShowPlayerNirtoMenu(playerid);
+            }
+            if(listitem == 3)
+            {
+                if(ToolsIsBeingUsed) {
+                    new targetid = GetPlayerAssistant(playerid);
+                    SendErrorMessage(targetid, "Player selected nitro but Tools is being used");
+                    SendErrorMessage(playerid, "Tools is being used by another player");
+                    return 1;
+                }
+                ToolsIsBeingUsed = true;
+                SetPlayerSelectedRamp(GetPlayerAssistant(playerid), 3);
+                ShowPlayerTireMenu(playerid);
             }
         }
         else if(response == 0)
@@ -629,6 +840,160 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             ResetMechanicVars(playerid, GetPlayerClientID(playerid));
         }
     }
+    if(dialogid == DIALOGID_TIREMENU)
+    {
+        new mechid = GetPlayerAssistant(playerid);
+        if(response == 1)
+        {
+            if(listitem == 0) //shadow
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1073)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 1);
+            }
+            if(listitem == 1) //mega
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1074)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 2);
+            }
+            if(listitem == 2) //Rimshine
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1075)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 3);
+            }
+            if(listitem == 3) //wires
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1076)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 4);
+            }
+            if(listitem == 4) //classic
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1077)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 5);
+            }
+            if(listitem == 5) //twist
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1078)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 6);
+            }
+            if(listitem == 6) //Cutter
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1079)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 7);
+            }
+            if(listitem == 7) //Switch
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1080)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 8);
+            }
+            if(listitem == 8) //Grove
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1081)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 9);
+            }
+            if(listitem == 9) //Import
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1082)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 10);
+            }
+            if(listitem == 10) //Dollar
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1083)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 11);
+            }
+            if(listitem == 11) //Trance
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1084)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 12);
+            }
+            if(listitem == 12) //Import
+            {
+                if(!IsValidComponentForVehicle(GetPlayerLastVehicle(playerid), 1085)) {
+                    SendErrorMessage(playerid, "You can't add this tire in this vehicle");
+                    ResetMechanicVars(playerid, mechid);
+                    return 1;
+                }
+                SendServerMessage(mechid, "Enter the Client's car");
+                SetServiceType(mechid, TYPE_TIRE);
+                SetPlayerSelectedTire(mechid, 13);
+            }
+        }
+        else if(response == 0)
+        {
+            ShowPlayerMechMenu(playerid);
+        }
+    }
     return 1;
 }
 
@@ -640,6 +1005,7 @@ timer MechAcceptTimer[7000](playerid)
     SetPlayerAssistedby(playerid, -1);
     SetPlayerOfferedService(playerid, false);
 }
+
 timer RepairTimer[5000](playerid, targetid)
 {
     new vehid = GetPlayerLastVehicle(playerid);
@@ -655,6 +1021,130 @@ timer RepairTimer[5000](playerid, targetid)
     SendServerMessage(targetid, "Finished Fixing the Vehicle");
     SetPlayerCantEnterVehicle(playerid, false);
     ShowPlayerMechMenu(targetid);
+}
+
+timer installHydraulicsTime[5000](playerid, targetid)
+{
+    new vehid = GetPlayerLastVehicle(playerid);
+    AddVehicleComponent(vehid, 1087);
+    GivePlayerMoney(targetid, -1500);
+    GivePlayerMoney(playerid, 1500);
+    SetPlayerAssisted(targetid, true);
+    if(IsValidDynamic3DTextLabel(Textlabel[playerid])) {
+        DestroyDynamic3DTextLabel(Textlabel[playerid]);
+    }
+    SendServerMessage(playerid, "Finished Adding Hydraulics to the Vehicle");
+    SendServerMessage(targetid, "Finished Adding Hydraulics to the Vehicle");
+    SetPlayerCantEnterVehicle(playerid, false);
+    ShowPlayerMechMenu(targetid);
+}
+
+timer PlaceTire[5000](playerid, tire)
+{
+    new vehid = GetPlayerLastVehicle(playerid);
+    new targetid = GetPlayerClientID(playerid);
+    ClearAnimations(playerid, 1);
+    if(IsValidDynamic3DTextLabel(Textlabel[playerid])) {
+        DestroyDynamic3DTextLabel(Textlabel[playerid]);
+    }
+    RemovePlayerAttachedObject(playerid, 6);
+    SetPlayerCantEnterVehicle(playerid, false);
+    switch(tire)
+    {
+        case 1:
+        {
+            AddVehicleComponent(vehid, 1073);
+            GivePlayerMoney(targetid, -1100);
+            GivePlayerMoney(playerid, 1100);
+            SendServerMessage(targetid, "Your car has been installed Shadow Tires");
+        }
+        case 2:
+        {
+            AddVehicleComponent(vehid, 1074);
+            GivePlayerMoney(targetid, -1030);
+            GivePlayerMoney(playerid, 1030);
+            SendServerMessage(targetid, "Your car has been installed Mega Tires");
+        }
+        case 3:
+        {
+            AddVehicleComponent(vehid, 1075);
+            GivePlayerMoney(targetid, -980);
+            GivePlayerMoney(playerid, 980);
+            SendServerMessage(targetid, "Your car has been installed Rimshine Tires");
+        }
+        case 4:
+        {
+            AddVehicleComponent(vehid, 1076);
+            GivePlayerMoney(targetid, -1560);
+            GivePlayerMoney(playerid, 1560);
+            SendServerMessage(targetid, "Your car has been installed Wires Tires");
+        }
+        case 5:
+        {
+            AddVehicleComponent(vehid, 1077);
+            GivePlayerMoney(targetid, -1620);
+            GivePlayerMoney(playerid, 1620);
+            SendServerMessage(targetid, "Your car has been installed Classic Tires");
+        }
+        case 6:
+        {
+            AddVehicleComponent(vehid, 1078);
+            GivePlayerMoney(targetid, -1200);
+            GivePlayerMoney(playerid, 1200);
+            SendServerMessage(targetid, "Your car has been installed Twist Tires");
+        }
+        case 7:
+        {
+            AddVehicleComponent(vehid, 1079);
+            GivePlayerMoney(targetid, -1030);
+            GivePlayerMoney(playerid, 1030);
+            SendServerMessage(targetid, "Your car has been installed Cutter Tires");
+        }
+        case 8:
+        {
+            AddVehicleComponent(vehid, 1080);
+            GivePlayerMoney(targetid, -900);
+            GivePlayerMoney(playerid, 900);
+            SendServerMessage(targetid, "Your car has been installed Switch Tires");
+        }
+        case 9:
+        {
+            AddVehicleComponent(vehid, 1081);
+            GivePlayerMoney(targetid, -1230);
+            GivePlayerMoney(playerid, 1230);
+            SendServerMessage(targetid, "Your car has been installed Grove Tires");
+        }
+        case 10:
+        {
+            AddVehicleComponent(vehid, 1082);
+            GivePlayerMoney(targetid, -820);
+            GivePlayerMoney(playerid, 820);
+            SendServerMessage(targetid, "Your car has been installed Import Tires");
+        }
+        case 11:
+        {
+            AddVehicleComponent(vehid, 1083);
+            GivePlayerMoney(targetid, -1560);
+            GivePlayerMoney(playerid, 1560);
+            SendServerMessage(targetid, "Your car has been installed Dollar Tires");
+        }
+        case 12:
+        {
+            AddVehicleComponent(vehid, 1084);
+            GivePlayerMoney(targetid, -1350);
+            GivePlayerMoney(playerid, 1350);
+            SendServerMessage(targetid, "Your car has been installed Trance Tires");
+        }
+        case 13:
+        {
+            AddVehicleComponent(vehid, 1085);
+            GivePlayerMoney(targetid, -770);
+            GivePlayerMoney(playerid, 770);
+            SendServerMessage(targetid, "Your car has been installed Atomic Tires");
+        }
+    }
+    SetPlayerAssisted(targetid, true);
+    ShowPlayerMechMenu(GetPlayerClientID(playerid));
 }
 
 timer PlaceNiro[5000](playerid, level)
@@ -711,6 +1201,17 @@ timer GetComp[3000](playerid, type)
                 DestroyDynamic3DTextLabel(Textlabel[playerid]);
             }
             Textlabel[playerid] = CreateDynamic3DTextLabel("type /placenitro to place the nitro", -1, x, y, z, 50.0, .playerid = playerid);
+        }
+        case 2: //Tire
+        {
+            GetVehicleRelativePos(GetPlayerLastVehicle(playerid), x, y, z, 1.0, 1.0, 0.0);
+            SetPlayerAttachedObject(playerid, 6, 1076, 6, 0.2569, 0.0260, 0.0350, -175.3999, -90.1000, 87.6999, 0.6020, 0.5869, 0.6400, 0xFFFFFFFF, 0xFFFFFFFF);
+            ClearAnimations(playerid, 1);
+            SetPlayerHasTheComponent(playerid, true);
+            if(IsValidDynamic3DTextLabel(Textlabel[playerid])) {
+                DestroyDynamic3DTextLabel(Textlabel[playerid]);
+            }
+            Textlabel[playerid] = CreateDynamic3DTextLabel("type /placetire to place the nitro", -1, x, y, z, 50.0, .playerid = playerid);
         }
     }
 }

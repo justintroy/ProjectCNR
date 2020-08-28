@@ -5170,3 +5170,1206 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [17:38:53] Removed Objects For Player (Mechanicmap.inc)
 [17:41:04] Reason is 1 xD
 [17:41:04] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:07:56] language = ""  (string)
+[22:07:56] 
+[22:07:56] Server Plugins
+[22:07:56] --------------
+[22:07:56]  Loading plugin: sscanf
+[22:07:56] 
+
+[22:07:56]  ===============================
+
+[22:07:56]       sscanf plugin loaded.     
+
+[22:07:56]          Version:  2.8.3        
+
+[22:07:56]   (c) 2018 Alex "Y_Less" Cole  
+
+[22:07:56]  ===============================
+
+[22:07:56]   Loaded.
+[22:07:56]  Loading plugin: crashdetect
+[22:07:56]   CrashDetect plugin 4.20
+[22:07:56]   Loaded.
+[22:07:56]  Loading plugin: mysql
+[22:07:56]  >> plugin.mysql: R41-4 successfully loaded.
+[22:07:56]   Loaded.
+[22:07:56]  Loading plugin: samp_bcrypt
+[22:07:56] [SampBcrypt] [info]: Version: 0.2.3
+[22:07:56]   Loaded.
+[22:07:56]  Loading plugin: streamer
+[22:07:56] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:07:56]   Loaded.
+[22:07:56]  Loaded 5 plugins.
+
+[22:07:57] 
+[22:07:57] Filterscripts
+[22:07:57] ---------------
+[22:07:57]   Loaded 0 filterscripts.
+
+[22:08:40]  
+[22:08:40]  ========================================== 
+[22:08:40]  |                                        | 
+[22:08:40]  |   File dumped to YSI code cache:       | 
+[22:08:40]  |                                        | 
+[22:08:40]  |      scriptfiles/YSI_CACHE.amx         | 
+[22:08:40]  |                                        | 
+[22:08:40]  | Load this file instead to skip this    | 
+[22:08:40]  | code optimisation step in the future.  | 
+[22:08:40]  | Note that if you have multiple scripts | 
+[22:08:40]  | loading at once (i.e. gamemodes,       | 
+[22:08:40]  | filterscripts, and modules) you may    | 
+[22:08:40]  | need to load and cache them            | 
+[22:08:40]  | individually so that they don't        | 
+[22:08:40]  | clobber each other.  If you don't, in  | 
+[22:08:40]  | "server.cfg", the following works:     | 
+[22:08:40]  |                                        | 
+[22:08:40]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[22:08:40]  |                                        | 
+[22:08:40]  | You can disable this message with:     | 
+[22:08:40]  |                                        | 
+[22:08:40]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[22:08:40]  |                                        | 
+[22:08:40]  | You can disable this caching with:     | 
+[22:08:40]  |                                        | 
+[22:08:40]  |   #define YSI_NO_MODE_CACHE            | 
+[22:08:40]  |                                        | 
+[22:08:40]  | You can explicitly enable it with:     | 
+[22:08:40]  |                                        | 
+[22:08:40]  |   #define YSI_YES_MODE_CACHE           | 
+[22:08:40]  |                                        | 
+[22:08:40]  ========================================== 
+[22:08:40]  
+[22:08:40] [debug] Long callback execution detected (hang or performance issue)
+[22:08:40] [debug] AMX backtrace:
+[22:08:40] [debug] #0 0000a79c in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=6, &buffer=@027d7440 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:466
+[22:08:40] [debug] #1 0000ab1c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027d7460 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[22:08:40] [debug] #2 0000cabc in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[22:08:40] [debug] #3 00008d84 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[22:08:40] [debug] #4 00001560 in public OnVehicleStreamIn () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[22:08:40]  
+[22:08:40]  
+[22:08:40]  
+[22:08:40]  ========================================== 
+[22:08:40]  |                                        | 
+[22:08:40]  |         YSI version 5.03.0689          | 
+[22:08:40]  |         By Alex "Y_Less" Cole          | 
+[22:08:40]  |                                        | 
+[22:08:40]  | You can disable this message with:     | 
+[22:08:40]  |                                        | 
+[22:08:40]  |   #define YSI_NO_VERSION_CHECK         | 
+[22:08:40]  |                                        | 
+[22:08:40]  ========================================== 
+[22:08:40]  
+[22:08:40]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[22:08:40] Creating Objects (Mechanicmap.inc)
+[22:08:40] SERVER: MySQL Connection was successful.
+[22:08:40] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[22:08:40] 
+-----------------------------------
+[22:08:40] ---GROUNDBREAKING COPS N ROBBERS----
+[22:08:40] -----------------------------------
+
+[22:08:40] Number of vehicle models: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:14:00] language = ""  (string)
+[22:14:00] 
+[22:14:00] Server Plugins
+[22:14:00] --------------
+[22:14:00]  Loading plugin: sscanf
+[22:14:00] 
+
+[22:14:00]  ===============================
+
+[22:14:00]       sscanf plugin loaded.     
+
+[22:14:00]          Version:  2.8.3        
+
+[22:14:00]   (c) 2018 Alex "Y_Less" Cole  
+
+[22:14:00]  ===============================
+
+[22:14:00]   Loaded.
+[22:14:00]  Loading plugin: crashdetect
+[22:14:00]   CrashDetect plugin 4.20
+[22:14:00]   Loaded.
+[22:14:00]  Loading plugin: mysql
+[22:14:00]  >> plugin.mysql: R41-4 successfully loaded.
+[22:14:00]   Loaded.
+[22:14:00]  Loading plugin: samp_bcrypt
+[22:14:00] [SampBcrypt] [info]: Version: 0.2.3
+[22:14:00]   Loaded.
+[22:14:00]  Loading plugin: streamer
+[22:14:00] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:14:00]   Loaded.
+[22:14:00]  Loaded 5 plugins.
+
+[22:14:00] 
+[22:14:00] Filterscripts
+[22:14:00] ---------------
+[22:14:00]   Loaded 0 filterscripts.
+
+[22:14:51]  
+[22:14:51]  ========================================== 
+[22:14:51]  |                                        | 
+[22:14:51]  |   File dumped to YSI code cache:       | 
+[22:14:51]  |                                        | 
+[22:14:51]  |      scriptfiles/YSI_CACHE.amx         | 
+[22:14:51]  |                                        | 
+[22:14:51]  | Load this file instead to skip this    | 
+[22:14:51]  | code optimisation step in the future.  | 
+[22:14:51]  | Note that if you have multiple scripts | 
+[22:14:51]  | loading at once (i.e. gamemodes,       | 
+[22:14:51]  | filterscripts, and modules) you may    | 
+[22:14:51]  | need to load and cache them            | 
+[22:14:51]  | individually so that they don't        | 
+[22:14:51]  | clobber each other.  If you don't, in  | 
+[22:14:51]  | "server.cfg", the following works:     | 
+[22:14:51]  |                                        | 
+[22:14:51]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[22:14:51]  |                                        | 
+[22:14:51]  | You can disable this message with:     | 
+[22:14:51]  |                                        | 
+[22:14:51]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[22:14:51]  |                                        | 
+[22:14:51]  | You can disable this caching with:     | 
+[22:14:51]  |                                        | 
+[22:14:51]  |   #define YSI_NO_MODE_CACHE            | 
+[22:14:51]  |                                        | 
+[22:14:51]  | You can explicitly enable it with:     | 
+[22:14:51]  |                                        | 
+[22:14:51]  |   #define YSI_YES_MODE_CACHE           | 
+[22:14:51]  |                                        | 
+[22:14:51]  ========================================== 
+[22:14:51]  
+[22:14:51] [debug] Long callback execution detected (hang or performance issue)
+[22:14:51] [debug] AMX backtrace:
+[22:14:51] [debug] #0 0000a7f0 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=74, &buffer=@027d7ca0 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:469
+[22:14:51] [debug] #1 0000ab1c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027d7cc0 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[22:14:51] [debug] #2 0000cabc in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[22:14:51] [debug] #3 00008d84 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[22:14:51] [debug] #4 00001560 in public OnVehicleStreamIn () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[22:14:51]  
+[22:14:51]  
+[22:14:51]  
+[22:14:51]  ========================================== 
+[22:14:51]  |                                        | 
+[22:14:51]  |         YSI version 5.03.0689          | 
+[22:14:51]  |         By Alex "Y_Less" Cole          | 
+[22:14:51]  |                                        | 
+[22:14:51]  | You can disable this message with:     | 
+[22:14:51]  |                                        | 
+[22:14:51]  |   #define YSI_NO_VERSION_CHECK         | 
+[22:14:51]  |                                        | 
+[22:14:51]  ========================================== 
+[22:14:51]  
+[22:14:51]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[22:14:52] Creating Objects (Mechanicmap.inc)
+[22:14:52] SERVER: MySQL Connection was successful.
+[22:14:52] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[22:14:52] 
+-----------------------------------
+[22:14:52] ---GROUNDBREAKING COPS N ROBBERS----
+[22:14:52] -----------------------------------
+
+[22:14:52] Number of vehicle models: 1
+[22:15:58] [connection] incoming connection: 127.0.0.1:55827 id: 0
+[22:15:58] [join] XomoX has joined the server (0:127.0.0.1)
+[22:15:58] Removed Objects For Player (Mechanicmap.inc)
+[22:15:58] [debug] Long callback execution detected (hang or performance issue)
+[22:15:58] [debug] AMX backtrace:
+[22:15:58] [debug] #0 0008d9a4 in @yH_OnPlayerConnect@014 (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\player\inventory.inc:27
+[22:15:58] [debug] #1 00020878 in public OnPlayerConnect (0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:04] [debug] Long callback execution detected (hang or performance issue)
+[22:16:04] [debug] AMX backtrace:
+[22:16:04] [debug] #0 000750f0 in public OnPlayerDataLoaded (playerid=0, race_check=1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\account\account.inc:87
+[22:16:30] [debug]
+[22:16:30] [debug] Parameter count corrections:
+[22:16:30] [debug]
+[22:16:30] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:30] [debug]
+[22:16:30] [debug] Run time error 4: "Array index out of bounds"
+[22:16:30] [debug]  Attempted to read/write array element at negative index -1
+[22:16:30] [debug] AMX backtrace:
+[22:16:30] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:30] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:30] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:31] [debug]
+[22:16:31] [debug] Parameter count corrections:
+[22:16:31] [debug]
+[22:16:31] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:31] [debug]
+[22:16:31] [debug] Run time error 4: "Array index out of bounds"
+[22:16:31] [debug]  Attempted to read/write array element at negative index -1
+[22:16:31] [debug] AMX backtrace:
+[22:16:31] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:31] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:31] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:38] [debug]
+[22:16:38] [debug] Parameter count corrections:
+[22:16:38] [debug]
+[22:16:38] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:38] [debug]
+[22:16:38] [debug] Run time error 4: "Array index out of bounds"
+[22:16:38] [debug]  Attempted to read/write array element at negative index -1
+[22:16:38] [debug] AMX backtrace:
+[22:16:38] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:38] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:38] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:38] [debug]
+[22:16:38] [debug] Parameter count corrections:
+[22:16:38] [debug]
+[22:16:38] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:38] [debug]
+[22:16:38] [debug] Run time error 4: "Array index out of bounds"
+[22:16:38] [debug]  Attempted to read/write array element at negative index -1
+[22:16:38] [debug] AMX backtrace:
+[22:16:38] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:38] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:38] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:38] [debug]
+[22:16:38] [debug] Parameter count corrections:
+[22:16:38] [debug]
+[22:16:38] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:38] [debug]
+[22:16:38] [debug] Run time error 4: "Array index out of bounds"
+[22:16:38] [debug]  Attempted to read/write array element at negative index -1
+[22:16:38] [debug] AMX backtrace:
+[22:16:38] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:38] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:38] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:38] [debug]
+[22:16:38] [debug] Parameter count corrections:
+[22:16:38] [debug]
+[22:16:38] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:38] [debug]
+[22:16:38] [debug] Run time error 4: "Array index out of bounds"
+[22:16:38] [debug]  Attempted to read/write array element at negative index -1
+[22:16:38] [debug] AMX backtrace:
+[22:16:38] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:38] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:38] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:38] [debug]
+[22:16:38] [debug] Parameter count corrections:
+[22:16:38] [debug]
+[22:16:38] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:38] [debug]
+[22:16:38] [debug] Run time error 4: "Array index out of bounds"
+[22:16:38] [debug]  Attempted to read/write array element at negative index -1
+[22:16:38] [debug] AMX backtrace:
+[22:16:38] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:38] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:38] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:39] [debug]
+[22:16:39] [debug] Parameter count corrections:
+[22:16:39] [debug]
+[22:16:39] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:39] [debug]
+[22:16:39] [debug] Run time error 4: "Array index out of bounds"
+[22:16:39] [debug]  Attempted to read/write array element at negative index -1
+[22:16:39] [debug] AMX backtrace:
+[22:16:39] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:39] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:39] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:39] [debug]
+[22:16:39] [debug] Parameter count corrections:
+[22:16:39] [debug]
+[22:16:39] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:39] [debug]
+[22:16:39] [debug] Run time error 4: "Array index out of bounds"
+[22:16:39] [debug]  Attempted to read/write array element at negative index -1
+[22:16:39] [debug] AMX backtrace:
+[22:16:39] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:39] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:39] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:39] [debug]
+[22:16:39] [debug] Parameter count corrections:
+[22:16:39] [debug]
+[22:16:39] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:39] [debug]
+[22:16:39] [debug] Run time error 4: "Array index out of bounds"
+[22:16:39] [debug]  Attempted to read/write array element at negative index -1
+[22:16:39] [debug] AMX backtrace:
+[22:16:39] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:39] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:39] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:39] [debug]
+[22:16:39] [debug] Parameter count corrections:
+[22:16:39] [debug]
+[22:16:39] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:39] [debug]
+[22:16:39] [debug] Run time error 4: "Array index out of bounds"
+[22:16:39] [debug]  Attempted to read/write array element at negative index -1
+[22:16:39] [debug] AMX backtrace:
+[22:16:39] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:39] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:39] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:39] [debug]
+[22:16:39] [debug] Parameter count corrections:
+[22:16:39] [debug]
+[22:16:39] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:39] [debug]
+[22:16:39] [debug] Run time error 4: "Array index out of bounds"
+[22:16:39] [debug]  Attempted to read/write array element at negative index -1
+[22:16:39] [debug] AMX backtrace:
+[22:16:39] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:39] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:39] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:39] [debug]
+[22:16:39] [debug] Parameter count corrections:
+[22:16:39] [debug]
+[22:16:39] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:16:39] [debug]
+[22:16:39] [debug] Run time error 4: "Array index out of bounds"
+[22:16:39] [debug]  Attempted to read/write array element at negative index -1
+[22:16:39] [debug] AMX backtrace:
+[22:16:39] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:106
+[22:16:39] [debug] #1 0008b5a8 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:541
+[22:16:39] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:16:40] Reason is 1 xD
+[22:16:40] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:19:55] language = ""  (string)
+[22:19:55] 
+[22:19:55] Server Plugins
+[22:19:55] --------------
+[22:19:55]  Loading plugin: sscanf
+[22:19:55] 
+
+[22:19:55]  ===============================
+
+[22:19:55]       sscanf plugin loaded.     
+
+[22:19:55]          Version:  2.8.3        
+
+[22:19:55]   (c) 2018 Alex "Y_Less" Cole  
+
+[22:19:55]  ===============================
+
+[22:19:55]   Loaded.
+[22:19:55]  Loading plugin: crashdetect
+[22:19:55]   CrashDetect plugin 4.20
+[22:19:55]   Loaded.
+[22:19:55]  Loading plugin: mysql
+[22:19:55]  >> plugin.mysql: R41-4 successfully loaded.
+[22:19:55]   Loaded.
+[22:19:55]  Loading plugin: samp_bcrypt
+[22:19:55] [SampBcrypt] [info]: Version: 0.2.3
+[22:19:55]   Loaded.
+[22:19:55]  Loading plugin: streamer
+[22:19:56] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:19:56]   Loaded.
+[22:19:56]  Loaded 5 plugins.
+
+[22:19:56] 
+[22:19:56] Filterscripts
+[22:19:56] ---------------
+[22:19:56]   Loaded 0 filterscripts.
+
+[22:20:48]  
+[22:20:48]  ========================================== 
+[22:20:48]  |                                        | 
+[22:20:48]  |   File dumped to YSI code cache:       | 
+[22:20:48]  |                                        | 
+[22:20:48]  |      scriptfiles/YSI_CACHE.amx         | 
+[22:20:48]  |                                        | 
+[22:20:48]  | Load this file instead to skip this    | 
+[22:20:48]  | code optimisation step in the future.  | 
+[22:20:48]  | Note that if you have multiple scripts | 
+[22:20:48]  | loading at once (i.e. gamemodes,       | 
+[22:20:48]  | filterscripts, and modules) you may    | 
+[22:20:48]  | need to load and cache them            | 
+[22:20:48]  | individually so that they don't        | 
+[22:20:48]  | clobber each other.  If you don't, in  | 
+[22:20:48]  | "server.cfg", the following works:     | 
+[22:20:48]  |                                        | 
+[22:20:48]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[22:20:48]  |                                        | 
+[22:20:48]  | You can disable this message with:     | 
+[22:20:48]  |                                        | 
+[22:20:48]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[22:20:48]  |                                        | 
+[22:20:48]  | You can disable this caching with:     | 
+[22:20:48]  |                                        | 
+[22:20:48]  |   #define YSI_NO_MODE_CACHE            | 
+[22:20:48]  |                                        | 
+[22:20:48]  | You can explicitly enable it with:     | 
+[22:20:48]  |                                        | 
+[22:20:48]  |   #define YSI_YES_MODE_CACHE           | 
+[22:20:48]  |                                        | 
+[22:20:48]  ========================================== 
+[22:20:48]  
+[22:20:48] [debug] Long callback execution detected (hang or performance issue)
+[22:20:48] [debug] AMX backtrace:
+[22:20:48] [debug] #0 0000a85c in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=37, &buffer=@027d7ca8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:475
+[22:20:48] [debug] #1 0000ab1c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027d7cc8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[22:20:48] [debug] #2 0000cabc in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[22:20:48] [debug] #3 00008d84 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[22:20:48] [debug] #4 00001560 in public OnVehicleStreamIn () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[22:20:48]  
+[22:20:48]  
+[22:20:48]  
+[22:20:48]  ========================================== 
+[22:20:48]  |                                        | 
+[22:20:48]  |         YSI version 5.03.0689          | 
+[22:20:48]  |         By Alex "Y_Less" Cole          | 
+[22:20:48]  |                                        | 
+[22:20:48]  | You can disable this message with:     | 
+[22:20:48]  |                                        | 
+[22:20:48]  |   #define YSI_NO_VERSION_CHECK         | 
+[22:20:48]  |                                        | 
+[22:20:48]  ========================================== 
+[22:20:48]  
+[22:20:48]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[22:20:48] Creating Objects (Mechanicmap.inc)
+[22:20:48] SERVER: MySQL Connection was successful.
+[22:20:48] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[22:20:48] 
+-----------------------------------
+[22:20:48] ---GROUNDBREAKING COPS N ROBBERS----
+[22:20:48] -----------------------------------
+
+[22:20:48] Number of vehicle models: 1
+[22:21:12] [connection] incoming connection: 127.0.0.1:53541 id: 0
+[22:21:12] [join] XomoX has joined the server (0:127.0.0.1)
+[22:21:12] Removed Objects For Player (Mechanicmap.inc)
+[22:21:12] [debug] Long callback execution detected (hang or performance issue)
+[22:21:12] [debug] AMX backtrace:
+[22:21:12] [debug] #0 00001610 in OnPlayerConnect (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:238
+[22:21:12] [debug] #1 000208a0 in public OnPlayerConnect (0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:21:52] Reason is 1 xD
+[22:21:52] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:23:14] language = ""  (string)
+[22:23:14] 
+[22:23:14] Server Plugins
+[22:23:14] --------------
+[22:23:14]  Loading plugin: sscanf
+[22:23:14] 
+
+[22:23:14]  ===============================
+
+[22:23:14]       sscanf plugin loaded.     
+
+[22:23:14]          Version:  2.8.3        
+
+[22:23:14]   (c) 2018 Alex "Y_Less" Cole  
+
+[22:23:14]  ===============================
+
+[22:23:14]   Loaded.
+[22:23:14]  Loading plugin: crashdetect
+[22:23:14]   CrashDetect plugin 4.20
+[22:23:14]   Loaded.
+[22:23:14]  Loading plugin: mysql
+[22:23:15]  >> plugin.mysql: R41-4 successfully loaded.
+[22:23:15]   Loaded.
+[22:23:15]  Loading plugin: samp_bcrypt
+[22:23:15] [SampBcrypt] [info]: Version: 0.2.3
+[22:23:15]   Loaded.
+[22:23:15]  Loading plugin: streamer
+[22:23:15] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:23:15]   Loaded.
+[22:23:15]  Loaded 5 plugins.
+
+[22:23:15] 
+[22:23:15] Filterscripts
+[22:23:15] ---------------
+[22:23:15]   Loaded 0 filterscripts.
+
+[22:24:12]  
+[22:24:12]  ========================================== 
+[22:24:12]  |                                        | 
+[22:24:12]  |   File dumped to YSI code cache:       | 
+[22:24:12]  |                                        | 
+[22:24:12]  |      scriptfiles/YSI_CACHE.amx         | 
+[22:24:12]  |                                        | 
+[22:24:12]  | Load this file instead to skip this    | 
+[22:24:12]  | code optimisation step in the future.  | 
+[22:24:12]  | Note that if you have multiple scripts | 
+[22:24:12]  | loading at once (i.e. gamemodes,       | 
+[22:24:12]  | filterscripts, and modules) you may    | 
+[22:24:12]  | need to load and cache them            | 
+[22:24:12]  | individually so that they don't        | 
+[22:24:12]  | clobber each other.  If you don't, in  | 
+[22:24:12]  | "server.cfg", the following works:     | 
+[22:24:12]  |                                        | 
+[22:24:12]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[22:24:12]  |                                        | 
+[22:24:12]  | You can disable this message with:     | 
+[22:24:12]  |                                        | 
+[22:24:12]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[22:24:12]  |                                        | 
+[22:24:12]  | You can disable this caching with:     | 
+[22:24:12]  |                                        | 
+[22:24:12]  |   #define YSI_NO_MODE_CACHE            | 
+[22:24:12]  |                                        | 
+[22:24:12]  | You can explicitly enable it with:     | 
+[22:24:12]  |                                        | 
+[22:24:12]  |   #define YSI_YES_MODE_CACHE           | 
+[22:24:12]  |                                        | 
+[22:24:12]  ========================================== 
+[22:24:12]  
+[22:24:12] [debug] Long callback execution detected (hang or performance issue)
+[22:24:12] [debug] AMX backtrace:
+[22:24:12] [debug] #0 0000a750 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=28, &buffer=@027d7cd8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:457
+[22:24:12] [debug] #1 0000ab1c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027d7cf8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[22:24:12] [debug] #2 0000cabc in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[22:24:12] [debug] #3 00008d84 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[22:24:12] [debug] #4 00001560 in public OnVehicleStreamIn () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[22:24:12]  
+[22:24:12]  
+[22:24:12]  
+[22:24:12]  ========================================== 
+[22:24:12]  |                                        | 
+[22:24:12]  |         YSI version 5.03.0689          | 
+[22:24:12]  |         By Alex "Y_Less" Cole          | 
+[22:24:12]  |                                        | 
+[22:24:12]  | You can disable this message with:     | 
+[22:24:12]  |                                        | 
+[22:24:12]  |   #define YSI_NO_VERSION_CHECK         | 
+[22:24:12]  |                                        | 
+[22:24:12]  ========================================== 
+[22:24:12]  
+[22:24:12]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[22:24:12] Creating Objects (Mechanicmap.inc)
+[22:24:13] SERVER: MySQL Connection was successful.
+[22:24:13] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[22:24:13] 
+-----------------------------------
+[22:24:13] ---GROUNDBREAKING COPS N ROBBERS----
+[22:24:13] -----------------------------------
+
+[22:24:13] Number of vehicle models: 1
+[22:24:36] [connection] incoming connection: 127.0.0.1:49875 id: 0
+[22:24:36] [join] XomoX has joined the server (0:127.0.0.1)
+[22:24:36] Removed Objects For Player (Mechanicmap.inc)
+[22:24:36] [debug] Long callback execution detected (hang or performance issue)
+[22:24:36] [debug] AMX backtrace:
+[22:24:36] [debug] #0 0008db30 in @yH_OnPlayerConnect@014 (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\player\inventory.inc:26
+[22:24:36] [debug] #1 00020878 in public OnPlayerConnect (0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:25:27] Reason is 1 xD
+[22:25:27] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:29:00] language = ""  (string)
+[22:29:00] 
+[22:29:00] Server Plugins
+[22:29:00] --------------
+[22:29:00]  Loading plugin: sscanf
+[22:29:01] 
+
+[22:29:01]  ===============================
+
+[22:29:01]       sscanf plugin loaded.     
+
+[22:29:01]          Version:  2.8.3        
+
+[22:29:01]   (c) 2018 Alex "Y_Less" Cole  
+
+[22:29:01]  ===============================
+
+[22:29:01]   Loaded.
+[22:29:01]  Loading plugin: crashdetect
+[22:29:01]   CrashDetect plugin 4.20
+[22:29:01]   Loaded.
+[22:29:01]  Loading plugin: mysql
+[22:29:01]  >> plugin.mysql: R41-4 successfully loaded.
+[22:29:01]   Loaded.
+[22:29:01]  Loading plugin: samp_bcrypt
+[22:29:01] [SampBcrypt] [info]: Version: 0.2.3
+[22:29:01]   Loaded.
+[22:29:01]  Loading plugin: streamer
+[22:29:01] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:29:01]   Loaded.
+[22:29:01]  Loaded 5 plugins.
+
+[22:29:01] 
+[22:29:01] Filterscripts
+[22:29:01] ---------------
+[22:29:01]   Loaded 0 filterscripts.
+
+[22:29:51]  
+[22:29:51]  ========================================== 
+[22:29:51]  |                                        | 
+[22:29:51]  |   File dumped to YSI code cache:       | 
+[22:29:51]  |                                        | 
+[22:29:51]  |      scriptfiles/YSI_CACHE.amx         | 
+[22:29:51]  |                                        | 
+[22:29:51]  | Load this file instead to skip this    | 
+[22:29:51]  | code optimisation step in the future.  | 
+[22:29:51]  | Note that if you have multiple scripts | 
+[22:29:51]  | loading at once (i.e. gamemodes,       | 
+[22:29:51]  | filterscripts, and modules) you may    | 
+[22:29:51]  | need to load and cache them            | 
+[22:29:51]  | individually so that they don't        | 
+[22:29:51]  | clobber each other.  If you don't, in  | 
+[22:29:51]  | "server.cfg", the following works:     | 
+[22:29:51]  |                                        | 
+[22:29:51]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[22:29:51]  |                                        | 
+[22:29:51]  | You can disable this message with:     | 
+[22:29:51]  |                                        | 
+[22:29:51]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[22:29:51]  |                                        | 
+[22:29:51]  | You can disable this caching with:     | 
+[22:29:51]  |                                        | 
+[22:29:51]  |   #define YSI_NO_MODE_CACHE            | 
+[22:29:51]  |                                        | 
+[22:29:51]  | You can explicitly enable it with:     | 
+[22:29:51]  |                                        | 
+[22:29:51]  |   #define YSI_YES_MODE_CACHE           | 
+[22:29:51]  |                                        | 
+[22:29:51]  ========================================== 
+[22:29:51]  
+[22:29:51] [debug] Long callback execution detected (hang or performance issue)
+[22:29:51] [debug] AMX backtrace:
+[22:29:51] [debug] #0 0000a83c in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=89, &buffer=@027d7cd8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:475
+[22:29:51] [debug] #1 0000ab1c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027d7cf8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[22:29:51] [debug] #2 0000cabc in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[22:29:51] [debug] #3 00008d84 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[22:29:51] [debug] #4 00001560 in public OnVehicleStreamIn () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[22:29:51]  
+[22:29:51]  
+[22:29:51]  
+[22:29:51]  ========================================== 
+[22:29:51]  |                                        | 
+[22:29:51]  |         YSI version 5.03.0689          | 
+[22:29:51]  |         By Alex "Y_Less" Cole          | 
+[22:29:51]  |                                        | 
+[22:29:51]  | You can disable this message with:     | 
+[22:29:51]  |                                        | 
+[22:29:51]  |   #define YSI_NO_VERSION_CHECK         | 
+[22:29:51]  |                                        | 
+[22:29:51]  ========================================== 
+[22:29:51]  
+[22:29:51]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[22:29:51] Creating Objects (Mechanicmap.inc)
+[22:29:51] SERVER: MySQL Connection was successful.
+[22:29:51] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[22:29:51] 
+-----------------------------------
+[22:29:51] ---GROUNDBREAKING COPS N ROBBERS----
+[22:29:51] -----------------------------------
+
+[22:29:51] Number of vehicle models: 1
+[22:31:07] [connection] incoming connection: 127.0.0.1:59656 id: 0
+[22:31:08] [join] XomoX has joined the server (0:127.0.0.1)
+[22:31:08] [debug] Long callback execution detected (hang or performance issue)
+[22:31:08] [debug] AMX backtrace:
+[22:31:08] [debug] #0 00077c88 in playerTD (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\utils\textdraws.inc:105
+[22:31:08] [debug] #1 0007410c in @yH_OnPlayerConnect@010 (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\account\account.inc:14
+[22:31:08] [debug] #2 00020800 in public OnPlayerConnect (0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:31:08] Removed Objects For Player (Mechanicmap.inc)
+[22:32:07] [debug]
+[22:32:07] [debug] Parameter count corrections:
+[22:32:07] [debug]
+[22:32:07] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[22:32:07] [debug]
+[22:32:07] [debug] Run time error 4: "Array index out of bounds"
+[22:32:07] [debug]  Attempted to read/write array element at negative index -1
+[22:32:07] [debug] AMX backtrace:
+[22:32:07] [debug] #0 0008771c in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:110
+[22:32:07] [debug] #1 0008ba50 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:564
+[22:32:07] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:33:09] Reason is 1 xD
+[22:33:09] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:34:18] language = ""  (string)
+[22:34:18] 
+[22:34:18] Server Plugins
+[22:34:18] --------------
+[22:34:18]  Loading plugin: sscanf
+[22:34:18] 
+
+[22:34:18]  ===============================
+
+[22:34:18]       sscanf plugin loaded.     
+
+[22:34:18]          Version:  2.8.3        
+
+[22:34:18]   (c) 2018 Alex "Y_Less" Cole  
+
+[22:34:18]  ===============================
+
+[22:34:18]   Loaded.
+[22:34:18]  Loading plugin: crashdetect
+[22:34:18]   CrashDetect plugin 4.20
+[22:34:18]   Loaded.
+[22:34:18]  Loading plugin: mysql
+[22:34:19]  >> plugin.mysql: R41-4 successfully loaded.
+[22:34:19]   Loaded.
+[22:34:19]  Loading plugin: samp_bcrypt
+[22:34:19] [SampBcrypt] [info]: Version: 0.2.3
+[22:34:19]   Loaded.
+[22:34:19]  Loading plugin: streamer
+[22:34:19] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:34:19]   Loaded.
+[22:34:19]  Loaded 5 plugins.
+
+[22:34:20] 
+[22:34:20] Filterscripts
+[22:34:20] ---------------
+[22:34:20]   Loaded 0 filterscripts.
+
+[22:34:20] [debug] Long callback execution detected (hang or performance issue)
+[22:34:20] [debug] AMX backtrace:
+[22:34:20] [debug] #0 00001420 in public OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:201
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:36:05] language = ""  (string)
+[22:36:05] 
+[22:36:05] Server Plugins
+[22:36:05] --------------
+[22:36:05]  Loading plugin: sscanf
+[22:36:06] 
+
+[22:36:06]  ===============================
+
+[22:36:06]       sscanf plugin loaded.     
+
+[22:36:06]          Version:  2.8.3        
+
+[22:36:06]   (c) 2018 Alex "Y_Less" Cole  
+
+[22:36:06]  ===============================
+
+[22:36:06]   Loaded.
+[22:36:06]  Loading plugin: crashdetect
+[22:36:06]   CrashDetect plugin 4.20
+[22:36:06]   Loaded.
+[22:36:06]  Loading plugin: mysql
+[22:36:06]  >> plugin.mysql: R41-4 successfully loaded.
+[22:36:06]   Loaded.
+[22:36:06]  Loading plugin: samp_bcrypt
+[22:36:06] [SampBcrypt] [info]: Version: 0.2.3
+[22:36:06]   Loaded.
+[22:36:06]  Loading plugin: streamer
+[22:36:06] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[22:36:06]   Loaded.
+[22:36:06]  Loaded 5 plugins.
+
+[22:36:06] 
+[22:36:06] Filterscripts
+[22:36:06] ---------------
+[22:36:06]   Loaded 0 filterscripts.
+
+[22:37:04]  
+[22:37:04]  ========================================== 
+[22:37:04]  |                                        | 
+[22:37:04]  |   File dumped to YSI code cache:       | 
+[22:37:04]  |                                        | 
+[22:37:04]  |      scriptfiles/YSI_CACHE.amx         | 
+[22:37:04]  |                                        | 
+[22:37:04]  | Load this file instead to skip this    | 
+[22:37:04]  | code optimisation step in the future.  | 
+[22:37:04]  | Note that if you have multiple scripts | 
+[22:37:04]  | loading at once (i.e. gamemodes,       | 
+[22:37:04]  | filterscripts, and modules) you may    | 
+[22:37:04]  | need to load and cache them            | 
+[22:37:04]  | individually so that they don't        | 
+[22:37:04]  | clobber each other.  If you don't, in  | 
+[22:37:04]  | "server.cfg", the following works:     | 
+[22:37:04]  |                                        | 
+[22:37:04]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[22:37:04]  |                                        | 
+[22:37:04]  | You can disable this message with:     | 
+[22:37:04]  |                                        | 
+[22:37:04]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[22:37:04]  |                                        | 
+[22:37:04]  | You can disable this caching with:     | 
+[22:37:04]  |                                        | 
+[22:37:04]  |   #define YSI_NO_MODE_CACHE            | 
+[22:37:04]  |                                        | 
+[22:37:04]  | You can explicitly enable it with:     | 
+[22:37:04]  |                                        | 
+[22:37:04]  |   #define YSI_YES_MODE_CACHE           | 
+[22:37:04]  |                                        | 
+[22:37:04]  ========================================== 
+[22:37:04]  
+[22:37:04] [debug] Long callback execution detected (hang or performance issue)
+[22:37:04] [debug] AMX backtrace:
+[22:37:04] [debug] #0 0000a7d8 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=67, &buffer=@027d7cd8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:469
+[22:37:04] [debug] #1 0000ab1c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027d7cf8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[22:37:04] [debug] #2 0000cabc in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[22:37:04] [debug] #3 00008d84 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[22:37:04] [debug] #4 00001560 in public OnVehicleStreamIn () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[22:37:04]  
+[22:37:04]  
+[22:37:04]  
+[22:37:04]  ========================================== 
+[22:37:04]  |                                        | 
+[22:37:04]  |         YSI version 5.03.0689          | 
+[22:37:04]  |         By Alex "Y_Less" Cole          | 
+[22:37:04]  |                                        | 
+[22:37:04]  | You can disable this message with:     | 
+[22:37:04]  |                                        | 
+[22:37:04]  |   #define YSI_NO_VERSION_CHECK         | 
+[22:37:04]  |                                        | 
+[22:37:04]  ========================================== 
+[22:37:04]  
+[22:37:04]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[22:37:04] Creating Objects (Mechanicmap.inc)
+[22:37:05] SERVER: MySQL Connection was successful.
+[22:37:05] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[22:37:05] 
+-----------------------------------
+[22:37:05] ---GROUNDBREAKING COPS N ROBBERS----
+[22:37:05] -----------------------------------
+
+[22:37:05] Number of vehicle models: 1
+[22:38:34] [connection] incoming connection: 127.0.0.1:49789 id: 0
+[22:38:34] [join] XomoX has joined the server (0:127.0.0.1)
+[22:38:34] [debug] Long callback execution detected (hang or performance issue)
+[22:38:34] [debug] AMX backtrace:
+[22:38:34] [debug] #0 0004abcc in @yH_OnPlayerConnect@007 (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\user-interface\ui_textmenu.inc:64
+[22:38:34] [debug] #1 000207b0 in public OnPlayerConnect (0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:38:34] Removed Objects For Player (Mechanicmap.inc)
+[22:39:12] [debug] Long callback execution detected (hang or performance issue)
+[22:39:12] [debug] AMX backtrace:
+[22:39:12] [debug] #0 00089990 in @yH_OnPlayerEnterDynRaceCP@013 (playerid=0, checkpointid=1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:366
+[22:39:12] [debug] #1 00020ae0 in public OnPlayerEnterDynamicRaceCP (0, 1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[22:41:45] Reason is 1 xD
+[22:41:45] [part] XomoX has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:16:49] language = ""  (string)
+[00:16:49] 
+[00:16:49] Server Plugins
+[00:16:49] --------------
+[00:16:49]  Loading plugin: sscanf
+[00:16:50] 
+
+[00:16:50]  ===============================
+
+[00:16:50]       sscanf plugin loaded.     
+
+[00:16:50]          Version:  2.8.3        
+
+[00:16:50]   (c) 2018 Alex "Y_Less" Cole  
+
+[00:16:50]  ===============================
+
+[00:16:50]   Loaded.
+[00:16:50]  Loading plugin: crashdetect
+[00:16:50]   CrashDetect plugin 4.20
+[00:16:50]   Loaded.
+[00:16:50]  Loading plugin: mysql
+[00:16:50]  >> plugin.mysql: R41-4 successfully loaded.
+[00:16:50]   Loaded.
+[00:16:50]  Loading plugin: samp_bcrypt
+[00:16:50] [SampBcrypt] [info]: Version: 0.2.3
+[00:16:50]   Loaded.
+[00:16:50]  Loading plugin: streamer
+[00:16:50] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[00:16:50]   Loaded.
+[00:16:50]  Loaded 5 plugins.
+
+[00:16:50] 
+[00:16:50] Filterscripts
+[00:16:50] ---------------
+[00:16:50]   Loaded 0 filterscripts.
+
+[00:18:01]  
+[00:18:01]  ========================================== 
+[00:18:01]  |                                        | 
+[00:18:01]  |   File dumped to YSI code cache:       | 
+[00:18:01]  |                                        | 
+[00:18:01]  |      scriptfiles/YSI_CACHE.amx         | 
+[00:18:01]  |                                        | 
+[00:18:01]  | Load this file instead to skip this    | 
+[00:18:01]  | code optimisation step in the future.  | 
+[00:18:01]  | Note that if you have multiple scripts | 
+[00:18:01]  | loading at once (i.e. gamemodes,       | 
+[00:18:01]  | filterscripts, and modules) you may    | 
+[00:18:01]  | need to load and cache them            | 
+[00:18:01]  | individually so that they don't        | 
+[00:18:01]  | clobber each other.  If you don't, in  | 
+[00:18:01]  | "server.cfg", the following works:     | 
+[00:18:01]  |                                        | 
+[00:18:01]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[00:18:01]  |                                        | 
+[00:18:01]  | You can disable this message with:     | 
+[00:18:01]  |                                        | 
+[00:18:01]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[00:18:01]  |                                        | 
+[00:18:01]  | You can disable this caching with:     | 
+[00:18:01]  |                                        | 
+[00:18:01]  |   #define YSI_NO_MODE_CACHE            | 
+[00:18:01]  |                                        | 
+[00:18:01]  | You can explicitly enable it with:     | 
+[00:18:01]  |                                        | 
+[00:18:01]  |   #define YSI_YES_MODE_CACHE           | 
+[00:18:01]  |                                        | 
+[00:18:01]  ========================================== 
+[00:18:01]  
+[00:18:01] [debug] Long callback execution detected (hang or performance issue)
+[00:18:01] [debug] AMX backtrace:
+[00:18:01] [debug] #0 0000a788 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=110, &buffer=@027d96b8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:463
+[00:18:01] [debug] #1 0000ab1c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027d96d8 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[00:18:01] [debug] #2 0000cabc in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[00:18:01] [debug] #3 00008d84 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[00:18:01] [debug] #4 00001560 in public OnVehicleStreamIn () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[00:18:01]  
+[00:18:01]  
+[00:18:01]  
+[00:18:01]  ========================================== 
+[00:18:01]  |                                        | 
+[00:18:01]  |         YSI version 5.03.0689          | 
+[00:18:01]  |         By Alex "Y_Less" Cole          | 
+[00:18:01]  |                                        | 
+[00:18:01]  | You can disable this message with:     | 
+[00:18:01]  |                                        | 
+[00:18:01]  |   #define YSI_NO_VERSION_CHECK         | 
+[00:18:01]  |                                        | 
+[00:18:01]  ========================================== 
+[00:18:01]  
+[00:18:01]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[00:18:02] Creating Objects (Mechanicmap.inc)
+[00:18:03] SERVER: MySQL Connection was successful.
+[00:18:04] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[00:18:04] 
+-----------------------------------
+[00:18:04] ---GROUNDBREAKING COPS N ROBBERS----
+[00:18:04] -----------------------------------
+
+[00:18:04] Number of vehicle models: 1
+[00:20:18] [connection] incoming connection: 127.0.0.1:58781 id: 0
+[00:20:18] [join] XomoX has joined the server (0:127.0.0.1)
+[00:20:18] Removed Objects For Player (Mechanicmap.inc)
+[00:20:18] [debug] Long callback execution detected (hang or performance issue)
+[00:20:18] [debug] AMX backtrace:
+[00:20:18] [debug] #0 00090c34 in @yH_OnPlayerConnect@014 (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\player\inventory.inc:26
+[00:20:18] [debug] #1 00020878 in public OnPlayerConnect (0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[00:21:07] Reason is 1 xD
+[00:21:07] [part] XomoX has left the server (0:1)
+[00:21:12] --- Server Shutting Down.
+[00:21:12] 
+
+[00:21:12]  ===============================
+
+[00:21:12]      sscanf plugin unloaded.    
+
+[00:21:12]  ===============================
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:25:48] language = ""  (string)
+[00:25:48] 
+[00:25:48] Server Plugins
+[00:25:48] --------------
+[00:25:48]  Loading plugin: sscanf
+[00:25:48] 
+
+[00:25:48]  ===============================
+
+[00:25:48]       sscanf plugin loaded.     
+
+[00:25:48]          Version:  2.8.3        
+
+[00:25:48]   (c) 2018 Alex "Y_Less" Cole  
+
+[00:25:48]  ===============================
+
+[00:25:48]   Loaded.
+[00:25:48]  Loading plugin: crashdetect
+[00:25:48]   CrashDetect plugin 4.20
+[00:25:48]   Loaded.
+[00:25:48]  Loading plugin: mysql
+[00:25:48]  >> plugin.mysql: R41-4 successfully loaded.
+[00:25:48]   Loaded.
+[00:25:48]  Loading plugin: samp_bcrypt
+[00:25:48] [SampBcrypt] [info]: Version: 0.2.3
+[00:25:48]   Loaded.
+[00:25:48]  Loading plugin: streamer
+[00:25:48] 
+
+*** Streamer Plugin v2.9.4 by Incognito loaded ***
+
+[00:25:48]   Loaded.
+[00:25:48]  Loaded 5 plugins.
+
+[00:25:49] 
+[00:25:49] Filterscripts
+[00:25:49] ---------------
+[00:25:49]   Loaded 0 filterscripts.
+
+[00:26:46]  
+[00:26:46]  ========================================== 
+[00:26:46]  |                                        | 
+[00:26:46]  |   File dumped to YSI code cache:       | 
+[00:26:46]  |                                        | 
+[00:26:46]  |      scriptfiles/YSI_CACHE.amx         | 
+[00:26:46]  |                                        | 
+[00:26:46]  | Load this file instead to skip this    | 
+[00:26:46]  | code optimisation step in the future.  | 
+[00:26:46]  | Note that if you have multiple scripts | 
+[00:26:46]  | loading at once (i.e. gamemodes,       | 
+[00:26:46]  | filterscripts, and modules) you may    | 
+[00:26:46]  | need to load and cache them            | 
+[00:26:46]  | individually so that they don't        | 
+[00:26:46]  | clobber each other.  If you don't, in  | 
+[00:26:46]  | "server.cfg", the following works:     | 
+[00:26:46]  |                                        | 
+[00:26:46]  |   gamemode0 ../scriptfiles/YSI_CACHE 1 | 
+[00:26:46]  |                                        | 
+[00:26:46]  | You can disable this message with:     | 
+[00:26:46]  |                                        | 
+[00:26:46]  |   #define YSI_NO_CACHE_MESSAGE         | 
+[00:26:46]  |                                        | 
+[00:26:46]  | You can disable this caching with:     | 
+[00:26:46]  |                                        | 
+[00:26:46]  |   #define YSI_NO_MODE_CACHE            | 
+[00:26:46]  |                                        | 
+[00:26:46]  | You can explicitly enable it with:     | 
+[00:26:46]  |                                        | 
+[00:26:46]  |   #define YSI_YES_MODE_CACHE           | 
+[00:26:46]  |                                        | 
+[00:26:46]  ========================================== 
+[00:26:46]  
+[00:26:46] [debug] Long callback execution detected (hang or performance issue)
+[00:26:46] [debug] AMX backtrace:
+[00:26:46] [debug] #0 0000a7ac in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=4, &buffer=@027d9b64 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:466
+[00:26:46] [debug] #1 0000ab1c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027d9b84 0, pattern=1598650688) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_amx_impl.inc:720
+[00:26:46] [debug] #2 0000cabc in ScriptInit_PreInitFuncs_ () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_core_entry.inc:173
+[00:26:46] [debug] #3 00008d84 in public SSCANF_OnGameModeInit () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:584
+[00:26:46] [debug] #4 00001560 in public OnVehicleStreamIn () at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:211
+[00:26:46]  
+[00:26:46]  
+[00:26:46]  
+[00:26:46]  ========================================== 
+[00:26:46]  |                                        | 
+[00:26:46]  |         YSI version 5.03.0689          | 
+[00:26:46]  |         By Alex "Y_Less" Cole          | 
+[00:26:46]  |                                        | 
+[00:26:46]  | You can disable this message with:     | 
+[00:26:46]  |                                        | 
+[00:26:46]  |   #define YSI_NO_VERSION_CHECK         | 
+[00:26:46]  |                                        | 
+[00:26:46]  ========================================== 
+[00:26:46]  
+[00:26:46]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[00:26:46] Creating Objects (Mechanicmap.inc)
+[00:26:46] SERVER: MySQL Connection was successful.
+[00:26:46] [MNL:CNR] 0 businesses loaded (max ID: 0)
+[00:26:46] 
+-----------------------------------
+[00:26:46] ---GROUNDBREAKING COPS N ROBBERS----
+[00:26:46] -----------------------------------
+
+[00:26:46] Number of vehicle models: 1
+[00:27:04] [connection] incoming connection: 127.0.0.1:63130 id: 0
+[00:27:04] [join] XomoX has joined the server (0:127.0.0.1)
+[00:27:04] Removed Objects For Player (Mechanicmap.inc)
+[00:27:04] [debug] Long callback execution detected (hang or performance issue)
+[00:27:04] [debug] AMX backtrace:
+[00:27:04] [debug] #0 0000c240 in IPToInt (ip[]=@027d9ad4 "127.0.0.1") at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_utils_impl.inc:734
+[00:27:04] [debug] #1 0000bdf4 in public SSCANF_OnPlayerConnect (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_va\..\..\YSI_Core\y_core\y_utils_impl.inc:246
+[00:27:04] [debug] #2 00001654 in OnPlayerConnect (playerid=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\.resources\sscanf-019253\sscanf2.inc:242
+[00:27:04] [debug] #3 000208a0 in public OnPlayerConnect (0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[00:28:32] [debug]
+[00:28:32] [debug] Parameter count corrections:
+[00:28:32] [debug]
+[00:28:32] [debug] The 1st mangled argments (e.g. `<1073741823 arguments>`) below should read `<3 arguments>`
+[00:28:32] [debug]
+[00:28:32] [debug] Run time error 4: "Array index out of bounds"
+[00:28:32] [debug]  Attempted to read/write array element at negative index -1
+[00:28:32] [debug] AMX backtrace:
+[00:28:32] [debug] #0 000877b0 in GetPlayerAssistant (playerid=-1) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:142
+[00:28:32] [debug] #1 0008c754 in @yH_OnPlayerKeyStateChange@013 (playerid=0, newkeys=1024, oldkeys=0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\gamemodes\main\systems\system_mechanic.inc:668
+[00:28:32] [debug] #2 00020bc4 in public OnPlayerKeyStateChange (0, 1024, 0) at C:\Users\Administrator\Documents\GitHub\ProjectCNR\dependencies\YSI-Includes\YSI_Coding\y_inline\..\y_cgen\y_cgen.inc:127
+[00:28:56] Reason is 1 xD
+[00:28:56] [part] XomoX has left the server (0:1)

@@ -77,7 +77,6 @@ public OnGameModeInit()
 	return 1;
 }
 
-
 public OnGameModeExit()
 {
 	for (new i = 0, j = GetPlayerPoolSize(); i <= j; i++)
